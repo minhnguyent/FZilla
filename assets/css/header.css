@@ -10,7 +10,6 @@
 .header__content,
 .navbar,
 .nav-link {
-    /* height: 2.1875rem; */
 }
 
 .navbar {
@@ -27,6 +26,7 @@
 
 .nav-link:hover {
     font-size: 1.1rem;
+    color: var(--color-supreme-orange);
 }
 
 .navbar__dropdown {
