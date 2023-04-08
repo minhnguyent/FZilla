@@ -1,3 +1,64 @@
-main {
-    height: 500vh;
+.main {
+    background-color: var(--color-black);
+    padding: 50px;
+}
+
+.main-section {
+
+}
+
+.main-section__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-section__heading h2 {
+    font-size: 1.35rem;
+    color: var(--color-supreme-orange);
+    margin: 0;
+}
+
+.main-section__heading-show-all {
+    display: none;
+    background-image: linear-gradient(120deg, var(--color-light-orange), var(--color-supreme-orange), var(--color-yellow));
+    color: var(--color-white);
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    border-radius: 2px;
+}
+
+.main-section.main-section--has-show-all .main-section__heading-show-all {
+    display: block;
+}
+
+.main-section__heading-show-all-icon {
+
+}
+
+.main-section__body {
+    margin-top: 8px;
+}
+
+.main-section__carousel {
+
+}
+
+.main-section__carousel-slide {
+    width: calc((100% - 2% * 4) / 5);
+}
+
+.main-section__carousel-btn {
+    background-color: #EA871Eaa;
+    padding: 8px 10px;
+    border-radius: 2px;
+}
+
+.main-section__carousel-btn:hover {
+    background-color: #EA871E;
+}
+
+.main-section__carousel-btn::after {
+    font-size: 1.8rem;
+    color: var(--color-white);
 }
