@@ -34,95 +34,87 @@
 
 <body>
     <div class="app">
-
-        <body>
-            <header class="header bg-dark bg-gradient">
-                <div class="header__content d-none d-md-flex container-fluid p-1">
-                    <div class="col-3">
-                        <img class="header__brand" src="./assets/img/nav-brand.png" alt="" />
-                    </div>
-                    <div class="col-6">
-                        <form class="search-form d-flex justify-content-center" role="search">
-                            <input class="search-form__input ps-2 pe-5 rounded-1 form-control" type="text"
-                                placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search"
-                                aria-describedby="button-addon2" />
-                            <button class="search-form__btn btn btn-sm" type="submit" id="ariabutton-addon2">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </button>
-                            <button class="search-form__reset" type="reset">
-                                <i class="fa-solid fa-xmark"></i>
-                            </button>
-                        </form>
-                    </div>
-                    <div class="col-3">
-                        <div class="d-flex justify-content-end">
-                            <a class="nav-link px-2 py-0" href="">Đăng nhập</a>
-                            <a class="nav-link px-2 py-0" href="">Đăng kí</a>
-                        </div>
+        <header class="header bg-dark bg-gradient">
+            <div class="header__content d-none d-md-flex container-fluid p-1">
+                <div class="col-3">
+                    <img class="header__brand" src="./assets/img/nav-brand.png" alt="" />
+                </div>
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <form class="search-form d-flex justify-content-center" role="search">
+                        <input class="search-form__input ps-2 pe-5 rounded-1 form-control" type="text"
+                            placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search"
+                            aria-describedby="button-addon2" />
+                        <button class="search-form__btn btn btn-sm" type="submit" id="ariabutton-addon2">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                        <button class="search-form__reset" type="reset">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="col-3">
+                    <div class="d-flex justify-content-end me-1">
+                        <a class="nav-link nav-link--account" href="">Đăng nhập</a>
+                        <a class="nav-link nav-link--account" href="">Đăng kí</a>
                     </div>
                 </div>
-                <nav class="navbar navbar-expand-md p-0 m-0 bg-dark bg-gradient">
-                    <div class="container-fluid p-md-0 p-2">
-                        <div class="d-md-none">
-                            <img class="header__brand" src="./assets/img/nav-brand.png" alt="" />
-                        </div>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="navbar-collapse collapse" id="navbarSupportedContent">
-                            <div class="container-fluid d-sm-block d-md-none mb-2">
-                            </div>
-                            <ul class="navbar-nav me-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link px-3 py-0 active-link" aria-current="page" href="#">Trang chủ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-3 py-0" href="#">Hành động</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-3 py-0" href="#">Viễn tưởng</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-3 py-0" href="#">Anime</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link px-3 py-0 dropdown__btn" href="#" role="button" aria-expanded="false">
-                                        Thể loại khác
-                                    </a>
-                                    <ul class="dropdown__list bg-dark bg-gradient">
-                                        <li class="nav-link dropdown__list-item">a</li>
-                                        <li class="nav-link dropdown__list-item">a</li>
-                                        <li class="nav-link dropdown__list-item">a</li>
-                                        <li class="nav-link dropdown__list-item">a</li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-2 py-0">Disabled</a>
-                                </li>
-                            </ul>
-                        </div>
+            </div>
+            <nav class="navbar navbar-expand-md p-0 m-0 bg-dark bg-gradient">
+                <div class="container-fluid p-md-0 p-2">
+                    <div class="d-md-none">
+                        <img class="header__brand" src="./assets/img/nav-brand.png" alt="" />
                     </div>
-                </nav>
-            </header>
-        </body>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                        <div class="container-fluid d-sm-block d-md-none mb-2">
+                        </div>
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active-link" aria-current="page" href="#">Trang chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Hành động</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Viễn tưởng</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Anime</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown__btn" href="#" role="button" aria-expanded="false">
+                                    Thể loại khác <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="dropdown__list bg-dark bg-gradient">
+                                    <li class="nav-link dropdown__list-item">a</li>
+                                    <li class="nav-link dropdown__list-item">a</li>
+                                    <li class="nav-link dropdown__list-item">a</li>
+                                    <li class="nav-link dropdown__list-item">a</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-</html>
+    </div>
+    <main></main>
 
-<main></main>
+    <footer class="footer"></footer>
 
-<footer class="footer"></footer>
-</div>
+    <div class="modal"></div>
 
-<div class="modal"></div>
+    <div class="toast"></div>
 
-<div class="toast"></div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
-<script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
