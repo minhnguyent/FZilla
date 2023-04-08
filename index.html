@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewsport" content="width=device-width, initial-scale=1.0">
 
   <!-- favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.svg">
@@ -51,7 +51,7 @@
     </header>
     
     <main class="main bg-dark bg-gradient">
-      <div class="container">
+      <div class="container-lg">
           <div class="main-section border-0">
             <div class="main-section__heading">
               <h2 class="text-uppercase">Phim Nổi Bật</h2>
@@ -61,21 +61,20 @@
               </div>
             </div>
             <div class="main-section__body">
-
               <div class="swiper main-section__carousel">
                 <div class="swiper-wrapper main-section__carousel-wrapper">
                   <!-- swiper-slide will be rendered here -->
                 </div>
 
                 <!-- navigation buttons -->
-                <div class="main-section__carousel-btn swiper-button-prev"></div>
-                <div class="main-section__carousel-btn swiper-button-next"></div>
+                <div class="main-section__carousel-btn main-section__carousel-btn-prev swiper-button-prev"></div>
+                <div class="main-section__carousel-btn main-section__carousel-btn-next swiper-button-next"></div>
               </div>
             </div>
           </div>
       </div>
 
-      <div class="container">
+      <div class="container-lg">
         <div class="row">
           <div class="col-8">
             <div class="film-list-container">
@@ -109,7 +108,7 @@
 
               <div class="main-section main-section--category-3 main-section--has-show-all">
                 <div class="main-section__heading">
-                  <h2 class="text-uppercase">Anime</h2>
+                  <h2 class="text-uppercase">Phim mới cập nhật</h2>
                   <div class="main-section__heading-show-all my-btn">
                     Xem tất cả
                     <span class="main-section__heading-show-all-icon"><i class="fa-solid fa-caret-right"></i></span>
@@ -138,7 +137,48 @@
           </div>
           <div class="col-4">
             <div class="main-sidebar">
-              
+              <div class="main-sidebar-section">
+                <div class="main-sidebar-section__heading">
+                  <h2 class="text-uppercase">Phim sắp chiếu</h2>
+                </div>
+                <div class="main-sidebar-section__body">
+                  <div class="swiper main-sidebar-section__carousel">
+                    <div class="swiper-wrapper main-sidebar-section__carousel-wrapper">
+                      <!-- swiper-slide will be rendered here -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- navigation buttons -->
+                <div class="swiper-button-prev main-sidebar-section__carousel-btn main-sidebar-section__carousel-btn-prev"></div>
+                <div class="swiper-button-next main-sidebar-section__carousel-btn main-sidebar-section__carousel-btn-next"></div>
+
+                <!-- pagination -->
+                <div class="swiper-pagination main-sidebar-section__carousel-pagination"></div>
+              </div>
+
+              <div class="main-sidebar-section">
+                <div class="main-sidebar-section__heading">
+                  <h2 class="text-uppercase">Phim trending</h2>
+                </div>
+
+                <div class="main-sidebar-section__body mt-2">
+                  <div class="main-sidebar-section__tabs">
+                    <div class="main-sidebar-section__tab-item active">Ngày</div>
+                    <div class="main-sidebar-section__tab-item">Tuần</div>
+                    <div class="main-sidebar-section__tab-item">Tháng</div>
+
+                    <div class="main-sidebar-section__tab-line"></div>
+                  </div>
+
+                  <div class="main-sidebar-section__tab-content">
+                    <div class="main-sidebar-section__tab-pane main-sidebar-section__tab-pane--day active"></div>
+                    <div class="main-sidebar-section__tab-pane main-sidebar-section__tab-pane--week"></div>
+                    <div class="main-sidebar-section__tab-pane main-sidebar-section__tab-pane--month"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
         </div>
