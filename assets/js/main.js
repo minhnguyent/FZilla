@@ -425,6 +425,65 @@ const inTrailerMovies = [
     },
 ];
 
+const quickCategory = [
+    {
+        category: 'Trinh thám',
+        href: 'trinh-tham'
+    },
+    {
+        category: 'Hành động',
+        href: 'hanh-dong'
+    },
+    {
+        category: 'Phiêu lưu',
+        href: 'phieu-luu'
+    },
+    {
+        category: 'Khoa học - viễn tưởng',
+        href: 'khoa-hoc-vien-tuong'
+    },
+    {
+        category: 'Hoạt hình',
+        href: 'hoat-hinh'
+    },
+    {
+        category: 'Cổ trang',
+        href: 'co-trang'
+    },
+    {
+        category: 'Hài hước',
+        href: 'hai-huoc'
+    },
+    {
+        category: 'Tâm lý - tình cảm',
+        href: 'tam-ly-tinh-cam'
+    },
+    {
+        category: 'Học đường',
+        href: 'hoc-duong'
+    },
+    {
+        category: 'Tài liệu',
+        href: 'tai-lieu'
+    },
+    {
+        category: 'Kiếm hiệp',
+        href: 'kiem-hiep'
+    },
+    {
+        category: 'Thể thao',
+        href: 'the-thao'
+    },
+    {
+        category: 'Kinh dị',
+        href: 'kinh-di'
+    },
+    {
+        category: 'TV Shows',
+        href: 'tv-shows'
+    },
+];
+
 const renderPopularMovies = function(root) {
     if (!root) return; 
 
@@ -572,6 +631,19 @@ const renderTrendingMovies = (root, movies) => {
     }).join('');
 }
 
+const renderQuickCategory = (root, categories) => {
+    if (!root || !categories) return;
+
+    root.innerHTML = categories.map((category) => {
+        return `
+            <li class="main-sidebar-section__list-item">
+                <span class="main-sidebar-section__list-item-icon"><i class="fa-solid fa-gear"></i></span>
+                <a href="${category.href}" class="main-sidebar-section__list-item-link">${category.category}</a>
+            </li>
+        `;
+    }).join('');
+}
+
 renderPopularMovies($('.main-section__carousel-wrapper'));
 
 renderMovieList($('.main-section--category-1 .main-section__body .row'), hotMovies);
@@ -585,7 +657,7 @@ renderTrendingMovies($('.main-sidebar-section__tab-pane--day'), trendingMovies.d
 renderTrendingMovies($('.main-sidebar-section__tab-pane--week'), trendingMovies.week);
 renderTrendingMovies($('.main-sidebar-section__tab-pane--month'), trendingMovies.month);
 
-
+renderQuickCategory($('.main-sidebar-section__list'), quickCategory);
 
 const mainSectionCarousel = new Swiper('.main-section__carousel', {
     autoplay: {

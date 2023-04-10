@@ -311,6 +311,7 @@
 }
 
 .main-sidebar-section__heading h2 {
+    margin-bottom: 0.5rem;
     font-size: 0.95rem;
     color: var(--color-white);
 }
@@ -340,6 +341,11 @@
     width: var(--width);
     height: var(--height);
     top: 34px;
+    transition: background-color 0.2s linear;
+}
+
+.main-sidebar-section__carousel-btn:hover {
+    background-color: #5e5e5e; 
 }
 
 .main-sidebar-section__carousel-btn::after {
@@ -530,10 +536,13 @@
     flex: 1;
     color: var(--color-white);
     padding-left: 8px;
+    padding-top: 4px;
+    transition: background-color 0.08s linear;
 }
 
 .main-sidebar-section__tab-pane-item:hover .main-sidebar-section__tab-pane-item-desc {
     background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .main-sidebar-section__tab-pane-item-title {
@@ -551,5 +560,31 @@
     opacity: 0.8;
 }
 
+.main-sidebar-section__list  {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.main-sidebar-section__list-item  {
+    border-bottom: 1px solid #4f4f4f;
+    display: flex;
+    align-items: center;
+}
+
+.main-sidebar-section__list-item-link  {
+    display: inline-block;
+    padding: 6px 0;
+    transition: color 0.1s linear;
+}
+
+.main-sidebar-section__list-item-icon {
+    font-size: 0.5rem;
+    line-height: 1;
+    margin-right: 5px;
+}
+
+.main-sidebar-section__list-item:hover .main-sidebar-section__list-item-link {
+    color: var(--color-supreme-orange);
+}
 
 
