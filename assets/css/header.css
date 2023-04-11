@@ -44,6 +44,8 @@
 
 .nav-link--username {
     text-transform: none;
+    width: 10rem;
+    text-align: right;
 }
 
 .nav-link:hover:not(.active-link, .nav-link--username) {
@@ -121,11 +123,11 @@
     font-size: .9rem;
     line-height: 2rem;
     max-width: 100%;
-    transition: all .3s;
     padding: 0 2rem 0 .5rem;
     border-top: 0.001px dotted var(--color-gray);
     overflow: hidden;
     cursor: pointer;
+    transition: all .3s;
 }
 
 .search-history-item:last-child {

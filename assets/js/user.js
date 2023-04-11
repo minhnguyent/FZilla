@@ -1,6 +1,6 @@
 const user = {
-    username: 'mmmmmmmmmmm', // username maxlength12
-    email: 'hi-world201@github.com',
+    username: 'fzilla', // username maxlength12
+    email: 'fzilla@github.com',
     password: 12345678,
     avatar: '../img/nav-brand.png',
     favouriteFilm: [
