@@ -18,7 +18,7 @@
 .nav-link {
     padding: 0;
     color: var(--color-white);
-    font-size: 1em;
+    font-size: 0.875rem;
     text-transform: uppercase;
     line-height: 3.125rem;
     text-align: center;
@@ -26,8 +26,8 @@
     cursor: pointer;
 }
 
-.nav-link:not(.nav-link--account, .nav-link--username) {
-    min-width: 10rem;
+.nav-link:not(.nav-link--account, .nav-link--username, .nav-link--bookmark) {
+    min-width: 8rem;
 }
 
 .active-link {
@@ -55,6 +55,10 @@
     color: var(--color-supreme-orange);
 }
 
+.nav-link--bookmark {
+    min-width: 4rem;
+}
+
 /* Search-form */
 
 .search-form {
@@ -70,12 +74,13 @@
     width: 70%;
 }
 
-.search-form__btn {
+.search-form__submit {
     font-size: 1rem;
     color: var(--color-white);
+    border: 0;
 }
 
-.search-form__btn:hover {
+.search-form__submit:hover {
     color: var(--color-supreme-orange);
 }
 
@@ -88,11 +93,59 @@
     height: 1.9125rem;
     border-radius: 0 0.25rem 0.25rem 0;
     opacity: .7;
-    transition: all .2;
+    transition: all .2s;
 }
 
 .search-form__reset:hover {
     opacity: .5;
+}
+
+.search-form__input--expand {
+    border-radius: .25rem .25rem 0 0 !important;
+}
+
+/* Search history */
+.search-history {
+    position: absolute;
+    background-color: white;
+    top: 2.5rem;
+    right: calc(15% + 16px);
+    z-index: 100;
+    width: 70%;
+    border-radius: 0 0 .25rem .25rem;
+}
+
+.search-history-item {
+    position: relative;
+    height: 2rem;
+    font-size: .9rem;
+    line-height: 2rem;
+    max-width: 100%;
+    transition: all .3s;
+    padding: 0 2rem 0 .5rem;
+    border-top: 0.001px dotted var(--color-gray);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.search-history-item:last-child {
+    border-radius: 0 0 .25rem .25rem;
+}
+
+.search-history-item:hover {
+    background-color: var(--color-gray);
+}
+
+.search-history-item__remove {
+    position: absolute;
+    line-height: 2rem;
+    top: 0;
+    right: .5rem;
+    cursor: pointer;
+}
+
+.search-history-item:hover {
+    opacity: .6;
 }
 
 /* Dropdown menu */
@@ -108,6 +161,7 @@
     display: none;
     padding: 0;
     z-index: 100;
+    width: 100%;
 }
 
 .dropdown__list-item {
@@ -117,49 +171,19 @@
     padding: 0;
 }
 
-.dropdown:hover .dropdown__list {
+.dropdown:hover>.dropdown__list {
     display: block;
 }
 
-/* Footer */
-.footer {}
+.dropdown__list--account::before {
+    position: absolute;
+    top: -9px;
+    right: 5px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 
-.footer__brand {
-    width: 5rem;
-}
-
-.footer__content {
-    padding: 1rem 0;
-}
-
-.footer__desc {
-    padding: 1rem 0;
-    color: var(--color-white);
-    opacity: .6;
-}
-
-.footer__content-title {
-    color: var(--color-supreme-orange);
-    font-weight: 600;
-}
-
-.footer-link {
-    display: block;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: .25rem 0;
-    color: var(--color-white);
-    opacity: .6;
-    transition: all .3s;
-}
-
-.copyright {
-    color: var(--color-white);
-    padding: .5rem 0;
-    text-align: center;
-}
-
-.footer-link:hover {
-    opacity: 1;
-    color: var(--color-white);
+    border-bottom: 10px solid var(--bs-gray-700);
+    content: '';
 }
