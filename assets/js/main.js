@@ -491,7 +491,7 @@ const renderPopularMovies = function(root) {
         return `
             <div class="swiper-slide main-section__carousel-slide">
                 <div class="film-item">
-                    <div class="film-item-inner">
+                    <a href="/film_info.html" class="film-item-inner">
                         <div class="film-item__main">
                             <div class="film-item__thumb">
                                 <img src="${movie.thumb}" alt="${movie.titleEn}" class="film-item__thumb-img">
@@ -522,21 +522,22 @@ const renderPopularMovies = function(root) {
                             <span class="film-item__subtitle-item" title="${movie.titleEn} (${movie.year})">${movie.titleEn} (${movie.year})</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         `;
     }).join('');
 }
 
-const renderMovieList = (root, movies) => {
+const renderMovieList = (root, movies, classList) => {
+    console.log(...classList);
     if (!root || !movies) return;
 
     root.innerHTML = movies.map((movie) => {
         return `
-            <div class="col-3">
+            <div class="${classList.join(' ')}">
                 <div class="film-item">
-                    <div class="film-item-inner">
+                    <a href="/film_info.html" class="film-item-inner">
                         <div class="film-item__main">
                             <div class="film-item__thumb">
                                 <img src="${movie.thumb}" alt="${movie.titleEn}" class="film-item__thumb-img">
@@ -567,7 +568,7 @@ const renderMovieList = (root, movies) => {
                             <span class="film-item__subtitle-item" title="${movie.titleEn} (${movie.year})">${movie.titleEn} (${movie.year})</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         `;
@@ -591,7 +592,7 @@ const renderTrailers = (root, movies) => {
                         </div>
 
                         <div class="trailer-item__desc">
-                            <div class="trailer-item__title">${movie.titleVn} - ${movie.titleEn} (${movie.year})</div>
+                            <div class="trailer-item__title">${movie.titleVn} | ${movie.titleEn} (${movie.year})</div>
 
                             <div class="trailer-item__views">
                                 <span class="trailer-item__views-icon"><i class="fa-solid fa-eye"></i></span>
@@ -619,7 +620,7 @@ const renderTrendingMovies = (root, movies) => {
                     <img src="${movie.thumb}" class="main-sidebar-section__tab-pane-item-img" alt="${movie.titleVn}">
                 </div>
                 <div class="main-sidebar-section__tab-pane-item-desc">
-                    <div class="main-sidebar-section__tab-pane-item-title">${movie.titleVn}</div>
+                    <div class="main-sidebar-section__tab-pane-item-title" title="${movie.titleVn}">${movie.titleVn}</div>
                     <div class="main-sidebar-section__tab-pane-item-subtitle">${movie.year}</div>
 
                     <div class="main-sidebar-section__tab-pane-item-views">
@@ -645,11 +646,14 @@ const renderQuickCategory = (root, categories) => {
 }
 
 renderPopularMovies($('.main-section__carousel-wrapper'));
+renderPopularMovies($('main-section--same-topic .main-section__carousel-wrapper'));
 
-renderMovieList($('.main-section--category-1 .main-section__body .row'), hotMovies);
-renderMovieList($('.main-section--category-2 .main-section__body .row'), hotMovies);
-renderMovieList($('.main-section--category-3 .main-section__body .row'), hotMovies);
-renderMovieList($('.main-section--category-4 .main-section__body .row'), hotMovies);
+renderMovieList($('.main-section--category-1 .main-section__body .row'), hotMovies, ["col-3"]);
+renderMovieList($('.main-section--category-2 .main-section__body .row'), hotMovies, ["col-3"]);
+renderMovieList($('.main-section--category-3 .main-section__body .row'), hotMovies, ["col-3"]);
+renderMovieList($('.main-section--category-4 .main-section__body .row'), hotMovies, ["col-3"]);
+renderMovieList($('.main-section--hot-movies-all .main-section__body .row'), hotMovies, ["col-2"]);
+renderMovieList($('.main-section--recommendation .main-section__body .row'), hotMovies, ["col-3"]);
 
 renderTrailers($('.main-sidebar-section__carousel-wrapper'), inTrailerMovies);
 
@@ -748,3 +752,5 @@ window.onscroll = () => {
         toTopBtn.classList.remove('active');
     }
 }
+
+// main-film-info
