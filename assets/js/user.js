@@ -4,7 +4,7 @@ const user = {
     password: 12345678,
     avatar: '../img/nav-brand.png',
     favouriteFilm: [
-
+        
     ]
 }
 

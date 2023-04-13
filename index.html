@@ -44,7 +44,7 @@
             <div class="container-lg">
                 <div class="header__content d-none d-md-flex container-fluid px-1 py-2">
                     <div class="col-3">
-                        <img class="header__brand" src="./assets/img/nav-brand.png" alt="" />
+                        <img class="header__brand" src="./assets/img/brand.png" alt="" />
                     </div>
 
                     <div class="col-6 d-flex justify-content-center align-items-center">
@@ -74,12 +74,12 @@
                             <div class="dropdown">
                                 <a class=" nav-link dropdown__btn nav-link--username hidden"></a>
                                 <ul class="dropdown__list dropdown__list--account bg-dark bg-gradient">
-                                    <li class="px-1 nav-link dropdown__list-item">
+                                    <li class="px-2 nav-link dropdown__list-item">
                                         <a href="userInfo.html">
                                             <i class="fa-regular fa-user"></i> Hồ sơ cá nhân
                                         </a>
                                     </li>
-                                    <li class="px-1 nav-link dropdown__list-item">
+                                    <li class="px-2 nav-link dropdown__list-item">
                                         <a href="">
                                             <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
                                         </a>
@@ -93,7 +93,7 @@
                 <nav class="navbar navbar-expand-md p-0 m-0">
                     <div class="container-fluid p-md-0 p-2">
                         <div class="d-md-none">
-                            <img class="header__brand" src="./assets/img/nav-brand.png" alt="" />
+                            <img class="header__brand" src="./assets/img/brand.png" alt="" />
                         </div>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -135,12 +135,11 @@
                             <div class="dropdown">
                                 <a class="nav-link nav-link--bookmark" href="#"><i
                                         class="fa-regular fa-bookmark"></i></a>
-                                <ul class="dropdown__list bg-dark bg-gradient">
-                                    <li class="dropdown__list-item">Tình cảm</li>
-                                    <li class="dropdown__list-item">Học đường</li>
-                                    <li class="dropdown__list-item">Khoa học</li>
-                                    <li class="dropdown__list-item">Phim tài liệu</li>
-                                </ul>
+                                <div class="dropdown__list bg-dark bg-gradient bookmark">
+                                    <div class="bookmark-wrapper">
+                                        
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -315,7 +314,7 @@
             <div class="row">
                 <div class="ms-2 col-0 col-md-6 footer__content row">
                     <div class="col-4 col-md-12">
-                        <img class="footer__brand" src="./assets/img/nav-brand.png" alt="">
+                        <img class="footer__brand" src="./assets/img/brand.png" alt="">
                     </div>
                     <div class="col-8 col-md-12">
                         <p class="footer__desc">
@@ -394,6 +393,7 @@
     <script src="./assets/js/user.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/bookmark.js"></script>
 </body>
 
 </html>
