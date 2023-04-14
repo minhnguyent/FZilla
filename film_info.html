@@ -58,12 +58,11 @@
                     <span class="breadcrumb__item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                   </li>
                   <li class="breadcrumb__item">
-                    <a href="/all_film.html" class="breadcrumb__item-link">Danh sách Phim hot</a>
+                    <a href="/all_film.html" class="breadcrumb__item-link">Thông tin phim</a>
                     <span class="breadcrumb__item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                   </li>
                   <li class="breadcrumb__item">
-                    <a href="/all_film.html" class="breadcrumb__item-link">Người Kiến và Chiến binh Ong: Thế giới Lượng
-                      tử</a>
+                    <a href="#" class="breadcrumb__item-link"></a>
                     <span class="breadcrumb__item-icon"><i class="fa-solid fa-chevron-right"></i></span>
                   </li>
                 </ul>
@@ -76,70 +75,6 @@
         <div class="row">
           <div class="col-8">
             <div class="main-box-wrapper">
-              <div class="main-film-info">
-                <div class="main-film-info__with-thumb">
-                  <div class="main-film-info__thumb">
-                    <div class="main-film-info__thumb-img-wrapper">
-                      <img src="./assets/img/film/popular/ant-man-3.jpg" class="main-film-info__img" alt="Ant-Man 3">
-                    </div>
-                    <div class="main-film-info__bookmark" title="Bookmark">
-                      <span class="main-film-info__bookmark-icon"><i class="fa-solid fa-bookmark"></i></span>
-                      <span class="main-film-info__bookmark-add-icon"><i class="fa-solid fa-plus"></i></span>
-                    </div>
-                    <div class="main-film-info__btn main-film-info__watch-trailer-btn my-btn my-btn-flex">
-                      <span class="main-film-info__btn-icon"><i class="fa-brands fa-youtube"></i></span>
-                      Xem trailer
-                    </div>
-                    <div class="main-film-info__btn main-film-info__watch-film-btn my-btn my-btn-flex">
-                      <span class="main-film-info__btn-icon"><i class="fa-regular fa-circle-play"></i></span>
-                      Xem phim
-                    </div>
-                  </div>
-                  <div class="main-film-info__about">
-                    <div class="main-film-info__about-title">Người Kiến và Chiến binh Ong: Thế giới Lượng tử</div>
-                    <ul class="main-film-info__about-list">
-                      <li class="main-film-info__about-list-item">
-                        <span>Quốc gia:</span>
-                        <a href="#">Phim Mỹ</a>
-                      </li>
-                      <li class="main-film-info__about-list-item">
-                        <span>Đạo diễn:</span>
-                        <a href="#">Chris Renaud, Jonathan del Val</a>
-                      </li>
-                      <li class="main-film-info__about-list-item">
-                        <span>Năm sản xuất:</span>
-                        <a href="#">2022</a>
-                      </li>
-                      <li class="main-film-info__about-list-item">
-                        <span>Thời lượng:</span>
-                        <a href="#">220 phút</a>
-                      </li>
-                      <li class="main-film-info__about-list-item">
-                        <span>Thể loại:</span>
-                        <a href="#">Phim viễn tưởng, phiêu lưu, khoa học.</a>
-                      </li>
-                    </ul>
-                    <div class="main-film-info__about-rate">
-                      <span class="main-film-info__about-rate-title">Đánh giá phim</span>
-                      <span class="main-film-info__about-rate-votes">(43 lượt)</span>
-
-                      <span class="main-film-info__about-rate-star active"><i class="fa-solid fa-star"></i></span>
-                      <span class="main-film-info__about-rate-star active"><i class="fa-solid fa-star"></i></span>
-                      <span class="main-film-info__about-rate-star active"><i class="fa-solid fa-star"></i></span>
-                      <span class="main-film-info__about-rate-star active"><i class="fa-solid fa-star"></i></span>
-                      <span class="main-film-info__about-rate-star"><i class="fa-solid fa-star"></i></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="main-film-info__film-content">
-                  <div class="main-film-info__film-content-heading text-uppercase">Nội dung phim</div>
-                  <div class="main-film-info__film-content-title">Người Kiến và Chiến binh Ong: Thế giới Lượng tử</div>
-                  <div class="main-film-info__film-content-desc">Ant-Man and the Wasp find themselves exploring the
-                    Quantum Realm, interacting with strange new creatures and embarking on an adventure that pushes them
-                    beyond the limits of what they thought was possible.</div>
-
-                </div>
-              </div>
             </div>
 
             <div class="film-list-container">
@@ -152,16 +87,15 @@
                   </div>
                 </div>
                 <div class="main-section__body mt-3">
-                  <div class="swiper main-section__carousel">
+                  <div class="swiper main-section__carousel main-section__carousel--info-page">
                     <div class="swiper-wrapper main-section__carousel-wrapper">
                       <!-- swiper-slide will be rendered here -->
                     </div>
-
-                    <!-- navigation buttons -->
-                    <div class="main-section__carousel-btn main-section__carousel-btn-prev swiper-button-prev"></div>
-                    <div class="main-section__carousel-btn main-section__carousel-btn-next swiper-button-next"></div>
                   </div>
+                  <!-- navigation buttons -->
                 </div>
+                <div class="main-section__carousel-btn main-section__carousel-btn--inline main-section__carousel-btn-prev swiper-button-prev"></div>
+                <div class="main-section__carousel-btn main-section__carousel-btn--inline main-section__carousel-btn-next swiper-button-next"></div>
               </div>
               <div class="main-section main-section--recommendation main-section--has-show-all">
                 <div class="main-section__heading">
@@ -265,7 +199,27 @@
 
   <!-- swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  
+  <script src="./assets/js/movieData.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/render.js"></script>
+  <script src="./assets/js/renderFilmInfo.js"></script>
+  <script src="./assets/js/renderMovie.js"></script>
+  <script src="./assets/js/swiperCarousel.js"></script>
+
+  <script>
+    const searchString = window.location.search;
+    const searchParams = new URLSearchParams(searchString);
+    const filmCategory = searchParams.get('film_category');
+    const filmId = searchParams.get('film_id');
+
+    renderFilmInfo($('.main-box-wrapper'), filmCategory, filmId);
+
+    renderSidebar();
+
+    renderCarouselMovies($('.main-section--same-topic .main-section__carousel-wrapper'), 'popularMovies');
+    renderMovieList($('.main-section--recommendation .main-section__body .row'), 'hotMovies');
+  </script>
 </body>
 
 </html>

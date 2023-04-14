@@ -217,7 +217,24 @@
 
   <!-- swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  
+  <script src="./assets/js/movieData.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/render.js"></script>
+  <script src="./assets/js/renderMovie.js"></script>
+  <script src="./assets/js/swiperCarousel.js"></script>
+
+  <script>
+    renderCarouselMovies($('.main-section__carousel-wrapper'), 'popularMovies');
+
+    renderSidebar();
+
+    renderMovieList($('.main-section--category-1 .main-section__body .row'), 'hotMovies');
+    renderMovieList($('.main-section--category-2 .main-section__body .row'), 'hotMovies');
+    renderMovieList($('.main-section--category-3 .main-section__body .row'), 'hotMovies');
+    renderMovieList($('.main-section--category-4 .main-section__body .row'), 'hotMovies');
+
+  </script>
 </body>
 
 </html>

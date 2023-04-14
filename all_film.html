@@ -7,7 +7,7 @@
   <meta name="viewsport" content="width=device-width, initial-scale=1.0">
 
   <!-- favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="../../assets/img/favicon.svg">
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.svg">
 
   <!-- font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
@@ -17,8 +17,8 @@
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
   <!-- normalize and reset -->
-  <link rel="stylesheet" href="../../assets/css/normalize.css">
-  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
 
   <!-- swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
@@ -26,13 +26,13 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 
   <!-- style -->
-  <link rel="stylesheet" href="../../assets/css/base.css">
-  <link rel="stylesheet" href="../../assets/css/header.css">
-  <link rel="stylesheet" href="../../assets/css/main.css">
-  <link rel="stylesheet" href="../../assets/css/footer.css">
-  <link rel="stylesheet" href="../../assets/css/modal.css">
-  <link rel="stylesheet" href="../../assets/css/form.css">
-  <link rel="stylesheet" href="../../assets/css/toast.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/footer.css">
+  <link rel="stylesheet" href="./assets/css/modal.css">
+  <link rel="stylesheet" href="./assets/css/form.css">
+  <link rel="stylesheet" href="./assets/css/toast.css">
 
   <title>FZilla - Xem phim trực tuyến</title>
 </head>
@@ -68,7 +68,7 @@
             </div>
 
             <div class="film-list-container">
-              <div class="main-section main-section--hot-movies-all">
+              <div class="main-section main-section--all-movies">
                 <div class="main-section__heading">
                   <h2 class="text-uppercase">Phim mới hot</h2>
                   <div class="main-section__heading-show-all my-btn">
@@ -211,7 +211,16 @@
 
   <!-- swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="../../assets/js/main.js"></script>
+
+  <script src="./assets/js/movieData.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/render.js"></script>
+  <script src="./assets/js/renderMovie.js"></script>
+  <script src="./assets/js/swiperCarousel.js"></script>
+
+  <script>
+    renderMovieList($('.main-section--all-movies .main-section__body .row'), 'popularMovies', ["col-2"]);
+  </script>
 </body>
 
 </html>
