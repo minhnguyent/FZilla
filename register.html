@@ -144,52 +144,55 @@
         <main class="bg bg-dark bg-gradient login-regiter__main">
             <div class="login-regiter bg-light">
                 <h1 class="login-regiter__heading">
-                    Đăng ký
+                    ĐĂNG KÝ
                 </h1>
                 <form>
-                    <div class="mb-3 login-regiter_form_item">
-                        <label for="namesigin" class="form-check-label login-regiter__form-label">Tên đăng nhập</label>
-                        <input type="email" class="form-control login-regiter__form-input" id="namesigin"
-                            placeholder="Vui lòng nhập tên đăng nhập">
+                    <div class="input-group mb-3 login-regiter_form_item">
+                        <div class="form-floating  login-regiter_form_item">
+                          <input type="text" class="form-control login-regiter__form-input" id="login" placeholder="Tên đăng nhập">
+                          <label for="login" class="login-regiter__form-label">Tên đăng nhập</label>
+                        </div>
                     </div>
-                    <div class="mb-3 login-regiter_form_item">
-                        <label for="Email1" class="form-check-label login-regiter__form-label">Email</label>
-                        <input type="email" class="form-control login-regiter__form-input" id="Email1"
-                            placeholder="Vui lòng nhập Email">
+                    <div class="input-group mb-3 login-regiter_form_item">
+                        <div class="form-floating  login-regiter_form_item">
+                          <input type="email" class="form-control login-regiter__form-input" id="email" placeholder="email">
+                          <label for="email" class="login-regiter__form-label">email</label>
+                        </div>
                     </div>
-                    <div class="mb-3 login-regiter_form_item">
-                        <label for="Password" class="form-check-label login-regiter__form-label">Mật khẩu</label>
-                        <input type="password" class="form-control login-regiter__form-input "
-                            placeholder="vui lòng nhập mật khẩu" id="Password">
+                    <div class="input-group mb-3 login-regiter_form_item">
+                        <div class="form-floating login-regiter_form_item">
+                          <input type="password" class="form-control login-regiter__form-input" id="password" placeholder="Mật khẩu">
+                          <label for="password" class="login-regiter__form-label">Mật khẩu</label>
+                        </div>
                     </div>
-                    <div class="mb-3 login-regiter_form_item">
-                        <label for="Password_check" class="form-check-label login-regiter__form-label">Nhập lại mật
-                            khẩu</label>
-                        <input type="password" class="form-control login-regiter__form-input "
-                            placeholder="vui lòng nhập lại mật khẩu" id="Password_check">
+                    <div class="input-group mb-3 login-regiter_form_item">
+                        <div class="form-floating login-regiter_form_item">
+                          <input type="password" class="form-control login-regiter__form-input" id="passwordrp" placeholder="Nhập lại mật khẩu">
+                          <label for="passwordrp" class="login-regiter__form-label">Mật khẩu</label>
+                        </div>
                     </div>
                     <div class=" mb-3 login-regiter_form_item_radio">
                         <label for="sex" class="form-check-label login-regiter__form-label">Giới tính</label>
                     </div>
-                    <div class="login-regiter__form-check_sex mb-3 login-regiter_form_item" id="sex">
+                    <div class="login-regiter__form-check_sex mb-3 login-regiter_form_item_sex" id="sex">
                         <div class="form-check ">
                             <input class="form-check-input login-regiter__form-radio-selection" type="radio" name="sex"
                                 id="male">
-                            <label class="form-check-label login-regiter__form-label" for="mail">
+                            <label class="form-check-label login-regiter__form-label_radio_check" for="mail">
                                 nam
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input login-regiter__form-radio-selection" type="radio" name="sex"
                                 id="fmale">
-                            <label class="form-check-label login-regiter__form-label" for="fmale">
+                            <label class="form-check-label login-regiter__form-label_radio_check" for="fmale">
                                 nữ
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input login-regiter__form-radio-selection" type="radio" name="sex"
                                 id="sex_other">
-                            <label class="form-check-label login-regiter__form-label" for="sex_other">
+                            <label class="form-check-label login-regiter__form-label_radio_check" for="sex_other">
                                 khác
                             </label>
                         </div>
