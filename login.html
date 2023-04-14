@@ -144,18 +144,20 @@
         <main class="bg bg-dark bg-gradient login-regiter__main">
             <div class="login-regiter bg-light">
                 <h1 class="login-regiter__heading">
-                    Đăng nhập
+                    ĐĂNG NHẬP
                 </h1>
                 <form>
-                    <div class="mb-3 login-regiter_form_item">
-                        <label for="Email1" class="form-check-label login-regiter__form-label">Tên đăng nhập</label>
-                        <input type="email" class="form-control login-regiter__form-input" id="Email1"
-                            placeholder="Vui lòng nhập tên đăng nhập">
+                    <div class="input-group mb-3 login-regiter_form_item">
+                        <div class="form-floating">
+                          <input type="text" class="form-control login-regiter__form-input" id="login" placeholder="Tên đăng nhập">
+                          <label for="login" class="login-regiter__form-label">Tên đăng nhập</label>
+                        </div>
                     </div>
-                    <div class="mb-3 login-regiter_form_item">
-                        <label for="Password" class="form-check-label login-regiter__form-label">Mật khẩu</label>
-                        <input type="password" class="form-control login-regiter__form-input "
-                            placeholder="vui lòng nhập mật khẩu" id="Password">
+                    <div class="input-group mb-3 login-regiter_form_item">
+                        <div class="form-floating">
+                          <input type="password" class="form-control login-regiter__form-input" id="password" placeholder="Mật khẩu">
+                          <label for="password" class="login-regiter__form-label">Mật khẩu</label>
+                        </div>
                     </div>
                     <div class="mb-3 form-check login-regiter_form_item_checkbox">
                         <input type="checkbox" class="form-check-input login-regiter__form-checkbox" id="remember">
@@ -168,6 +170,7 @@
             </div>
 
         </main>
+
 
         <footer class="footer bg-black bg-gradient">
             <div class="container-lg">
