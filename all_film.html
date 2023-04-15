@@ -39,10 +39,85 @@
 
 <body>
   <div class="app">
-    <header class="header">
-      <nav class="navbar">
+    <header class="header bg-dark bg-gradient fixed-top">
+      <div class="container-lg">
+        <div class="header__content d-none d-md-flex container-fluid px-1 py-2">
+          <div class="col-3">
+            <img class="header__brand" src="./assets/img/brand.png" alt="" />
+          </div>
 
-      </nav>
+          <div class="col-6 d-flex justify-content-center align-items-center">
+            <form class="search-form d-flex justify-content-center" role="search">
+              <input class="search-form__input ps-2 pe-5 rounded-1 form-control" type="text"
+                placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search" aria-describedby="button-addon2" />
+
+              <div class="search-history">
+                <!-- Lich su tim kiem -->
+              </div>
+
+              <button class="search-form__submit btn btn-sm" type="submit" id="ariabutton-addon2">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+              <button class="search-form__reset hidden" type="reset">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </form>
+          </div>
+
+          <div class="col-3">
+            <div class="d-flex justify-content-end me-1">
+              <a class="nav-link nav-link--account" href="login.html">Đăng nhập</a>
+              <a class="nav-link nav-link--account" href="register.html">Đăng kí</a>
+
+              <div class="dropdown">
+                <a class=" nav-link dropdown__btn nav-link--username hidden"></a>
+                <ul class="dropdown__list dropdown__list--account bg-dark bg-gradient">
+                  <li class="dropdown__list-item">
+                    <a class="nav-link" href="userProfile.html">
+                      <i class="fa-regular fa-user"></i> Hồ sơ cá nhân
+                    </a>
+                  </li>
+                  <li class="dropdown__list-item">
+                    <a class="nav-link user-logout" href="#">
+                      <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-md p-0 m-0">
+          <div class="container-fluid p-md-0 p-2">
+            <div class="d-md-none">
+              <img class="header__brand" src="./assets/img/brand.png" alt="" />
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content"
+              aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbar-content">
+              <div class="container-fluid d-sm-block d-md-none mb-2">
+              </div>
+
+              <ul class="navbar-nav me-auto">
+              </ul>
+
+              <div class="dropdown">
+                <a class="nav-link nav-link--bookmark" href="#"><i class="fa-regular fa-bookmark"></i></a>
+                <div class="dropdown__list bg-dark bg-gradient bookmark">
+                  <div class="bookmark-wrapper">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="main bg-dark bg-gradient">
@@ -188,8 +263,69 @@
       </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer bg-black bg-gradient">
+      <div class="container-lg">
+        <div class="row">
+          <div class="ms-2 col-0 col-md-6 footer__content row">
+            <div class="col-4 col-md-12">
+              <img class="footer__brand" src="./assets/img/brand.png" alt="">
+            </div>
+            <div class="col-8 col-md-12">
+              <p class="footer__desc">
+                Website được xây dựng bởi ... <br>
+                Chúc bạn có những giây phút xem phim vui vẻ!
+              </p>
+            </div>
+          </div>
 
+          <div class="col-md-2 d-none d-md-block footer__content">
+            <div class="footer__content-title">Thể loại</div>
+            <ul>
+              <li>
+                <a class="footer-link" href="#">Hành động</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Viễn tưởng</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Anime</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 footer__content">
+            <div class="footer__content-title">Quy định</div>
+            <ul>
+              <li>
+                <a class="footer-link" href="#">Quy định chung</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Quyền riêng tư</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Bản quyền</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 footer__content">
+            <div class="footer__content-title">Contact us</div>
+            <ul>
+              <li>
+                <a class="footer-link" href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+              </li>
+              <li>
+                <a class="footer-link" href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+              </li>
+              <li>
+                <a class="footer-link" href=""><i class="fa-brands fa-github"></i> Github</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright"><i class="fa-regular fa-copyright"></i> 2023 FZilla. Bản quyền thuộc về FZilla</div>
     </footer>
   </div>
 
@@ -212,11 +348,17 @@
   <!-- swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
+
   <script src="./assets/js/movieData.js"></script>
   <script src="./assets/js/main.js"></script>
   <script src="./assets/js/render.js"></script>
   <script src="./assets/js/renderMovie.js"></script>
   <script src="./assets/js/swiperCarousel.js"></script>
+  <script src="./assets/js/init.js"></script>
+  <script src="./assets/js/navbar.js"></script>
+  <script src="./assets/js/bookmark.js"></script>
+  <script src="./assets/js/user.js"></script>
+  <script src="./assets/js/search.js"></script>
 
   <script>
     renderMovieList($('.main-section--all-movies .main-section__body .row'), 'popularMovies', ["col-2"]);
