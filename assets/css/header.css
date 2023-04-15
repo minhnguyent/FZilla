@@ -21,6 +21,7 @@
     font-size: 0.875rem;
     text-transform: uppercase;
     line-height: 3.125rem;
+    height: 100%;
     text-align: center;
     transition: all .3s;
     cursor: pointer;
@@ -54,6 +55,10 @@
 .nav-link:hover:not(.active-link, .nav-link--username) {
     color: var(--color-supreme-orange);
     background-color: rgba(0, 0, 0, .2);
+}
+
+.nav-link:focus {
+    color: var(--color-supreme-orange);
 }
 
 .nav-link--username:hover {
@@ -171,8 +176,8 @@
 
 .dropdown__list-item {
     text-align: left;
-    padding: 0 2rem;
-    min-width: 10rem;
+    padding: 0;
+    min-width: 8rem;
     padding: 0;
 }
 

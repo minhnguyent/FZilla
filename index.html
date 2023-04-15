@@ -68,19 +68,19 @@
 
                     <div class="col-3">
                         <div class="d-flex justify-content-end me-1">
-                            <a class="nav-link nav-link--account" href="">Đăng nhập</a>
-                            <a class="nav-link nav-link--account" href="">Đăng kí</a>
+                            <a class="nav-link nav-link--account" href="login.html">Đăng nhập</a>
+                            <a class="nav-link nav-link--account" href="register.html">Đăng kí</a>
 
                             <div class="dropdown">
                                 <a class=" nav-link dropdown__btn nav-link--username hidden"></a>
                                 <ul class="dropdown__list dropdown__list--account bg-dark bg-gradient">
-                                    <li class="px-2 nav-link dropdown__list-item">
-                                        <a href="userInfo.html">
+                                    <li class="dropdown__list-item">
+                                        <a class="nav-link" href="userProfile.html">
                                             <i class="fa-regular fa-user"></i> Hồ sơ cá nhân
                                         </a>
                                     </li>
-                                    <li class="px-2 nav-link dropdown__list-item">
-                                        <a href="">
+                                    <li class="dropdown__list-item">
+                                        <a class="nav-link user-logout" href="#">
                                             <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
                                         </a>
                                     </li>
@@ -107,29 +107,6 @@
                             </div>
 
                             <ul class="navbar-nav me-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link active-link" aria-current="page" href="#">Trang chủ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Hành động</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Viễn tưởng</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Anime</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown__btn" href="#" role="button" aria-expanded="false">
-                                        Thể loại khác <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                    </a>
-                                    <ul class="dropdown__list bg-dark bg-gradient">
-                                        <li class="nav-link dropdown__list-item">Tình cảm</li>
-                                        <li class="nav-link dropdown__list-item">Học đường</li>
-                                        <li class="nav-link dropdown__list-item">Khoa học</li>
-                                        <li class="nav-link dropdown__list-item">Phim tài liệu</li>
-                                    </ul>
-                                </li>
                             </ul>
 
                             <div class="dropdown">
@@ -390,10 +367,12 @@
 
     <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="./assets/js/user.js"></script>
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/init.js"></script>
+    <script src="./assets/js/navbar.js"></script>
     <script src="./assets/js/bookmark.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/user.js"></script>
+    <script src="./assets/js/search.js"></script>
 </body>
 
 </html>

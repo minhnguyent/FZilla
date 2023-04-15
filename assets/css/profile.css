@@ -1,0 +1,62 @@
+.user-information {
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid var(--color-gray);
+    /* border-radius: 10px; */
+    color: var(--color-white);
+    max-width: 800px;
+}
+
+.user-section h2 {
+    font-size: 1.35rem;
+    color: var(--color-supreme-orange);
+    margin: 0;
+}
+
+.user-information-title {
+    font-size: .8rem;
+    line-height: 1.6;
+}
+
+.user-information-content {
+    background: none;
+    color: var(--color-supreme-orange);
+    border: 1px solid var(--color-gray);
+    padding: 3px;
+    width: 60%;
+    margin-left: 10px;
+}
+
+.user-information__username,
+.user-information__fullname,
+.user-information__email,
+.user-information__phone,
+.user-information__registration-date {
+}
+
+.user-avatar__img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50% 50%;
+}
+
+.user-avatar__username {
+    text-align: center;
+    padding: .5rem;
+}
+
+.user-bookmark, 
+.user-watch-history {
+    max-width: 1000px;
+}
+
+.user-bookmark .row, 
+.user-watch-history .row {
+    overflow-x: auto;
+}
+
+.user-information,
+.user-bookmark, 
+.user-watch-history {
+    margin: 0 auto 1rem;
+}
