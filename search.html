@@ -44,7 +44,7 @@
             <div class="container-lg">
                 <div class="header__content d-none d-md-flex container-fluid px-1 py-2">
                     <div class="col-3">
-                        <img class="header__brand" src="./assets/img/brand.png" alt="" />
+                        <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
                     </div>
 
                     <div class="col-6 d-flex justify-content-center align-items-center">
@@ -93,7 +93,7 @@
                 <nav class="navbar navbar-expand-md p-0 m-0">
                     <div class="container-fluid p-md-0 p-2">
                         <div class="d-md-none">
-                            <img class="header__brand" src="./assets/img/brand.png" alt="" />
+                            <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
                         </div>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -125,8 +125,41 @@
         </header>
 
         <main class="main bg-dark bg-gradient">
-            <div class="container-lg">
 
+            <div class="container-lg">
+                <div class="row search-result">
+                    <h2 class="search-result__title">Kết quả tìm kiếm cho "Avatar Dòng chảy của nước"</h2>
+                    <div class="category-list-container">
+                        <div class="main-section">
+                            <div class="main-section__heading">
+                                <h2 class="text-uppercase">Thể loại có liên quan</h2>
+                            </div>
+                            <div class="main-section__body mt-2">
+                                <ul class="row">
+                                    <li class="col-2 btn btn-outline-dark"><a href="#">Tình cảm</a></li>
+                                    <li class="col-2 btn btn-outline-dark"><a href="#">Tình cảm</a></li>
+                                    <li class="col-2 btn btn-outline-dark"><a href="#">Tình cảm</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="film-list-container">
+                        <div class="main-section search-result__film-list main-section--category-1 main-section--has-show-all">
+                            <div class="main-section__heading">
+                                <h2 class="text-uppercase">Phim có liên quan</h2>
+                                <div class="main-section__heading-show-all my-btn">
+                                    <a href="/all_film.html">Xem tất cả</a>
+                                    <span class="main-section__heading-show-all-icon"><i
+                                            class="fa-solid fa-caret-right"></i></span>
+                                </div>
+                            </div>
+                            <div class="main-section__body mt-3">
+                                <div class="row gy-3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -136,7 +169,7 @@
                 <div class="row">
                     <div class="ms-2 col-0 col-md-6 footer__content row">
                         <div class="col-4 col-md-12">
-                            <img class="footer__brand" src="./assets/img/brand.png" alt="">
+                            <a href="./index.html"><img class="footer__brand" src="./assets/img/brand.png" alt="" /></a>
                         </div>
                         <div class="col-8 col-md-12">
                             <p class="footer__desc">
@@ -225,7 +258,11 @@
     <script src="./assets/js/search.js"></script>
 
     <script>
+        renderCarouselMovies($('.main-section__carousel-wrapper'), 'popularMovies');
 
+        renderSidebar();
+
+        renderMovieList($('.main-section--category-1 .main-section__body .row'), 'hotMovies', ['col-2']);
 
     </script>
 </body>

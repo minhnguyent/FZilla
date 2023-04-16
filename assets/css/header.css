@@ -69,12 +69,21 @@
     min-width: 4rem;
 }
 
+/* Header user */
+
 .header__user--logged-out .nav-link--username {
     display: none;
 }
 
 .header__user--logged-in .nav-link--account {
     display: none;
+}
+
+.header__user-img {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1px dotted var(--color-supreme-orange);
 }
 
 /* Search-form */

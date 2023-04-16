@@ -25,6 +25,7 @@
     padding: 3px;
     width: 60%;
     margin-left: 10px;
+    cursor: text;
 }
 
 .user-information__username,
@@ -32,6 +33,7 @@
 .user-information__email,
 .user-information__phone,
 .user-information__registration-date {
+    
 }
 
 .user-avatar__img {

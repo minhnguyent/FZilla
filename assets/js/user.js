@@ -50,9 +50,13 @@ function renderUserHeader() {
 
         // Show user
         let usernameElement = document.querySelector('.nav-link--username');
+        
+        // usernameElement.innerHTML =
+        //     `${userData['username']} <span class="px-2"><i
+        // class="fa fa-user" aria-hidden="true"></i></span>`;
+
         usernameElement.innerHTML =
-            `${userData['username']} <span class="px-2"><i
-        class="fa fa-user" aria-hidden="true"></i></span>`;
+            `${userData['username']} <span class="px-2"><img class="header__user-img" src="${userData.avatar}"></img></span>`;
     } else {
          // Change state
          document.querySelector('.header__user').classList.add('header__user--logged-out');
@@ -60,9 +64,6 @@ function renderUserHeader() {
  
     }
 }
-
-
-
 
 
 // User profile 

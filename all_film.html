@@ -1,453 +1,373 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewsport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- favicon -->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="./assets/img/favicon.svg"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewsport" content="width=device-width, initial-scale=1.0">
 
-    <!-- font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css"
-    />
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.svg">
 
-    <!-- bootstrap-5 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
 
-    <!-- normalize and reset -->
-    <link rel="stylesheet" href="./assets/css/normalize.css" />
-    <link rel="stylesheet" href="./assets/css/reset.css" />
+  <!-- bootstrap-5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-    <!-- swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+  <!-- normalize and reset -->
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
 
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.9.1.js"
-    ></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
-    <!-- style -->
-    <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/header.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/footer.css" />
-    <link rel="stylesheet" href="./assets/css/modal.css" />
-    <link rel="stylesheet" href="./assets/css/form.css" />
-    <link rel="stylesheet" href="./assets/css/toast.css" />
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 
-    <title>FZilla - Xem phim trực tuyến</title>
-  </head>
+  <!-- style -->
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/footer.css">
+  <link rel="stylesheet" href="./assets/css/modal.css">
+  <link rel="stylesheet" href="./assets/css/form.css">
+  <link rel="stylesheet" href="./assets/css/toast.css">
 
-  <body>
-    <div class="app">
-      <header class="header bg-dark bg-gradient fixed-top">
-        <div class="container-lg">
-          <div
-            class="header__content d-none d-md-flex container-fluid px-1 py-2"
-          >
-            <div class="col-3">
-              <img class="header__brand" src="./assets/img/brand.png" alt="" />
-            </div>
+  <title>FZilla - Xem phim trực tuyến</title>
+</head>
 
-            <div class="col-6 d-flex justify-content-center align-items-center">
-              <form
-                class="search-form search-form--empty d-flex justify-content-center"
-                role="search"
-              >
-                <input
-                  class="search-form__input ps-2 pe-5 rounded-1 form-control"
-                  type="text"
-                  placeholder="Tìm kiếm thể loại, phim,..."
-                  aria-label="Search"
-                  aria-describedby="button-addon2"
-                />
-
-                <div class="search-history">
-                  <!-- Lich su tim kiem -->
-                </div>
-
-                <button
-                  class="search-form__submit btn btn-sm"
-                  type="submit"
-                  id="ariabutton-addon2"
-                >
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-                <button class="search-form__reset" type="reset">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </form>
-            </div>
-
-            <div class="col-3">
-              <div
-                class="header__user header__user--logged-out d-flex justify-content-end me-1"
-              >
-                <a class="nav-link nav-link--account" href="login.html"
-                  >Đăng nhập</a
-                >
-                <a class="nav-link nav-link--account" href="register.html"
-                  >Đăng kí</a
-                >
-
-                <div class="dropdown">
-                  <a class="nav-link dropdown__btn nav-link--username"></a>
-                  <ul
-                    class="dropdown__list dropdown__list--account bg-dark bg-gradient"
-                  >
-                    <li class="dropdown__list-item">
-                      <a class="nav-link" href="user_profile.html">
-                        <i class="fa-regular fa-user"></i> Hồ sơ cá nhân
-                      </a>
-                    </li>
-                    <li class="dropdown__list-item">
-                      <a class="nav-link user-logout" href="#">
-                        <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+<body>
+  <div class="app">
+    <header class="header bg-dark bg-gradient fixed-top">
+      <div class="container-lg">
+          <div class="header__content d-none d-md-flex container-fluid px-1 py-2">
+              <div class="col-3">
+                  <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
               </div>
-            </div>
+
+              <div class="col-6 d-flex justify-content-center align-items-center">
+                  <form class="search-form search-form--empty d-flex justify-content-center" role="search">
+                      <input class="search-form__input ps-2 pe-5 rounded-1 form-control" type="text"
+                          placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search"
+                          aria-describedby="button-addon2" />
+
+                      <div class="search-history">
+                          <!-- Lich su tim kiem -->
+                      </div>
+
+                      <button class="search-form__submit btn btn-sm" type="submit" id="ariabutton-addon2">
+                          <i class="fa fa-search" aria-hidden="true"></i>
+                      </button>
+                      <button class="search-form__reset" type="reset">
+                          <i class="fa-solid fa-xmark"></i>
+                      </button>
+                  </form>
+              </div>
+
+              <div class="col-3">
+                  <div class="header__user header__user--logged-out d-flex justify-content-end me-1">
+                      <a class="nav-link nav-link--account" href="login.html">Đăng nhập</a>
+                      <a class="nav-link nav-link--account" href="register.html">Đăng kí</a>
+
+                      <div class="dropdown">
+                          <a class=" nav-link dropdown__btn nav-link--username"></a>
+                          <ul class="dropdown__list dropdown__list--account bg-dark bg-gradient">
+                              <li class="dropdown__list-item">
+                                  <a class="nav-link" href="user_profile.html">
+                                      <i class="fa-regular fa-user"></i> Hồ sơ cá nhân
+                                  </a>
+                              </li>
+                              <li class="dropdown__list-item">
+                                  <a class="nav-link user-logout" href="#">
+                                      <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
           </div>
 
           <nav class="navbar navbar-expand-md p-0 m-0">
-            <div class="container-fluid p-md-0 p-2">
-              <div class="d-md-none">
-                <img
-                  class="header__brand"
-                  src="./assets/img/brand.png"
-                  alt=""
-                />
-              </div>
-
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbar-content"
-                aria-controls="navbar-content"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="navbar-collapse collapse" id="navbar-content">
-                <div class="container-fluid d-sm-block d-md-none mb-2"></div>
-
-                <ul class="navbar-nav me-auto"></ul>
-
-                <div class="dropdown">
-                  <a class="nav-link nav-link--bookmark" href="#"
-                    ><i class="fa-regular fa-bookmark"></i
-                  ></a>
-                  <div class="dropdown__list bg-dark bg-gradient bookmark">
-                    <div class="bookmark-wrapper"></div>
+              <div class="container-fluid p-md-0 p-2">
+                  <div class="d-md-none">
+                      <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
                   </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
 
-      <main class="main bg-dark bg-gradient">
-        <div class="container-lg">
-          <div class="row">
-            <div class="col-12">
-              <div class="main-breadcrumb-container">
-                <div class="breadcrumb main-breadcrumb mb-0">
-                  <ul class="breadcrumb__list">
-                    <li class="breadcrumb__item">
-                      <span class="breadcrumb__item-home-icon"
-                        ><i class="fa-solid fa-house-chimney-window"></i
-                      ></span>
-                      <a href="/" class="breadcrumb__item-link">FilmZilla</a>
-                      <span class="breadcrumb__item-icon"
-                        ><i class="fa-solid fa-chevron-right"></i
-                      ></span>
-                    </li>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false"
+                      aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
 
-                    <li class="breadcrumb__item">
-                      <a href="/all_film.html" class="breadcrumb__item-link"
-                        >Xem tất cả</a
-                      >
-                      <span class="breadcrumb__item-icon"
-                        ><i class="fa-solid fa-chevron-right"></i
-                      ></span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="film-list-container">
-                <div class="main-section main-section--all-movies">
-                  <div class="main-section__heading">
-                    <h2 class="text-uppercase">Phim mới hot</h2>
-                    <div class="main-section__heading-show-all my-btn">
-                      Xem tất cả
-                      <span class="main-section__heading-show-all-icon"
-                        ><i class="fa-solid fa-caret-right"></i
-                      ></span>
-                    </div>
-                    <div class="main-section__filter">
-                      <select class="main-section__filter-item" name="topic">
-                        <option value="category">Thể loại</option>
-                        <option value="trinh-tham">Trinh thám</option>
-                        <option value="hanh-dong">Hành động</option>
-                        <option value="phieu-luu">Phiêu lưu</option>
-                        <option value="khoa-hoc-vien-tuong">
-                          Khoa học - viễn tưởng
-                        </option>
-                        <option value="hoat-hinh">Hoạt hình</option>
-                        <option value="co-trang">Cổ trang</option>
-                        <option value="hai-huoc">Hài hước</option>
-                        <option value="tam-ly-tinh-cam">
-                          Tâm lý - tình cảm
-                        </option>
-                        <option value="hoc-duong">Học đường</option>
-                        <option value="tai-lieu">Tài liệu</option>
-                        <option value="kiem-hiep">Kiếm hiệp</option>
-                        <option value="the-thao">Thể thao</option>
-                        <option value="kinh-di">Kinh dị</option>
-                        <option value="tv-shows">TV Shows</option>
-                      </select>
-                      <select class="main-section__filter-item" name="type">
-                        <option value="category">Hình thức</option>
-                        <option value="feature-film">Phim lẻ</option>
-                        <option value="tv-series">Phim Bộ</option>
-                      </select>
-                      <select class="main-section__filter-item" name="nation">
-                        <option value="category">Quốc gia</option>
-                        <option value="viet-name">Phim Việt Nam</option>
-                        <option value="au-my">Phim Âu Mỹ</option>
-                        <option value="trung-quoc">Phim Trung Quốc</option>
-                        <option value="han-quoc">Phim Hàn Quốc</option>
-                        <option value="nhat-ban">Phim Nhật Bản</option>
-                        <option value="dai-loan">Phim Đài Loan</option>
-                        <option value="hong-kong">Phim Hồng Kông</option>
-                        <option value="an-do">Phim Ấn Độ</option>
-                        <option value="tong-hop">Phim Tổng Hợp</option>
-                      </select>
-                      <select
-                        class="main-section__filter-item"
-                        name="release-date"
-                      >
-                        <option value="category">Năm phát hành</option>
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                        <option value="2019">2019</option>
-                        <option value="2018">2018</option>
-                        <option value="2017">2017</option>
-                        <option value="2016">2016</option>
-                        <option value="2015">2015</option>
-                        <option value="2014">2014</option>
-                        <option value="2013">2013</option>
-                        <option value="2012">2012</option>
-                        <option value="2011">2011</option>
-                        <option value="2010">2010</option>
-                        <option value="2010-earlier">Trước 2010</option>
-                      </select>
-                      <select class="main-section__filter-item" name="sort-by">
-                        <option value="category">Sắp xếp theo</option>
-                        <option value="by-manufacture-date">
-                          Ngày sản xuất
-                        </option>
-                        <option value="by-views">Lượt xem</option>
-                        <option value="by-update-time">
-                          Thời gian cập nhật
-                        </option>
-                      </select>
-                      <div
-                        class="main-section__filter-item main-section__filter-item-btn my-btn my-btn-flex"
-                      >
-                        Tìm Kiếm
+                  <div class="navbar-collapse collapse" id="navbar-content">
+                      <div class="container-fluid d-sm-block d-md-none mb-2">
                       </div>
+
+                      <ul class="navbar-nav me-auto">
+                      </ul>
+
+                      <div class="dropdown">
+                          <a class="nav-link nav-link--bookmark" href="#"><i
+                                  class="fa-regular fa-bookmark"></i></a>
+                          <div class="dropdown__list bg-dark bg-gradient bookmark">
+                              <div class="bookmark-wrapper">
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </nav>
+      </div>
+  </header>
+
+    <main class="main bg-dark bg-gradient">
+
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-12">
+            <div class="main-breadcrumb-container">
+              <div class="breadcrumb main-breadcrumb mb-0">
+                <ul class="breadcrumb__list">
+                  <li class="breadcrumb__item">
+                    <span class="breadcrumb__item-home-icon"><i class="fa-solid fa-house-chimney-window"></i></span>
+                    <a href="/" class="breadcrumb__item-link">FilmZilla</a>
+                    <span class="breadcrumb__item-icon"><i class="fa-solid fa-chevron-right"></i></span>
+                  </li>
+
+                  <li class="breadcrumb__item">
+                    <a href="/all_film.html" class="breadcrumb__item-link">Xem tất cả</a>
+                    <span class="breadcrumb__item-icon"><i class="fa-solid fa-chevron-right"></i></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="film-list-container">
+              <div class="main-section main-section--all-movies">
+                <div class="main-section__heading">
+                  <h2 class="text-uppercase">Phim mới hot</h2>
+                  <div class="main-section__heading-show-all my-btn">
+                    Xem tất cả
+                    <span class="main-section__heading-show-all-icon"><i class="fa-solid fa-caret-right"></i></span>
+                  </div>
+                  <div class="main-section__filter">
+                    <select class="main-section__filter-item" name="topic">
+                      <option value="category">Thể loại</option>
+                      <option value="trinh-tham">Trinh thám</option>
+                      <option value="hanh-dong">Hành động</option>
+                      <option value="phieu-luu">Phiêu lưu</option>
+                      <option value="khoa-hoc-vien-tuong">Khoa học - viễn tưởng</option>
+                      <option value="hoat-hinh">Hoạt hình</option>
+                      <option value="co-trang">Cổ trang</option>
+                      <option value="hai-huoc">Hài hước</option>
+                      <option value="tam-ly-tinh-cam">Tâm lý - tình cảm</option>
+                      <option value="hoc-duong">Học đường</option>
+                      <option value="tai-lieu">Tài liệu</option>
+                      <option value="kiem-hiep">Kiếm hiệp</option>
+                      <option value="the-thao">Thể thao</option>
+                      <option value="kinh-di">Kinh dị</option>
+                      <option value="tv-shows">TV Shows</option>
+                    </select>
+                    <select class="main-section__filter-item" name="type">
+                      <option value="category">Hình thức</option>
+                      <option value="feature-film">Phim lẻ</option>
+                      <option value="tv-series">Phim Bộ</option>
+                    </select>
+                    <select class="main-section__filter-item" name="nation">
+                      <option value="category">Quốc gia</option>
+                      <option value="viet-name">Phim Việt Nam</option>
+                      <option value="au-my">Phim Âu Mỹ</option>
+                      <option value="trung-quoc">Phim Trung Quốc</option>
+                      <option value="han-quoc">Phim Hàn Quốc</option>
+                      <option value="nhat-ban">Phim Nhật Bản</option>
+                      <option value="dai-loan">Phim Đài Loan</option>
+                      <option value="hong-kong">Phim Hồng Kông </option>
+                      <option value="an-do">Phim Ấn Độ</option>
+                      <option value="tong-hop">Phim Tổng Hợp</option>
+                    </select>
+                    <select class="main-section__filter-item" name="release-date">
+                      <option value="category">Năm phát hành</option>
+                      <option value="2023">2023</option>
+                      <option value="2022">2022</option>
+                      <option value="2021">2021</option>
+                      <option value="2020">2020</option>
+                      <option value="2019">2019</option>
+                      <option value="2018">2018</option>
+                      <option value="2017">2017</option>
+                      <option value="2016">2016</option>
+                      <option value="2015">2015</option>
+                      <option value="2014">2014</option>
+                      <option value="2013">2013</option>
+                      <option value="2012">2012</option>
+                      <option value="2011">2011</option>
+                      <option value="2010">2010</option>
+                      <option value="2010-earlier">Trước 2010</option>
+                    </select>
+                    <select class="main-section__filter-item" name="sort-by">
+                      <option value="category">Sắp xếp theo</option>
+                      <option value="by-manufacture-date">Ngày sản xuất</option>
+                      <option value="by-views"> Lượt xem</option>
+                      <option value="by-update-time">Thời gian cập nhật</option>
+                    </select>
+                    <div class="main-section__filter-item main-section__filter-item-btn my-btn my-btn-flex">Tìm Kiếm
                     </div>
                   </div>
-                  <div class="main-section__body mt-3">
-                    <div class="row gy-3"></div>
+                </div>
+                <div class="main-section__body mt-3">
+                  <div class="row gy-3">
                   </div>
                 </div>
+              </div>
 
-                <div class="pagination main-section-pagination">
-                  <ul class="pagination__list">
-                    <li class="pagination__item pagination__item--disabled">
-                      <a href="#" class="pagination__item-link">
-                        <span class="pagination__item-link-icon"
-                          ><i class="fa-solid fa-chevron-left"></i
-                        ></span>
-                      </a>
-                    </li>
-                    <li class="pagination__item">
-                      <a href="#" class="pagination__item-link">1</a>
-                    </li>
-                    <li class="pagination__item">
-                      <a href="#" class="pagination__item-link">2</a>
-                    </li>
-                    <li class="pagination__item">
-                      <a href="#" class="pagination__item-link">3</a>
-                    </li>
-                    <li class="pagination__item">
-                      <a href="#" class="pagination__item-link">4</a>
-                    </li>
-                    <li class="pagination__item">
-                      <a href="#" class="pagination__item-link">5</a>
-                    </li>
-                    <li class="pagination__item">
-                      <a href="#" class="pagination__item-link">6</a>
-                    </li>
-                    <li class="pagination__item pagination__item--disabled">
-                      <a href="#" class="pagination__item-link">...</a>
-                    </li>
-                    <li class="pagination__item">
-                      <a href="#" class="pagination__item-link">28</a>
-                    </li>
-                    <li class="pagination__item">
-                      <a href="#" class="pagination__item-link">
-                        <span class="pagination__item-link-icon"
-                          ><i class="fa-solid fa-chevron-right"></i
-                        ></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+              <div class="pagination main-section-pagination">
+                <ul class="pagination__list">
+                  <li class="pagination__item pagination__item--disabled">
+                    <a href="#" class="pagination__item-link">
+                      <span class="pagination__item-link-icon"><i class="fa-solid fa-chevron-left"></i></span>
+                    </a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__item-link">1</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__item-link">2</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__item-link">3</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__item-link">4</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__item-link">5</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__item-link">6</a>
+                  </li>
+                  <li class="pagination__item pagination__item--disabled">
+                    <a href="#" class="pagination__item-link">...</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__item-link">28</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a href="#" class="pagination__item-link">
+                      <span class="pagination__item-link-icon"><i class="fa-solid fa-chevron-right"></i></span>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </main>
+      </div>
+    </main>
 
-      <footer class="footer bg-black bg-gradient">
-        <div class="container-lg">
-          <div class="row">
-            <div class="ms-2 col-0 col-md-6 footer__content row">
-              <div class="col-4 col-md-12">
-                <img
-                  class="footer__brand"
-                  src="./assets/img/brand.png"
-                  alt=""
-                />
-              </div>
-              <div class="col-8 col-md-12">
-                <p class="footer__desc">
-                  Website được xây dựng bởi ... <br />
-                  Chúc bạn có những giây phút xem phim vui vẻ!
-                </p>
-              </div>
+    <footer class="footer bg-black bg-gradient">
+      <div class="container-lg">
+        <div class="row">
+          <div class="ms-2 col-0 col-md-6 footer__content row">
+            <div class="col-4 col-md-12">
+              <a href="./index.html"><img class="footer__brand" src="./assets/img/brand.png" alt="" /></a>
             </div>
-
-            <div class="col-md-2 d-none d-md-block footer__content">
-              <div class="footer__content-title">Thể loại</div>
-              <ul>
-                <li>
-                  <a class="footer-link" href="#">Hành động</a>
-                </li>
-                <li>
-                  <a class="footer-link" href="#">Viễn tưởng</a>
-                </li>
-                <li>
-                  <a class="footer-link" href="#">Anime</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-6 col-md-2 footer__content">
-              <div class="footer__content-title">Quy định</div>
-              <ul>
-                <li>
-                  <a class="footer-link" href="#">Quy định chung</a>
-                </li>
-                <li>
-                  <a class="footer-link" href="#">Quyền riêng tư</a>
-                </li>
-                <li>
-                  <a class="footer-link" href="#">Bản quyền</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-6 col-md-2 footer__content">
-              <div class="footer__content-title">Contact us</div>
-              <ul>
-                <li>
-                  <a class="footer-link" href=""
-                    ><i class="fa-brands fa-facebook-f"></i> Facebook</a
-                  >
-                </li>
-                <li>
-                  <a class="footer-link" href=""
-                    ><i class="fa-brands fa-instagram"></i> Instagram</a
-                  >
-                </li>
-                <li>
-                  <a class="footer-link" href=""
-                    ><i class="fa-brands fa-github"></i> Github</a
-                  >
-                </li>
-              </ul>
+            <div class="col-8 col-md-12">
+              <p class="footer__desc">
+                Website được xây dựng bởi ... <br>
+                Chúc bạn có những giây phút xem phim vui vẻ!
+              </p>
             </div>
           </div>
+
+          <div class="col-md-2 d-none d-md-block footer__content">
+            <div class="footer__content-title">Thể loại</div>
+            <ul>
+              <li>
+                <a class="footer-link" href="#">Hành động</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Viễn tưởng</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Anime</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 footer__content">
+            <div class="footer__content-title">Quy định</div>
+            <ul>
+              <li>
+                <a class="footer-link" href="#">Quy định chung</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Quyền riêng tư</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Bản quyền</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 footer__content">
+            <div class="footer__content-title">Contact us</div>
+            <ul>
+              <li>
+                <a class="footer-link" href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+              </li>
+              <li>
+                <a class="footer-link" href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+              </li>
+              <li>
+                <a class="footer-link" href=""><i class="fa-brands fa-github"></i> Github</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
 
-        <div class="copyright">
-          <i class="fa-regular fa-copyright"></i> 2023 FZilla. Bản quyền thuộc
-          về FZilla
-        </div>
-      </footer>
-    </div>
+      <div class="copyright"><i class="fa-regular fa-copyright"></i> 2023 FZilla. Bản quyền thuộc về FZilla</div>
+    </footer>
+  </div>
 
-    <div class="modal"></div>
+  <div class="modal">
 
-    <div class="toast"></div>
+  </div>
 
-    <div class="to-top-btn" title="Về đầu trang"></div>
+  <div class="toast">
 
-    <!-- bootstrap 5 -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
+  </div>
 
-    <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <div class="to-top-btn" title="Về đầu trang">
+  </div>
 
-    <script src="./assets/js/userData.js"></script>
-    <script src="./assets/js/movieData.js"></script>
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/render.js"></script>
-    <script src="./assets/js/renderMovie.js"></script>
-    <script src="./assets/js/swiperCarousel.js"></script>
-    <script src="./assets/js/navbar.js"></script>
-    <script src="./assets/js/bookmark.js"></script>
-    <script src="./assets/js/user.js"></script>
-    <script src="./assets/js/search.js"></script>
-
-    <script>
-      renderMovieList(
-        $(".main-section--all-movies .main-section__body .row"),
-        "popularMovies",
-        ["col-2"]
-      );
+  <!-- bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
-  </body>
+
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+  <script src="./assets/js/userData.js"></script>
+  <script src="./assets/js/movieData.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/render.js"></script>
+  <script src="./assets/js/renderMovie.js"></script>
+  <script src="./assets/js/swiperCarousel.js"></script>
+  <script src="./assets/js/navbar.js"></script>
+  <script src="./assets/js/bookmark.js"></script>
+  <script src="./assets/js/user.js"></script>
+  <script src="./assets/js/search.js"></script>
+
+
+
+  <script>
+    renderMovieList($('.main-section--all-movies .main-section__body .row'), 'popularMovies', ["col-2"]);
+  </script>
+</body>
+
 </html>
