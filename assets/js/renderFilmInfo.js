@@ -17,14 +17,14 @@ const renderFilmInfo = function(root, category, filmId) {
             <span class="main-film-info__bookmark-icon"><i class="fa-solid fa-bookmark"></i></span>
             <span class="main-film-info__bookmark-add-icon"><i class="fa-solid fa-plus"></i></span>
           </div>
-          <div class="main-film-info__btn main-film-info__watch-trailer-btn my-btn my-btn-flex">
+          <a href="/FZilla/film_watching.html?film_category=${category}&film_id=${filmId}" class="main-film-info__btn main-film-info__watch-trailer-btn my-btn my-btn-flex">
             <span class="main-film-info__btn-icon"><i class="fa-brands fa-youtube"></i></span>
             Xem trailer
-          </div>
-          <div class="main-film-info__btn main-film-info__watch-film-btn my-btn my-btn-flex">
+          </a>
+          <a href="/FZilla/film_watching.html?film_category=${category}&film_id=${filmId}" class="main-film-info__btn main-film-info__watch-film-btn my-btn my-btn-flex">
             <span class="main-film-info__btn-icon"><i class="fa-regular fa-circle-play"></i></span>
             Xem phim
-          </div>
+          </a>
         </div>
         <div class="main-film-info__about">
           <div class="main-film-info__about-title">${movie.titleVn}</div>
@@ -50,15 +50,15 @@ const renderFilmInfo = function(root, category, filmId) {
               <a href="#">Phim viễn tưởng, phiêu lưu, khoa học.</a>
             </li>
           </ul>
-          <div class="main-film-info__about-rate">
-            <span class="main-film-info__about-rate-title">Đánh giá phim</span>
-            <span class="main-film-info__about-rate-votes">(43 lượt)</span>
+          <div class="main-film-info__about-rating">
+            <span class="main-film-info__about-rating-title">Đánh giá phim</span>
+            <span class="main-film-info__about-rating-votes">(43 lượt)</span>
 
-            <span class="main-film-info__about-rate-star active"><i class="fa-solid fa-star"></i></span>
-            <span class="main-film-info__about-rate-star active"><i class="fa-solid fa-star"></i></span>
-            <span class="main-film-info__about-rate-star active"><i class="fa-solid fa-star"></i></span>
-            <span class="main-film-info__about-rate-star active"><i class="fa-solid fa-star"></i></span>
-            <span class="main-film-info__about-rate-star"><i class="fa-solid fa-star"></i></span>
+            <span class="main-film-info__about-rating-star active"><i class="fa-solid fa-star"></i></span>
+            <span class="main-film-info__about-rating-star active"><i class="fa-solid fa-star"></i></span>
+            <span class="main-film-info__about-rating-star active"><i class="fa-solid fa-star"></i></span>
+            <span class="main-film-info__about-rating-star active"><i class="fa-solid fa-star"></i></span>
+            <span class="main-film-info__about-rating-star"><i class="fa-solid fa-star"></i></span>
           </div>
         </div>
       </div>
