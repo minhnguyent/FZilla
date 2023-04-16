@@ -21,23 +21,23 @@ const mainSectionCarousel = new Swiper('.main-section__carousel', {
     },
 });
 
-const mainSectionCarouselInfoPage = new Swiper('.main-section__carousel--info-page', {
+const mainSectionCarouselInfoPage = new Swiper('.main-section__carousel--same-topic', {
     autoplay: {
-        delay: 4000,
+        delay: 1000,
         pauseOnMouseEnter: true,
         disableOnInteraction: false
     },
     loop: true,
     slidesPerView: 'auto',
-    loopedSlides: 4,
+    loopedSlides: 1,
     spaceBetween: 20,
-    slidesPerGroup: 4,
+    slidesPerGroup: 1,
 
     breakpoints: {
         // TODO
     },
 
-    speed: 1450,
+    speed: 650,
     navigation: {
         nextEl: '.main-section__carousel-btn-next',
         prevEl: '.main-section__carousel-btn-prev',
@@ -53,7 +53,7 @@ const mainSidebarSectionCarousel = new Swiper('.main-sidebar-section__carousel',
     spaceBetween: 30,
     effect: 'fade',
     fadeEffect: { crossFade: true },
-    loop: true,
+    loop: false,
     breakpoints: {
         // TODO
     },

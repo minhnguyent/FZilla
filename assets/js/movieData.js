@@ -6,7 +6,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/avatar-2.jpg',
       rating: '7.7',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=o5F8MOz_IDw',
+      trailer: './assets/video/trailer/avatar-2.mp4',
     },
     {
       titleEn: 'Ant-Man and the Wasp: Quantumania',
@@ -14,7 +14,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/ant-man-3.jpg',
       rating: '6.4',
       year: '2023',
-      trailerUrl: 'https://www.youtube.com/watch?v=ZlNFpri-Y40',
+      trailer: './assets/video/trailer/ant-man-3.mp4',
     },
     {
       titleEn: 'Shazam! Fury of the Gods',
@@ -22,7 +22,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/shazam-fury-of-the-gods.jpg',
       rating: '6.5',
       year: '2023',
-      trailerUrl: 'https://www.youtube.com/watch?v=Zi88i4CpHe4',
+      trailer: './assets/video/trailer/shazam-fury-of-the-gods.mp4',
     },
     {
       titleEn: 'Disenchanted',
@@ -30,7 +30,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/disenchanted.jpg',
       rating: '5.6',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=dRuwjZJ-DQw',
+      trailer: './assets/video/trailer/disenchanted.mp4',
     },
     {
       titleEn: 'Shang-Chi and the Legend of the Ten Rings',
@@ -38,7 +38,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/shang-chi.jpg',
       rating: '7.4',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=8YjFbMbfXaQ',
+      trailer: './assets/video/trailer/shang-chi.mp4',
     },
     {
       titleEn: 'Loki',
@@ -46,7 +46,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/loki.jpg',
       rating: '8.2',
       year: '2021',
-      trailerUrl: 'https://www.youtube.com/watch?v=nW948Va-l10',
+      trailer: './assets/video/trailer/loki.mp4',
     },
     {
       titleEn: 'Peaky Blinders (Season 5)',
@@ -54,7 +54,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/peaky-blinders-5.jpg',
       rating: '',
       year: '2019',
-      trailerUrl: 'https://www.youtube.com/watch?v=Ruyl8_PT_y8',
+      trailer: './assets/video/trailer/peaky-blinders-5.mp4',
     },
     {
       titleEn: 'Black Adam',
@@ -62,7 +62,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/black-adam.jpg',
       rating: '6.3',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=X0tOpBuYasI',
+      trailer: './assets/video/trailer/black-adam.mp4',
     },
 
     // duplicate
@@ -72,7 +72,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/avatar-2.jpg',
       rating: '7.7',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=o5F8MOz_IDw',
+      trailer: './assets/video/trailer/avatar-2.mp4',
     },
     {
       titleEn: 'Ant-Man and the Wasp: Quantumania',
@@ -80,7 +80,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/ant-man-3.jpg',
       rating: '6.4',
       year: '2023',
-      trailerUrl: 'https://www.youtube.com/watch?v=ZlNFpri-Y40',
+      trailer: './assets/video/trailer/ant-man-3.mp4',
     },
     {
       titleEn: 'Shazam! Fury of the Gods',
@@ -88,7 +88,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/shazam-fury-of-the-gods.jpg',
       rating: '6.5',
       year: '2023',
-      trailerUrl: 'https://www.youtube.com/watch?v=Zi88i4CpHe4',
+      trailer: './assets/video/trailer/shazam-fury-of-the-gods.mp4',
     },
     {
       titleEn: 'Disenchanted',
@@ -96,7 +96,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/disenchanted.jpg',
       rating: '5.6',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=dRuwjZJ-DQw',
+      trailer: './assets/video/trailer/disenchanted.mp4',
     },
     {
       titleEn: 'Shang-Chi and the Legend of the Ten Rings',
@@ -104,7 +104,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/shang-chi.jpg',
       rating: '7.4',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=8YjFbMbfXaQ',
+      trailer: './assets/video/trailer/shang-chi.mp4',
     },
     {
       titleEn: 'Loki',
@@ -112,7 +112,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/loki.jpg',
       rating: '8.2',
       year: '2021',
-      trailerUrl: 'https://www.youtube.com/watch?v=nW948Va-l10',
+      trailer: './assets/video/trailer/loki.mp4',
     },
     {
       titleEn: 'Peaky Blinders (Season 5)',
@@ -120,7 +120,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/peaky-blinders-5.jpg',
       rating: '',
       year: '2019',
-      trailerUrl: 'https://www.youtube.com/watch?v=Ruyl8_PT_y8',
+      trailer: './assets/video/trailer/peaky-blinders-5.mp4',
     },
     {
       titleEn: 'Black Adam',
@@ -128,7 +128,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/black-adam.jpg',
       rating: '6.3',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=X0tOpBuYasI',
+      trailer: './assets/video/trailer/black-adam.mp4',
     },
 
     // duplicate
@@ -138,7 +138,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/avatar-2.jpg',
       rating: '7.7',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=o5F8MOz_IDw',
+      trailer: './assets/video/trailer/avatar-2.mp4',
     },
     {
       titleEn: 'Ant-Man and the Wasp: Quantumania',
@@ -146,7 +146,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/ant-man-3.jpg',
       rating: '6.4',
       year: '2023',
-      trailerUrl: 'https://www.youtube.com/watch?v=ZlNFpri-Y40',
+      trailer: './assets/video/trailer/ant-man-3.mp4',
     },
     {
       titleEn: 'Shazam! Fury of the Gods',
@@ -154,7 +154,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/shazam-fury-of-the-gods.jpg',
       rating: '6.5',
       year: '2023',
-      trailerUrl: 'https://www.youtube.com/watch?v=Zi88i4CpHe4',
+      trailer: './assets/video/trailer/shazam-fury-of-the-gods.mp4',
     },
     {
       titleEn: 'Disenchanted',
@@ -162,7 +162,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/disenchanted.jpg',
       rating: '5.6',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=dRuwjZJ-DQw',
+      trailer: './assets/video/trailer/disenchanted.mp4',
     },
     {
       titleEn: 'Shang-Chi and the Legend of the Ten Rings',
@@ -170,7 +170,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/shang-chi.jpg',
       rating: '7.4',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=8YjFbMbfXaQ',
+      trailer: './assets/video/trailer/shang-chi.mp4',
     },
     {
       titleEn: 'Loki',
@@ -178,7 +178,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/loki.jpg',
       rating: '8.2',
       year: '2021',
-      trailerUrl: 'https://www.youtube.com/watch?v=nW948Va-l10',
+      trailer: './assets/video/trailer/loki.mp4',
     },
     {
       titleEn: 'Peaky Blinders (Season 5)',
@@ -186,7 +186,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/peaky-blinders-5.jpg',
       rating: '',
       year: '2019',
-      trailerUrl: 'https://www.youtube.com/watch?v=Ruyl8_PT_y8',
+      trailer: './assets/video/trailer/peaky-blinders-5.mp4',
     },
     {
       titleEn: 'Black Adam',
@@ -194,7 +194,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/black-adam.jpg',
       rating: '6.3',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=X0tOpBuYasI',
+      trailer: './assets/video/trailer/black-adam.mp4',
     },    
   ],
   hotMovies: [
@@ -204,7 +204,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/avatar-2.jpg',
       rating: '7.7',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=o5F8MOz_IDw',
+      trailer: './assets/video/trailer/avatar-2.mp4',
     },
     {
       titleEn: 'Ant-Man and the Wasp: Quantumania',
@@ -212,7 +212,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/ant-man-3.jpg',
       rating: '6.4',
       year: '2023',
-      trailerUrl: 'https://www.youtube.com/watch?v=ZlNFpri-Y40',
+      trailer: './assets/video/trailer/ant-man-3.mp4',
     },
     {
       titleEn: 'Shazam! Fury of the Gods',
@@ -220,7 +220,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/shazam-fury-of-the-gods.jpg',
       rating: '6.5',
       year: '2023',
-      trailerUrl: 'https://www.youtube.com/watch?v=Zi88i4CpHe4',
+      trailer: './assets/video/trailer/shazam-fury-of-the-gods.mp4',
     },
     {
       titleEn: 'Disenchanted',
@@ -228,7 +228,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/disenchanted.jpg',
       rating: '5.6',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=dRuwjZJ-DQw',
+      trailer: './assets/video/trailer/disenchanted.mp4',
     },
     {
       titleEn: 'Shang-Chi and the Legend of the Ten Rings',
@@ -236,7 +236,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/shang-chi.jpg',
       rating: '7.4',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=8YjFbMbfXaQ',
+      trailer: './assets/video/trailer/shang-chi.mp4',
     },
     {
       titleEn: 'Loki',
@@ -244,7 +244,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/loki.jpg',
       rating: '8.2',
       year: '2021',
-      trailerUrl: 'https://www.youtube.com/watch?v=nW948Va-l10',
+      trailer: './assets/video/trailer/loki.mp4',
     },
     {
       titleEn: 'Peaky Blinders (Season 5)',
@@ -252,7 +252,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/peaky-blinders-5.jpg',
       rating: '',
       year: '2019',
-      trailerUrl: 'https://www.youtube.com/watch?v=Ruyl8_PT_y8',
+      trailer: './assets/video/trailer/peaky-blinders-5.mp4',
     },
     {
       titleEn: 'Black Adam',
@@ -260,7 +260,7 @@ const moviesByCategory = {
       thumb: './assets/img/film/popular/black-adam.jpg',
       rating: '6.3',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=X0tOpBuYasI',
+      trailer: './assets/video/trailer/black-adam.mp4',
     },
   ],
   trendingMoviesDay: [
@@ -271,7 +271,7 @@ const moviesByCategory = {
       rating: '7.7',
       views: '318',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=o5F8MOz_IDw',
+      trailer: './assets/video/trailer/avatar-2.mp4',
     },
     {
       titleEn: 'Ant-Man and the Wasp: Quantumania',
@@ -280,7 +280,7 @@ const moviesByCategory = {
       rating: '6.4',
       views: '232',
       year: '2023',
-      trailerUrl: 'https://www.youtube.com/watch?v=ZlNFpri-Y40',
+      trailer: './assets/video/trailer/ant-man-3.mp4',
     },
     {
       titleEn: 'Shazam! Fury of the Gods',
@@ -289,7 +289,7 @@ const moviesByCategory = {
       rating: '6.5',
       views: '220',
       year: '2023',
-      trailerUrl: 'https://www.youtube.com/watch?v=Zi88i4CpHe4',
+      trailer: './assets/video/trailer/shazam-fury-of-the-gods.mp4',
     },
     {
       titleEn: 'Disenchanted',
@@ -298,7 +298,7 @@ const moviesByCategory = {
       rating: '5.6',
       views: '178',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=dRuwjZJ-DQw',
+      trailer: './assets/video/trailer/disenchanted.mp4',
     }
   ],
   trendingMoviesWeek: [
@@ -309,7 +309,7 @@ const moviesByCategory = {
       rating: '7.4',
       views: '520',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=8YjFbMbfXaQ',
+      trailer: './assets/video/trailer/shang-chi.mp4',
     },
     {
       titleEn: 'Loki',
@@ -318,7 +318,7 @@ const moviesByCategory = {
       rating: '8.2',
       views: '480',
       year: '2021',
-      trailerUrl: 'https://www.youtube.com/watch?v=nW948Va-l10',
+      trailer: './assets/video/trailer/loki.mp4',
     },
     {
       titleEn: 'Peaky Blinders (Season 5)',
@@ -327,7 +327,7 @@ const moviesByCategory = {
       rating: '',
       views: '213',
       year: '2019',
-      trailerUrl: 'https://www.youtube.com/watch?v=Ruyl8_PT_y8',
+      trailer: './assets/video/trailer/peaky-blinders-5.mp4',
     },
     {
       titleEn: 'Black Adam',
@@ -336,7 +336,7 @@ const moviesByCategory = {
       rating: '6.3',
       views: '202',
       year: '2022',
-      trailerUrl: 'https://www.youtube.com/watch?v=X0tOpBuYasI',
+      trailer: './assets/video/trailer/black-adam.mp4',
     },
   ],
   trendingMoviesMonth: [
@@ -347,7 +347,7 @@ const moviesByCategory = {
       rating: '8.2',
       views: '1.5k',
       year: '2021',
-      trailerUrl: 'https://www.youtube.com/watch?v=nW948Va-l10',
+      trailer: './assets/video/trailer/loki.mp4',
     },
     {
       titleEn: 'Peaky Blinders (Season 5)',
@@ -356,7 +356,7 @@ const moviesByCategory = {
       rating: '',
       views: '1.2k',
       year: '2019',
-      trailerUrl: 'https://www.youtube.com/watch?v=Ruyl8_PT_y8',
+      trailer: './assets/video/trailer/peaky-blinders-5.mp4',
     },
     {
       titleEn: 'Ant-Man and the Wasp: Quantumania',
@@ -365,7 +365,7 @@ const moviesByCategory = {
       rating: '6.4',
       views: '920',
       year: '2023',
-      trailerUrl: 'https://www.youtube.com/watch?v=ZlNFpri-Y40',
+      trailer: './assets/video/trailer/ant-man-3.mp4',
     },
     {
       titleEn: 'Shazam! Fury of the Gods',
@@ -374,7 +374,7 @@ const moviesByCategory = {
       rating: '6.5',
       views: '678',
       year: '2023',
-      trailerUrl: 'https://www.youtube.com/watch?v=Zi88i4CpHe4',
+      trailer: './assets/video/trailer/shazam-fury-of-the-gods.mp4',
     },
   ],
   inTrailerMovies: [
@@ -385,7 +385,7 @@ const moviesByCategory = {
       year: '2022',
       views: '2.6k',
       likes: '928',
-      trailerUrl: 'https://www.youtube.com/watch?v=o5F8MOz_IDw',
+      trailer: './assets/video/trailer/avatar-2.mp4',
     },
     {
       titleEn: 'Shazam! Fury of the Gods',
@@ -394,7 +394,7 @@ const moviesByCategory = {
       year: '2023',
       views: '1.2k',
       likes: '500',
-      trailerUrl: 'https://www.youtube.com/watch?v=Zi88i4CpHe4',
+      trailer: './assets/video/trailer/shazam-fury-of-the-gods.mp4',
     },
     {
       titleEn: 'John Wick: Chapter 4',
@@ -403,7 +403,7 @@ const moviesByCategory = {
       year: '2023',
       views: '860',
       likes: '335',
-      trailerUrl: 'https://www.youtube.com/watch?v=yjRHZEUamCc',
+      trailer: 'https://www.youtube.com/watch?v=yjRHZEUamCc',
     },
     {
       titleEn: 'Guy Ritchie’s The Covenant',
@@ -412,7 +412,7 @@ const moviesByCategory = {
       year: '2023',
       views: '520',
       likes: '128',
-      trailerUrl: 'https://www.youtube.com/watch?v=02PPMPArNEQ',
+      trailer: 'https://www.youtube.com/watch?v=02PPMPArNEQ',
     },
   ],
 };
@@ -475,4 +475,3 @@ const quickCategory = [
     href: 'tv-shows'
   },
 ];
-
