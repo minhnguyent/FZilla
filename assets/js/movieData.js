@@ -475,3 +475,4 @@ const quickCategory = [
     href: 'tv-shows'
   },
 ];
+
