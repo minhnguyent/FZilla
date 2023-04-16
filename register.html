@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="col-6 d-flex justify-content-center align-items-center">
-                        <form class="search-form d-flex justify-content-center" role="search">
+                        <form class="search-form search-form--empty d-flex justify-content-center" role="search">
                             <input class="search-form__input ps-2 pe-5 rounded-1 form-control" type="text"
                                 placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search"
                                 aria-describedby="button-addon2" />
@@ -60,19 +60,19 @@
                             <button class="search-form__submit btn btn-sm" type="submit" id="ariabutton-addon2">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                             </button>
-                            <button class="search-form__reset hidden" type="reset">
+                            <button class="search-form__reset" type="reset">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </form>
                     </div>
 
                     <div class="col-3">
-                        <div class="d-flex justify-content-end me-1">
+                        <div class="header__user header__user--logged-out d-flex justify-content-end me-1">
                             <a class="nav-link nav-link--account" href="login.html">Đăng nhập</a>
                             <a class="nav-link nav-link--account" href="register.html">Đăng kí</a>
 
                             <div class="dropdown">
-                                <a class=" nav-link dropdown__btn nav-link--username hidden"></a>
+                                <a class=" nav-link dropdown__btn nav-link--username"></a>
                                 <ul class="dropdown__list dropdown__list--account bg-dark bg-gradient">
                                     <li class="dropdown__list-item">
                                         <a class="nav-link" href="user_profile.html">
@@ -225,7 +225,7 @@
     <script src="./assets/js/search.js"></script>
 
     <script>
-        
+
 
     </script>
 </body>

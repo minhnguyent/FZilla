@@ -44,25 +44,20 @@ function renderUserHeader() {
 
     if (typeof userData !== 'undefined') {
 
-        // Hide Login Register
-        document.querySelectorAll('.nav-link--account').forEach(function (item) {
-            item.classList.add('hidden');
-        });
+        // Change state
+        document.querySelector('.header__user').classList.remove('header__user--logged-out');
+        document.querySelector('.header__user').classList.add('header__user--logged-in');
 
         // Show user
         let usernameElement = document.querySelector('.nav-link--username');
-        usernameElement.classList.remove('hidden');
         usernameElement.innerHTML =
             `${userData['username']} <span class="px-2"><i
         class="fa fa-user" aria-hidden="true"></i></span>`;
     } else {
-        // Show Login Register
-        document.querySelectorAll('.nav-link--account').forEach(function (item) {
-            item.classList.remove('hidden');
-        });
-
-        // Hide user
-        document.querySelector('.nav-link--username').classList.add('hidden');
+         // Change state
+         document.querySelector('.header__user').classList.add('header__user--logged-out');
+         document.querySelector('.header__user').classList.remove('header__user--logged-in');
+ 
     }
 }
 

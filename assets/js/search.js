@@ -3,10 +3,10 @@ const searchForm = document.querySelector('.search-form');
 // test history
 const historyItemList = {
     history: [
-        'Lorem ipsum dolor sit amet consectetur.',
-        'Lorem ipsum dolor sit amet consectetur.',
-        'Lorem ipsum dolor sit amet consectetur.',
-        'Lorem ipsum dolor sit amet consectetur.'
+        'Avatar Dòng chảy của nước',
+        'Hành động',
+        'Loki',
+        'Khế ước'
     ]
 };
 localStorage.setItem('searchHistory', JSON.stringify(historyItemList));
@@ -44,9 +44,9 @@ if (searchForm) {
     // Show and hide resetButton
     searchInput.addEventListener('keyup', function () {
         if (searchInput.value.length !== 0) {
-            resetButton.classList.remove('hidden');
+            searchForm.classList.remove('search-form--empty');
         } else {
-            resetButton.classList.add('hidden');
+            searchForm.classList.add('search-form--empty');
         }
     });
 
@@ -65,13 +65,13 @@ if (searchForm) {
     });
 
     /*****************************************************************
-    TODO: focus out form ------------------------------------
+    TODO: focus out form ------------------------------------        */
     searchForm.addEventListener('focusout', function() {
         searchHistoryElement.innerHTML = '';
         searchInput.classList.add('rounded-1');
         searchInput.classList.remove('search-form__input--expand');
     });
-    *****************************************************************/
+    /*****************************************************************/
 
     function renderSearchHistory(root) {
         if (typeof localStorage['searchHistory'] === 'undefined') {
