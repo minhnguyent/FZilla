@@ -20,7 +20,40 @@ function setFavouriteMovies(movies) {
     } else { // not
         localStorage.setItem('favouriteMovies', JSON.stringify({'movies': movies}));
     }
+    updateBookmark();
 }
+
+// movie = { category: ..., filmId: ... };
+// return -1 if not, else
+function isFavouriteMovie(movie, listMovies = getFavouriteMovies()) {
+    let position = -1;
+    listMovies.forEach(function(value, index) {
+        if (movie['category'] === value['category'] && movie['filmId'] === value['filmId'])
+            position = index;
+    });
+    return position;
+} 
+
+function addFavouriteMovie(movie, listMovies = getFavouriteMovies()) { 
+    // movie = { category: ..., filmId: ... };
+    if (isFavouriteMovie(movie) !== -1)
+        return ;
+    listMovies.push(movie);
+    setFavouriteMovies(listMovies);
+} 
+
+function removeFavouriteByIndex(index, listMovies = getFavouriteMovies()) {
+    if (index < 0 || index >= listMovies.length) return ;
+    listMovies.splice(index, 1);
+    setFavouriteMovies(listMovies);
+}
+
+function removeFavouriteByMovie(movie, listMovies = getFavouriteMovies()) {
+    let position = isFavouriteMovie(movie);
+    if (position === -1) return ;
+    removeFavouriteByIndex(position, listMovies);
+}
+
 
 if (bookmarkElement) {
     const bookmarkWrapper = bookmarkElement.querySelector('.bookmark-wrapper');
@@ -62,9 +95,7 @@ if (bookmarkElement) {
                 <i class="bookmark-item-remove fa-solid fa-xmark"></i>`;
             item.querySelector('.bookmark-item-remove').addEventListener('click', function (e) {
                 e.stopPropagation();
-                items.splice(key, 1);
-                setFavouriteMovies(items);
-                updateBookmark();
+                removeFavouriteByIndex(key);
             });
 
             item.addEventListener('click', function() {
@@ -85,7 +116,6 @@ if (bookmarkElement) {
         clearAllButton.textContent = 'Xóa tất cả';
         clearAllButton.addEventListener('click', function () {
             setFavouriteMovies([]);
-            updateBookmark();
             bookmarkElement.removeChild(bookmarkElement.querySelector('.bookmark-clear-all'));
         });
         bookmarkElement.append(clearAllButton);
