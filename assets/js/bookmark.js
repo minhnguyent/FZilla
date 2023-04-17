@@ -22,6 +22,8 @@ function setFavouriteMovies(movies) {
     }
 }
 
+
+
 if (bookmarkElement) {
     const bookmarkWrapper = bookmarkElement.querySelector('.bookmark-wrapper');
 
