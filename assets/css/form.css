@@ -1,4 +1,4 @@
-.login-regiter {
+.login-register {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -12,7 +12,7 @@
   width: 670px;
   height: auto;
 }
-.login-regiter h1 {
+.login-register h1 {
   text-align: center;
   font-family: "Inter";
   font-style: normal;
@@ -25,7 +25,7 @@
 
   color: #0b2447;
 }
-input.login-regiter__form-input {
+input.login-register__form-input {
   box-sizing: border-box;
   width: 575px;
   height: 28px;
@@ -37,26 +37,26 @@ input.login-regiter__form-input {
   align-self: center;
   font-size: 14px;
 }
-label.login-regiter__form-label {
+label.login-register__form-label {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   line-height: 20px;
 }
-input.login-regiter__form-checkbox {
+input.login-register__form-checkbox {
   width: 21px;
   height: 23px;
   background-color: rgba(0, 0, 0, 0.25);
 }
-button.login-regiter__form-submit {
+button.login-register__form-submit {
   width: 575px;
   height: 42px;
   background: #ff6464;
   border-radius: 16px;
   align-self: center;
 }
-.login-regiter p {
+.login-register p {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -65,25 +65,25 @@ button.login-regiter__form-submit {
   text-align: center;
   color: #000000;
 }
-.login-regiter form {
+.login-register form {
   display: flex;
   flex-direction: column;
 }
-.login-regiter_form_item {
+.login-register_form_item {
   align-self: center;
   height: 58px;
 }
-.login-regiter_form_item_checkbox,
-.login-regiter_form_item_radio {
+.login-register_form_item_checkbox,
+.login-register_form_item_radio {
   margin-left: 37.5px;
 }
-.login-regiter__form-check_sex {
+.login-register__form-check_sex {
   display: flex;
   justify-content: space-between;
   width: 400px;
   justify-self: flex-end;
 }
-.login-regiter__form-radio-selection {
+.login-register__form-radio-selection {
   width: 20px;
   height: 20px;
   background-color: rgba(0, 0, 0, 0.25);
@@ -92,14 +92,15 @@ button.login-regiter__form-submit {
 .input-group{
  width: 575px;
 }
-label.login-regiter__form-label_radio_check {
+label.login-register__form-label_radio_check {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
 }
-.login-regiter_form_item_sex{
+.login-register_form_item_sex{
   align-self: center;
   height: 30px;
 }
+
