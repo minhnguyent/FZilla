@@ -43,7 +43,8 @@ if (bookmarkElement) {
 
     function renderBookmark(root, items) {
         root.innerHTML = '';
-        items.forEach(function (movie, key) {
+        items.forEach(function (value, key) {
+            let movie = moviesByCategory[value['category']][value['filmId']];
             let item = document.createElement('div');
             item.classList.add('dropdown__list-item', 'bookmark-item');
             item.innerHTML =
@@ -59,10 +60,15 @@ if (bookmarkElement) {
                     </div>
                 </div>
                 <i class="bookmark-item-remove fa-solid fa-xmark"></i>`;
-            item.querySelector('.bookmark-item-remove').addEventListener('click', function () {
+            item.querySelector('.bookmark-item-remove').addEventListener('click', function (e) {
+                e.stopPropagation();
                 items.splice(key, 1);
                 setFavouriteMovies(items);
                 updateBookmark();
+            });
+
+            item.addEventListener('click', function() {
+                window.location.href = `/FZilla/film_info.html?film_category=${value['category']}&film_id=${value['filmId']}`;
             });
 
             root.append(item);
@@ -86,4 +92,4 @@ if (bookmarkElement) {
     }
 }
 
-window.onstorage(updateBookmark);
+window.addEventListener('storage', updateBookmark);
