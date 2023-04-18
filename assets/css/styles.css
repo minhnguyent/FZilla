@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.contact h1 {
+    background-image: url(/assets/img/image/back.jpeg);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-size: cover;
+    font-size: 3rem;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.contact .first {
+    background: white;
+    border-top: 1px solid black;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.contact .first>h2 {
+    background-color: lightskyblue;
+    font-size: 2rem;
+}
+
+.contact .first>p {
+    font-size: 1.22rem;
+}
+
+.contact .second {
+    background-image: url(/assets/img/image/full.jpeg);
+    background-size: cover;
+    width: 70%;
+    border: 2px solid lightskyblue;
+    margin: 0 auto;
+}
+
+.contact .second>h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+.contact .second>form {
+    margin: 0 auto;
+    width: 40%;
+}
+
+.contact .second>form>label {
+    font-size: 1.5rem;
+    display: flex;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.contact .second>form>input {
+    font-size: 1.22rem;
+    padding: 0.5rem;
+    border-radius: 15px;
+    margin: 0.1rem 0;
+}
+
+.contact .second>form>input[type=text] {
+    height: 30px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.contact .second>form>input[type=email] {
+    height: 30px;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.contact .second>form>select {
+    height: 30px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px 0 5px 10px;
+    text-align: center;
+}
+
+.contact #lang-select {
+    text-align: center;
+    font-size: 1.22rem;
+}
+
+.contact #message {
+    margin-top: -10px;
+    margin-left: 16px;
+    font-size: 1.22rem;
+}
+
+.contact .second>form>input[type=submit] {
+    font-size: 1.22rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 0.1rem 0;
+    background: #31a8d4;
+    width: 100%;
+    margin-left: 10px;
+}

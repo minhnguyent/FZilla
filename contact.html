@@ -34,8 +34,9 @@
     <link rel="stylesheet" href="./assets/css/modal.css">
     <link rel="stylesheet" href="./assets/css/form.css">
     <link rel="stylesheet" href="./assets/css/toast.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 
-    <title>FZilla - Xem phim trực tuyến</title>
+    <title>FZilla - Liên hệ</title>
 </head>
 
 <body>
@@ -123,13 +124,56 @@
                 </nav>
             </div>
         </header>
-        
+
         <main class="main bg-dark bg-gradient">
             <div class="container-lg">
 
-            </div>
+                <div class="contact">
+                    <div class="first">
+                        <h1>LIÊN HỆ</h1>
+                        <h2>Thông tin</h2>
+                        <br>
+                        <p>&emsp;FZilla là website xem phim online và chia sẻ thông tin các bộ phim mới thông qua nhiều nguồn khác nhau. Nếu
+                            muốn biết
+                            thêm thông tin chi tiết, vui lòng liên hệ địa chỉ bên dưới:</p>
+                        <br>
+                        <p>&emsp;Địa chỉ: Phường Xuân Khánh, quận Ninh Kiều, Tp Cần Thơ</p>
+                        <p>&emsp;Điện thoại: 0000000000</p>
+                        <p>&emsp;Mạng xã hội: Facebook Instagram Fanpage</p>
+                        <br>
+                        <h2>Phản hồi</h2>
+                        <br>
+                        <p>&emsp;Nếu bạn có bất kỳ ý kiến đóng góp nào, vui lòng gửi liên hệ thư điện tử hoặc điền thông tin vào biểu mẫu
+                            sau:
+                        </p>
+                        <br>
+                    </div>
+                    
+                    <div class="second">
+                        <h2>&ensp;Ý kiến đóng góp</h2>
+                        <form action="contact.html" method="post">
+                            <label for="name">&ensp; Họ và tên</label>
+                            <input type="text" id="name" name="name" placeholder="Vui lòng nhập họ tên của bạn">
+                            <br>
+                            <label for="email">&ensp; Email</label>
+                            <input type="email" id="email" name="email" placeholder="Vui lòng nhập địa chỉ email.">
+                            <br>
+                            <label id="sub" for="subject">&ensp; Vấn đề gặp phải</label>
+                            <select name="lang" id="lang-select">
+                                <option value="1">Tài khoản cá nhân</option>
+                                <option value="2">Chế độ ưu đãi</option>
+                                <option value="3">Vấn đề khác</option>
+                            </select>
+                            <br>
+                            <label for="message">&ensp; Nội dung chi tiết</label>
+                            <br>
+                            <textarea id="message" name="message" placeholder="Nội dung ý kiến đóng góp"
+                                style="height:100px;width:100%"></textarea>
+                            <br>
+                            <input type="submit" value="Gửi">
+                    </div>
+                </div>
         </main>
-
 
         <footer class="footer bg-black bg-gradient">
             <div class="container-lg">
