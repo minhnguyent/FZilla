@@ -9,7 +9,7 @@ body {
 }
 
 .contact h1 {
-    background-image: url(/assets/img/image/back.jpeg);
+    background-image: url(/assets/img/contact/back.jpeg);
     padding-top: 5px;
     padding-bottom: 5px;
     background-size: cover;
@@ -37,7 +37,7 @@ body {
 }
 
 .contact .second {
-    background-image: url(/assets/img/image/full.jpeg);
+    background-image: url(/assets/img/contact/full.jpeg);
     background-size: cover;
     width: 70%;
     border: 2px solid lightskyblue;
