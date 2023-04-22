@@ -356,7 +356,7 @@
     const searchString = window.location.search;
     const searchParams = new URLSearchParams(searchString);
     const filmCategory = searchParams.get('film_category');
-    const filmId = searchParams.get('film_id');
+    const filmId = Number(searchParams.get('film_id'));
 
     renderFilmInfo($('.main-box-wrapper'), filmCategory, filmId);
 
