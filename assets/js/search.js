@@ -18,7 +18,6 @@ if (searchForm) {
     const submitButton = searchForm.querySelector('.search-form__submit');
     const searchHistoryElement = searchForm.querySelector('.search-history');
 
-
     submitButton.addEventListener('click', function(event) {
         event.preventDefault();
         if (searchInput.value === '')
@@ -41,35 +40,59 @@ if (searchForm) {
         }
     });
 
-    // Show and hide resetButton
-    searchInput.addEventListener('keyup', function () {
-        if (searchInput.value.length !== 0) {
-            searchForm.classList.remove('search-form--empty');
-        } else {
-            searchForm.classList.add('search-form--empty');
-        }
-    });
-
-    resetButton.addEventListener('click', function () {
-        this.classList.add('hidden');
-    });
-
-
-    // Show search history
-    searchInput.addEventListener('focus', function () {
-        if (typeof localStorage['searchHistory'] !== 'undefined') {
+    const showHistory = function() {
+        if (searchInput.value === '') {
             renderSearchHistory(searchHistoryElement);
             searchInput.classList.remove('rounded-1');
             searchInput.classList.add('search-form__input--expand');
         }
-    });
+    }
 
-    /*****************************************************************
-    TODO: focus out form ------------------------------------        */
-    searchForm.addEventListener('focusout', function() {
+    const hideHistory = function() {
         searchHistoryElement.innerHTML = '';
         searchInput.classList.add('rounded-1');
         searchInput.classList.remove('search-form__input--expand');
+    }
+
+    // Show search history
+    searchInput.addEventListener('focus', function () {
+        if (typeof localStorage['searchHistory'] !== 'undefined') {
+            showHistory();
+        }
+    });
+    searchInput.addEventListener('input', function() {
+        this.value ? hideHistory() : showHistory();
+    })
+
+    /*****************************************************************
+    TODO: focus out form ------------------------------------        */
+    searchForm.addEventListener('focusout', function(e) {
+        const relatedTarget = e.relatedTarget;
+        if (relatedTarget === null) {
+            hideHistory();
+            return;
+        }
+
+        if (relatedTarget.closest('.search-history-item__content')) {
+            // TODO: window.location.href="/FZilla/search.html?keyword=<search_content>"
+            searchInput.value = relatedTarget.closest('.search-history-item__content').innerHTML;
+        }
+        else if (relatedTarget.closest('.search-history-item__remove')) {
+            // remove item
+        }
+        else if (relatedTarget.closest('.search-history-item')) {
+            searchInput.value = relatedTarget.closest('.search-history-item')
+                                .querySelector('.search-history-item__content').innerHTML;
+        }
+        else if (relatedTarget.closest('.search-form__reset')) {
+            setTimeout(() => {
+                showHistory();
+                searchInput.focus();
+            }, 150);
+        }
+        else {
+            hideHistory();
+        }
     });
     /*****************************************************************/
 
@@ -87,12 +110,11 @@ if (searchForm) {
         historyItemList['history'].forEach(function (value, key) {
             let item = document.createElement('div');
             item.classList.add('search-history-item');
+            item.setAttribute('tabindex', '0');
 
             item.innerHTML =
-                `<p class="search-history-item__content">
-                    ${value}
-                </p>
-                <i class="search-history-item__remove fa-solid fa-xmark"></i>`
+                `<p class="search-history-item__content" tabindex="0">${value}</p>
+                <span class="search-history-item__remove" tabindex="0"><i class="fa-solid fa-xmark"></i></span>`
 
             // add mouseon event 
             item.querySelector('.search-history-item__content').addEventListener('click', function() {

@@ -127,7 +127,7 @@
     opacity: .5;
 }
 
-.search-form--empty .search-form__reset {
+.search-form__input:placeholder-shown + .search-form__reset {
     display: none;
 }
 

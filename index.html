@@ -48,10 +48,15 @@
           </div>
 
           <div class="col-6 d-flex justify-content-center align-items-center">
-            <form class="search-form search-form--empty d-flex justify-content-center" role="search">
+            <form class="search-form d-flex justify-content-center" role="search">
               <input class="search-form__input ps-2 pe-5 rounded-1 form-control" type="text"
                 placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search"
-                aria-describedby="button-addon2" />
+                aria-describedby="button-addon2"
+                value=""
+              />
+              <button class="search-form__reset" type="reset">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
 
               <div class="search-history">
                 <!-- Lich su tim kiem -->
@@ -59,9 +64,6 @@
 
               <button class="search-form__submit btn btn-sm" type="submit" id="ariabutton-addon2">
                 <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-              <button class="search-form__reset" type="reset">
-                <i class="fa-solid fa-xmark"></i>
               </button>
             </form>
           </div>
