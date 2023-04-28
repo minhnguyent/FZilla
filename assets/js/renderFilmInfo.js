@@ -13,9 +13,19 @@ const renderFilmInfo = function(root, category, filmId) {
           <div class="main-film-info__thumb-img-wrapper">
             <img src="${movie.thumb}" class="main-film-info__img" alt="${movie.titleVn}">
           </div>
-          <div class="main-film-info__bookmark" title="Bookmark">
-            <span class="main-film-info__bookmark-icon"><i class="fa-solid fa-bookmark"></i></span>
-            <span class="main-film-info__bookmark-add-icon"><i class="fa-solid fa-plus"></i></span>
+          <div class="main-film-info__bookmark ${isFavouriteMovie({ category, filmId }) !== -1 && 'main-film-info__bookmark--added'}">
+            <span class="main-film-info__bookmark-icon">
+              <i class="fa-solid fa-bookmark"></i>
+            </span>
+            <span class="main-film-info__bookmark-status-icon main-film-info__bookmark-add-icon" title="Thêm vào danh sách yêu thích">
+              <i class="fa-solid fa-plus"></i>
+            </span>
+            <span class="main-film-info__bookmark-status-icon main-film-info__bookmark-tick-icon">
+              <i class="fa-solid fa-check"></i>
+            </span>
+            <span class="main-film-info__bookmark-status-icon main-film-info__bookmark-remove-icon" title="Xóa khỏi danh sách yêu thích">
+              <i class="fa-solid fa-x"></i>
+            </span>
           </div>
           <a href="/FZilla/film_watching.html?film_category=${category}&film_id=${filmId}" class="main-film-info__btn main-film-info__watch-trailer-btn my-btn my-btn-flex">
             <span class="main-film-info__btn-icon"><i class="fa-brands fa-youtube"></i></span>
@@ -69,4 +79,28 @@ const renderFilmInfo = function(root, category, filmId) {
       </div>
     </div>
   `;
+
+  const mainFilmInfoBookmark = $('.main-film-info__bookmark');
+  mainFilmInfoBookmark.addEventListener('click', function() {
+    if (
+      this.classList.contains('main-film-info__bookmark--added') ||
+      this.classList.contains('main-film-info__bookmark--adding')
+    ) {
+      // remove
+      this.classList.remove('main-film-info__bookmark--added');
+      this.classList.remove('main-film-info__bookmark--adding');
+      removeFavouriteByMovie({ category, filmId });
+    }
+    else {
+      // add
+      this.classList.add('main-film-info__bookmark--adding');
+      addFavouriteMovie({ category, filmId });
+      this.addEventListener('mouseout', function() {
+        if (this.classList.contains('main-film-info__bookmark--adding')) {
+          this.classList.remove('main-film-info__bookmark--adding');
+          this.classList.add('main-film-info__bookmark--added');
+        }
+      }, { once: true });
+    }
+  });
 }
