@@ -1,27 +1,25 @@
-const listFavouriteMovies = {
-    'movies': [
-        {
-            category: 'trendingMoviesMonth',
-            filmId: 2
-        },
-        {
-            category: 'trendingMoviesMonth',
-            filmId: 3
-        }, 
-        {
-            category: 'popularMovies',
-            filmId: 6
-        },
-        {
-            category: 'popularMovies',
-            filmId: 4
-        },
-        {
-            category: 'hotMovies',
-            filmId: 3
-        },
-    ],
-};
+const listFavouriteMovies = [
+    {
+        category: 'trendingMoviesMonth',
+        filmId: 2
+    },
+    {
+        category: 'trendingMoviesMonth',
+        filmId: 3
+    },
+    {
+        category: 'popularMovies',
+        filmId: 6
+    },
+    {
+        category: 'popularMovies',
+        filmId: 4
+    },
+    {
+        category: 'hotMovies',
+        filmId: 3
+    },
+];
 
 const listHistoryMovies = {
     'movies': [
@@ -32,7 +30,7 @@ const listHistoryMovies = {
         {
             category: 'trendingMoviesMonth',
             filmId: 1
-        }, 
+        },
         {
             category: 'popularMovies',
             filmId: 2
@@ -50,8 +48,8 @@ const user = {
     registrationDate: '29-12-2022',
     password: 12345678,
     avatar: '/FZilla/assets/img/nav-brand.png',
-    favourite: listFavouriteMovies['movies'],
-    history: listHistoryMovies['movies']
+    favourite: listFavouriteMovies,
+    history: listHistoryMovies
 }
 
 // Mô phỏng đăng nhập

@@ -6,8 +6,8 @@ function getFavouriteMovies() {
         return (JSON.parse(userData)['favourite']);
     } else { // not
         if (typeof localStorage['favouriteMovies'] === 'undefined')
-            localStorage.setItem('favouriteMovies', JSON.stringify({ 'movies': [] }));
-        return JSON.parse(localStorage['favouriteMovies'])['movies'];
+            localStorage.setItem('favouriteMovies', JSON.stringify([]));
+        return JSON.parse(localStorage['favouriteMovies']);
     }
 }
 
@@ -18,7 +18,7 @@ function setFavouriteMovies(movies) {
         newData['favourite'] = movies;
         localStorage.setItem('user', JSON.stringify(newData));
     } else { // not
-        localStorage.setItem('favouriteMovies', JSON.stringify({'movies': movies}));
+        localStorage.setItem('favouriteMovies', JSON.stringify(movies));
     }
     updateBookmark();
 }
