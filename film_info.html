@@ -353,17 +353,14 @@
   <script src="./assets/js/search.js"></script>
 
   <script>
-    const searchString = window.location.search;
-    const searchParams = new URLSearchParams(searchString);
-    const filmCategory = searchParams.get('film_category');
-    const filmId = Number(searchParams.get('film_id'));
-
-    renderFilmInfo($('.main-box-wrapper'), filmCategory, filmId);
+    renderFilmInfo($('.main-box-wrapper'));
+    handleBookmarkButton();
 
     renderSidebar();
 
     renderCarouselMovies($('.main-section--same-topic .main-section__carousel-wrapper'), 'popularMovies');
     renderMovieList($('.main-section--recommendation .main-section__body .row'), 'hotMovies');
+
   </script>
 </body>
 

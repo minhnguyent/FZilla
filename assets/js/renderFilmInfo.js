@@ -1,4 +1,6 @@
-const renderFilmInfo = function(root, category, filmId) {
+const renderFilmInfo = function(root) {
+  const { category, filmId } = getFilmInfoFromSearchParams();
+
   if (!root || moviesByCategory.hasOwnProperty(category) === false) return;
 
   const movie = moviesByCategory[category][filmId];
@@ -79,28 +81,4 @@ const renderFilmInfo = function(root, category, filmId) {
       </div>
     </div>
   `;
-
-  const mainFilmInfoBookmark = $('.main-film-info__bookmark');
-  mainFilmInfoBookmark.addEventListener('click', function() {
-    if (
-      this.classList.contains('main-film-info__bookmark--added') ||
-      this.classList.contains('main-film-info__bookmark--adding')
-    ) {
-      // remove
-      this.classList.remove('main-film-info__bookmark--added');
-      this.classList.remove('main-film-info__bookmark--adding');
-      removeFavouriteByMovie({ category, filmId });
-    }
-    else {
-      // add
-      this.classList.add('main-film-info__bookmark--adding');
-      addFavouriteMovie({ category, filmId });
-      this.addEventListener('mouseout', function() {
-        if (this.classList.contains('main-film-info__bookmark--adding')) {
-          this.classList.remove('main-film-info__bookmark--adding');
-          this.classList.add('main-film-info__bookmark--added');
-        }
-      }, { once: true });
-    }
-  });
 }

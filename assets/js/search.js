@@ -18,12 +18,18 @@ if (searchForm) {
     const submitButton = searchForm.querySelector('.search-form__submit');
     const searchHistoryElement = searchForm.querySelector('.search-history');
 
+    const searchRedirection = function() {
+        if (searchInput.value === '') return;
+        const searchQuery = searchInput.value;
+        window.location.href = `/FZilla/search.html?search_query=${searchQuery}`;
+    }
+
     submitButton.addEventListener('click', function(event) {
         event.preventDefault();
         if (searchInput.value === '')
-            return ;
+            return;
         
-            
+        searchRedirection(); 
         if (typeof localStorage['searchHistory'] === 'undefined') {
             let historyItemList = {
                 history: [
@@ -33,8 +39,9 @@ if (searchForm) {
             localStorage['history'] = historyItemList;
         } else {
             let historyItemList = JSON.parse(localStorage['searchHistory']);
-            historyItemList['history'].splice(0, 0, searchInput.value);
-            console.log(historyItemList['history']);
+            if (historyItemList['history'].includes(searchInput.value) === false) {
+                historyItemList['history'].unshift(searchInput.value);
+            }
             localStorage['searchHistory'] = JSON.stringify(historyItemList);
             renderSearchHistory(searchHistoryElement);
         }
@@ -64,8 +71,6 @@ if (searchForm) {
         this.value ? hideHistory() : showHistory();
     })
 
-    /*****************************************************************
-    TODO: focus out form ------------------------------------        */
     searchForm.addEventListener('focusout', function(e) {
         const relatedTarget = e.relatedTarget;
         if (relatedTarget === null) {
@@ -74,15 +79,19 @@ if (searchForm) {
         }
 
         if (relatedTarget.closest('.search-history-item__content')) {
-            // TODO: window.location.href="/FZilla/search.html?keyword=<search_content>"
+            // click to item
             searchInput.value = relatedTarget.closest('.search-history-item__content').innerHTML;
+            searchRedirection();
         }
         else if (relatedTarget.closest('.search-history-item__remove')) {
             // remove item
         }
         else if (relatedTarget.closest('.search-history-item')) {
+            // click to item
             searchInput.value = relatedTarget.closest('.search-history-item')
-                                .querySelector('.search-history-item__content').innerHTML;
+                                .querySelector('.search-history-item__content')
+                                .innerHTML;
+            searchRedirection();
         }
         else if (relatedTarget.closest('.search-form__reset')) {
             setTimeout(() => {
@@ -94,7 +103,6 @@ if (searchForm) {
             hideHistory();
         }
     });
-    /*****************************************************************/
 
     function renderSearchHistory(root) {
         if (typeof localStorage['searchHistory'] === 'undefined') {
@@ -116,12 +124,6 @@ if (searchForm) {
                 `<p class="search-history-item__content" tabindex="0">${value}</p>
                 <span class="search-history-item__remove" tabindex="0"><i class="fa-solid fa-xmark"></i></span>`
 
-            // add mouseon event 
-            item.querySelector('.search-history-item__content').addEventListener('click', function() {
-                searchInput.value = this.innerText;
-                resetButton.classList.remove('hidden');
-            });
-
             // add remove event
             item.querySelector('.search-history-item__remove').addEventListener('click', function (event) {
                 historyItemList['history'].splice(key, 1);
@@ -134,6 +136,7 @@ if (searchForm) {
                     searchInput.classList.remove('search-form__input--expand');
                 }
                 renderSearchHistory(root);
+                searchInput.focus();
             });
 
             // add item into root

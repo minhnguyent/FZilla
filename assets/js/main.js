@@ -3,11 +3,6 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-// renderPopularMovies($('main-section--same-topic .main-section__carousel-wrapper'), moviesByCategory.popularMovies);
-
-// renderMovieList($('.main-section--hot-movies-all .main-section__body .row'), moviesByCategory.hotMovies, ["col-2"]);
-// renderMovieList($('.main-section--recommendation .main-section__body .row'), moviesByCategory.hotMovies, ["col-3"]);
-
 // main-sidebar-section__tabs
 const tabItems = $$('.main-sidebar-section__tab-item');
 const tabPanes = $$('.main-sidebar-section__tab-pane');
@@ -38,7 +33,7 @@ toTopBtn.onclick = () => {
   });
 }
 
-window.onscroll = () => {
+window.addEventListener('scroll', function() {
   if (
     document.body.scrollTop > viewportHeight || // for safari
     document.documentElement.scrollTop > viewportHeight // for chrome, firefox, IE and opera
@@ -49,4 +44,19 @@ window.onscroll = () => {
   else {
     toTopBtn.classList.remove('active');
   }
+});
+
+function getFilmInfoFromSearchParams() {
+  const searchString = window.location.search;
+  const searchParams = new URLSearchParams(searchString);
+  const category = searchParams.get('film_category');
+  const filmId = Number(searchParams.get('film_id'));
+  return {
+    category,
+    filmId
+  }
 }
+
+window.addEventListener('storage', function() {
+  if (typeof updateBookmark === 'function') updateBookmark();
+}); 

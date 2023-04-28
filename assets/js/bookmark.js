@@ -123,4 +123,43 @@ if (bookmarkElement) {
     }
 }
 
-window.addEventListener('storage', updateBookmark);
+function handleBookmarkButton() {
+    const { category, filmId } = getFilmInfoFromSearchParams();
+    const mainFilmInfoBookmark = $('.main-film-info__bookmark');
+    mainFilmInfoBookmark.addEventListener('click', function() {
+        if (
+            this.classList.contains('main-film-info__bookmark--added') ||
+            this.classList.contains('main-film-info__bookmark--adding')
+        ) {
+            // remove
+            this.classList.remove('main-film-info__bookmark--added');
+            this.classList.remove('main-film-info__bookmark--adding');
+            removeFavouriteByMovie({ category, filmId });
+        }
+        else {
+            // add
+            this.classList.add('main-film-info__bookmark--adding');
+            addFavouriteMovie({ category, filmId });
+            this.addEventListener('mouseout', function() {
+                if (this.classList.contains('main-film-info__bookmark--adding')) {
+                    this.classList.remove('main-film-info__bookmark--adding');
+                    this.classList.add('main-film-info__bookmark--added');
+                }
+            }, { once: true });
+        }
+    });
+}
+
+function setBookmarkButtonStatus() {
+    const { category, filmId } = getFilmInfoFromSearchParams();
+    const mainFilmInfoBookmark = $('.main-film-info__bookmark');
+
+    if (isFavouriteMovie({ category, filmId } === -1)) {
+        mainFilmInfoBookmark.classList.remove('main-film-info__bookmark--added');
+        mainFilmInfoBookmark.classList.remove('main-film-info__bookmark--adding');
+    }
+    else {   
+        mainFilmInfoBookmark.classList.add('main-film-info__bookmark--added');
+        mainFilmInfoBookmark.classList.add('main-film-info__bookmark--adding');
+    }
+}
