@@ -21,8 +21,7 @@ const listFavouriteMovies = [
     },
 ];
 
-const listHistoryMovies = {
-    'movies': [
+const listHistoryMovies = [
         {
             category: 'trendingMoviesMonth',
             filmId: 3
@@ -35,8 +34,7 @@ const listHistoryMovies = {
             category: 'popularMovies',
             filmId: 2
         },
-    ],
-};
+];
 
 localStorage.setItem('favouriteMovies', JSON.stringify(listFavouriteMovies));
 
