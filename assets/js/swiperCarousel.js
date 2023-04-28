@@ -23,7 +23,7 @@ const mainSectionCarousel = new Swiper('.main-section__carousel', {
 
 const mainSectionCarouselInfoPage = new Swiper('.main-section__carousel--same-topic', {
     autoplay: {
-        delay: 4000,
+        delay: 1000,
         pauseOnMouseEnter: true,
         disableOnInteraction: false
     },
@@ -37,7 +37,7 @@ const mainSectionCarouselInfoPage = new Swiper('.main-section__carousel--same-to
         // TODO
     },
 
-    speed: 500,
+    speed: 650,
     navigation: {
         nextEl: '.main-section__carousel-btn-next',
         prevEl: '.main-section__carousel-btn-prev',
