@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="./assets/css/form.css">
   <link rel="stylesheet" href="./assets/css/toast.css">
 
-  <title>FZilla - Xem phim trực tuyến</title>
+  <title class="titlePage" id="titlePage">FZilla - Xem phim trực tuyến</title>
 </head>
 
 <body>
@@ -363,10 +363,11 @@
   <script src="./assets/js/user.js"></script>
   <script src="./assets/js/search.js"></script>
 
-
-
   <script>
     renderMovieList($('.main-section--all-movies .main-section__body .row'), 'popularMovies', ["col-2"]);
+
+    const titlePage = $('#titlePage');
+    titlePage.innerHTML = 'FZilla - Danh sách phim hot';
   </script>
 </body>
 
