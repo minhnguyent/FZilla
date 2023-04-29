@@ -28,14 +28,6 @@
     cursor: text;
 }
 
-.user-information__username,
-.user-information__fullname,
-.user-information__email,
-.user-information__phone,
-.user-information__registration-date {
-    
-}
-
 .user-avatar__img {
     width: 200px;
     height: 200px;

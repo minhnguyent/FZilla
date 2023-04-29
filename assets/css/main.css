@@ -1114,8 +1114,39 @@
     transition: max-height 0.2s linear;
 }
 
-main.login-register__main{
+/* Login - register */
+
+.login-register__main{
     display: flex;
     justify-content: center;
     padding-top: 2rem;
+}
+
+/* Search */
+
+.search-result {
+
+}
+
+.search-result__title {
+    color: var(--color-supreme-orange);
+}
+
+.search-result__category-item {
+    position: relative;
+    font-size: 1.15rem;
+    color: var(--color-gray);
+    border-radius: 0;
+}
+
+.search-result__category-item:first-child {
+    margin-left: 1rem;
+}
+
+.search-result__category-item:hover {
+    color: var(--color-white);
+}
+
+.search-result__category-item:hover i {
+    color: var(--color-supreme-orange);
 }
