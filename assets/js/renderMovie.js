@@ -67,7 +67,7 @@ const renderMovieList = (root, category, colClassList = ['col-3']) => {
               </div>
 
               <div class="film-item__play-btn" title="Xem phim">
-              <span class="film-item__play-btn-icon"><i class="fa-solid fa-play"></i></span>
+                <span class="film-item__play-btn-icon"><i class="fa-solid fa-play"></i></span>
               </div>
             </div>
             <div class="film-item__desc">
