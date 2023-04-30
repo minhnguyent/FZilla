@@ -124,20 +124,20 @@
             </div>
         </header>
 
-        <main class="bg bg-dark bg-gradient login-register__main">
+        <main class="bg bg-dark bg-gradient main">
             <div class="login-register bg-light">
                 <h1 class="login-register__heading">
                     ĐĂNG KÝ
                 </h1>
                 <form>
                     <div class="input-group mb-3 login-register_form_item">
-                        <div class="form-floating  login-register_form_item">
+                        <div class="form-floating login-register_form_item">
                           <input type="text" class="form-control login-register__form-input" id="login" placeholder="Tên đăng nhập">
                           <label for="login" class="login-register__form-label">Tên đăng nhập</label>
                         </div>
                     </div>
                     <div class="input-group mb-3 login-register_form_item">
-                        <div class="form-floating  login-register_form_item">
+                        <div class="form-floating login-register_form_item">
                           <input type="email" class="form-control login-register__form-input" id="email" placeholder="email">
                           <label for="email" class="login-register__form-label">Email</label>
                         </div>
@@ -154,25 +154,25 @@
                           <label for="passwordrp" class="login-register__form-label">Nhập lại mật khẩu</label>
                         </div>
                     </div>
-                    <div class=" mb-3 login-register_form_item_radio">
-                        <label for="sex" class="form-check-label login-register__form-label">Giới tính</label>
-                    </div>
-                    <div class="login-register__form-check_sex mb-3 login-register_form_item_sex" id="sex">
-                        <div class="form-check ">
+                    <div class="row input-group mb-3 login-register_form_item" id="sex">
+                        <div class="mb-3 login-register_form_item_radio">
+                            <label for="sex" class="form-check-label login-register__form-label">Giới tính</label>
+                        </div>
+                        <div class="col">
                             <input class="form-check-input login-register__form-radio-selection" type="radio" name="sex"
                                 id="male">
-                            <label class="form-check-label login-register__form-label_radio_check" for="mail">
+                            <label class="form-check-label login-register__form-label_radio_check" for="male">
                                 Nam
                             </label>
                         </div>
-                        <div class="form-check">
+                        <div class="col">
                             <input class="form-check-input login-register__form-radio-selection" type="radio" name="sex"
                                 id="fmale">
                             <label class="form-check-label login-register__form-label_radio_check" for="fmale">
                                 Nữ
                             </label>
                         </div>
-                        <div class="form-check">
+                        <div class="col">
                             <input class="form-check-input login-register__form-radio-selection" type="radio" name="sex"
                                 id="sex_other">
                             <label class="form-check-label login-register__form-label_radio_check" for="sex_other">
@@ -180,14 +180,14 @@
                             </label>
                         </div>
                     </div>
-                    <div class="mb-3 form-check login-register_form_item_checkbox">
+                    <div class="mb-3 login-register_form_item">
                         <input type="checkbox" class="form-check-input login-register__form-checkbox" id="poplicy_rule">
-                        <label class="form-check-label login-register__form-label" for="poplicy_rule">Đồng ý với các <a
-                                href="">Điều khoản</a> và <a href="">Chính sách</a></label>
+                        <label class="form-check-label login-register__form-label" for="poplicy_rule">Đồng ý với các <a class="login-register__link"
+                                href="">Điều khoản</a> và <a class="login-register__link" href="">Chính sách</a></label>
                     </div>
-                    <button type="submit" class="btn btn-primary login-register__form-submit">Đăng kí</button>
+                    <button type="submit" class="input-group btn login-register__form-submit">Đăng kí</button>
                 </form>
-                <p class="login-register__p"> Bạn đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+                <p class="login-register__p"> Bạn đã có tài khoản? <a class="login-register__link" href="login.html">Đăng nhập</a></p>
             </div>
 
         </main>

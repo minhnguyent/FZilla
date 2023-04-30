@@ -1120,14 +1120,6 @@
     transition: max-height 0.2s linear;
 }
 
-/* Login - register */
-
-.login-register__main{
-    display: flex;
-    justify-content: center;
-    padding-top: 2rem;
-}
-
 /* Search */
 
 .search-result {
