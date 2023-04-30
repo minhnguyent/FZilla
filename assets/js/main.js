@@ -59,4 +59,5 @@ function getFilmInfoFromSearchParams() {
 
 window.addEventListener('storage', function() {
   if (typeof updateBookmark === 'function') updateBookmark();
+  if (typeof setBookmarkButtonStatus === 'function') setBookmarkButtonStatus();
 }); 

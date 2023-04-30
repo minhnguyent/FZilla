@@ -2,8 +2,11 @@ const renderFilmWatching = function(root, category, filmId) {
   if (!root || moviesByCategory.hasOwnProperty(category) === false) return;
 
   const movie = moviesByCategory[category][filmId];
-
+  const titlePage = $('#titlePage');
   const breadCrumbList = $('.breadcrumb__list');
+
+  titlePage.innerHTML = `FZilla - Xem phim ${movie.titleVn}`;
+
   breadCrumbList.querySelector('.breadcrumb__item:last-child .breadcrumb__item-link').innerHTML = movie.titleVn;
 
   root.innerHTML = `
