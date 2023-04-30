@@ -2,294 +2,317 @@
 <html lang="vi">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.svg">
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.svg">
 
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
 
-    <!-- bootstrap-5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <!-- bootstrap-5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-    <!-- normalize and reset -->
-    <link rel="stylesheet" href="./assets/css/normalize.css">
-    <link rel="stylesheet" href="./assets/css/reset.css">
+  <!-- normalize and reset -->
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/reset.css">
 
 
-    <!-- swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 
-    <!-- style -->
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/footer.css">
-    <link rel="stylesheet" href="./assets/css/modal.css">
-    <link rel="stylesheet" href="./assets/css/form.css">
-    <link rel="stylesheet" href="./assets/css/toast.css">
+  <!-- style -->
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/footer.css">
+  <link rel="stylesheet" href="./assets/css/modal.css">
+  <link rel="stylesheet" href="./assets/css/form.css">
+  <link rel="stylesheet" href="./assets/css/toast.css">
 
-    <title class="titlePage" id="titlePage">FZilla - Xem phim trực tuyến</title>
+  <title class="titlePage" id="titlePage">FZilla - Xem phim trực tuyến</title>
 </head>
 
 <body>
-    <div class="app">
-        <header class="header bg-dark bg-gradient fixed-top">
-            <div class="container-lg">
-                <div class="header__content d-none d-md-flex container-fluid px-1 py-2">
-                    <div class="col-3">
-                        <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
-                    </div>
+  <div class="app">
+    <header class="header bg-dark bg-gradient fixed-top">
+      <div class="container-lg">
+        <div class="header__content d-none d-md-flex container-fluid px-1 py-2">
+          <div class="col-3">
+            <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
+          </div>
 
-                    <div class="col-6 d-flex justify-content-center align-items-center">
-                        <form class="search-form search-form--empty d-flex justify-content-center" role="search">
-                            <input class="search-form__input ps-2 pe-5 rounded-1 form-control" type="text"
-                                placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search"
-                                aria-describedby="button-addon2" />
+          <div class="col-6 d-flex justify-content-center align-items-center">
+            <form class="search-form search-form--empty d-flex justify-content-center" role="search">
+              <input class="search-form__input ps-2 pe-5 rounded-1 form-control" type="text"
+                placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search"
+                aria-describedby="button-addon2" />
 
-                            <div class="search-history">
-                                <!-- Lich su tim kiem -->
-                            </div>
+              <div class="search-history">
+                <!-- Lich su tim kiem -->
+              </div>
 
-                            <button class="search-form__submit btn btn-sm" type="submit" id="ariabutton-addon2">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </button>
-                            <button class="search-form__reset" type="reset">
-                                <i class="fa-solid fa-xmark"></i>
-                            </button>
-                        </form>
-                    </div>
+              <button class="search-form__submit btn btn-sm" type="submit" id="ariabutton-addon2">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+              <button class="search-form__reset" type="reset">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </form>
+          </div>
 
-                    <div class="col-3">
-                        <div class="header__user header__user--logged-out d-flex justify-content-end me-1">
-                            <a class="nav-link nav-link--account" href="login.html">Đăng nhập</a>
-                            <a class="nav-link nav-link--account" href="register.html">Đăng kí</a>
+          <div class="col-3">
+            <div class="header__user header__user--logged-out d-flex justify-content-end me-1">
+              <a class="nav-link nav-link--account" href="login.html">Đăng nhập</a>
+              <a class="nav-link nav-link--account" href="register.html">Đăng kí</a>
 
-                            <div class="dropdown">
-                                <a class=" nav-link dropdown__btn nav-link--username"></a>
-                                <ul class="dropdown__list dropdown__list--account bg-dark bg-gradient">
-                                    <li class="dropdown__list-item">
-                                        <a class="nav-link" href="user_profile.html">
-                                            <i class="fa-regular fa-user"></i> Hồ sơ cá nhân
-                                        </a>
-                                    </li>
-                                    <li class="dropdown__list-item">
-                                        <a class="nav-link user-logout" href="#">
-                                            <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+              <div class="dropdown">
+                <a class=" nav-link dropdown__btn nav-link--username"></a>
+                <ul class="dropdown__list dropdown__list--account bg-dark bg-gradient">
+                  <li class="dropdown__list-item">
+                    <a class="nav-link" href="user_profile.html">
+                      <i class="fa-regular fa-user"></i> Hồ sơ cá nhân
+                    </a>
+                  </li>
+                  <li class="dropdown__list-item">
+                    <a class="nav-link user-logout" href="#">
+                      <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-md p-0 m-0">
+          <div class="container-fluid p-md-0 p-2">
+            <div class="d-md-none">
+              <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbar-content">
+              <div class="container-fluid d-sm-block d-md-none mb-2">
+              </div>
+
+              <ul class="navbar-nav me-auto">
+              </ul>
+
+              <div class="dropdown">
+                <a class="nav-link nav-link--bookmark" href="#"><i
+                    class="fa-regular fa-bookmark"></i></a>
+                <div class="dropdown__list bg-dark bg-gradient bookmark">
+                  <div class="bookmark-wrapper">
+
+                  </div>
                 </div>
-
-                <nav class="navbar navbar-expand-md p-0 m-0">
-                    <div class="container-fluid p-md-0 p-2">
-                        <div class="d-md-none">
-                            <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
-                        </div>
-
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="navbar-collapse collapse" id="navbar-content">
-                            <div class="container-fluid d-sm-block d-md-none mb-2">
-                            </div>
-
-                            <ul class="navbar-nav me-auto">
-                            </ul>
-
-                            <div class="dropdown">
-                                <a class="nav-link nav-link--bookmark" href="#"><i
-                                        class="fa-regular fa-bookmark"></i></a>
-                                <div class="dropdown__list bg-dark bg-gradient bookmark">
-                                    <div class="bookmark-wrapper">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+              </div>
             </div>
-        </header>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-        <main class="bg bg-dark bg-gradient main">
-            <div class="login-register bg-light">
-                <h1 class="login-register__heading">
-                    ĐĂNG KÝ
-                </h1>
-                <form>
-                    <div class="input-group mb-3 login-register_form_item">
-                        <div class="form-floating login-register_form_item">
-                          <input type="text" class="form-control login-register__form-input" id="login" placeholder="Tên đăng nhập">
-                          <label for="login" class="login-register__form-label">Tên đăng nhập</label>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3 login-register_form_item">
-                        <div class="form-floating login-register_form_item">
-                          <input type="email" class="form-control login-register__form-input" id="email" placeholder="email">
-                          <label for="email" class="login-register__form-label">Email</label>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3 login-register_form_item">
-                        <div class="form-floating login-register_form_item">
-                          <input type="password" class="form-control login-register__form-input" id="password" placeholder="Mật khẩu">
-                          <label for="password" class="login-register__form-label">Mật khẩu</label>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3 login-register_form_item">
-                        <div class="form-floating login-register_form_item">
-                          <input type="password" class="form-control login-register__form-input" id="passwordrp" placeholder="Nhập lại mật khẩu">
-                          <label for="passwordrp" class="login-register__form-label">Nhập lại mật khẩu</label>
-                        </div>
-                    </div>
-                    <div class="row input-group mb-3 login-register_form_item" id="sex">
-                        <div class="mb-3 login-register_form_item_radio">
-                            <label for="sex" class="form-check-label login-register__form-label">Giới tính</label>
-                        </div>
-                        <div class="col">
-                            <input class="form-check-input login-register__form-radio-selection" type="radio" name="sex"
-                                id="male">
-                            <label class="form-check-label login-register__form-label_radio_check" for="male">
-                                Nam
-                            </label>
-                        </div>
-                        <div class="col">
-                            <input class="form-check-input login-register__form-radio-selection" type="radio" name="sex"
-                                id="fmale">
-                            <label class="form-check-label login-register__form-label_radio_check" for="fmale">
-                                Nữ
-                            </label>
-                        </div>
-                        <div class="col">
-                            <input class="form-check-input login-register__form-radio-selection" type="radio" name="sex"
-                                id="sex_other">
-                            <label class="form-check-label login-register__form-label_radio_check" for="sex_other">
-                                Khác
-                            </label>
-                        </div>
-                    </div>
-                    <div class="mb-3 login-register_form_item">
-                        <input type="checkbox" class="form-check-input login-register__form-checkbox" id="poplicy_rule">
-                        <label class="form-check-label login-register__form-label" for="poplicy_rule">Đồng ý với các <a class="login-register__link"
-                                href="">Điều khoản</a> và <a class="login-register__link" href="">Chính sách</a></label>
-                    </div>
-                    <button type="submit" class="input-group btn login-register__form-submit">Đăng kí</button>
-                </form>
-                <p class="login-register__p"> Bạn đã có tài khoản? <a class="login-register__link" href="login.html">Đăng nhập</a></p>
+    <main class="bg bg-dark bg-gradient main">
+      <div class="form-container bg-light">
+        <h1 class="form__heading mt-2 text-uppercase">
+          Đăng ký
+        </h1>
+        <form class="form form-register" id="form-register">
+          <div class="input-group form__item">
+            <div class="form-floating form__item">
+              <input type="text" class="form-control form__input" id="username" name="username" placeholder="Tên đăng nhập">
+              <label for="login" class="form__label">Tên đăng nhập</label>
             </div>
-
-        </main>
-
-
-        <footer class="footer bg-black bg-gradient">
-            <div class="container-lg">
-                <div class="row">
-                    <div class="ms-2 col-0 col-md-6 footer__content row">
-                        <div class="col-4 col-md-12">
-                            <img class="footer__brand" src="./assets/img/brand.png" alt="">
-                        </div>
-                        <div class="col-8 col-md-12">
-                            <p class="footer__desc">
-                                Website được xây dựng bởi ... <br>
-                                Chúc bạn có những giây phút xem phim vui vẻ!
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2 d-none d-md-block footer__content">
-                        <div class="footer__content-title">Thể loại</div>
-                        <ul>
-                            <li>
-                                <a class="footer-link" href="#">Hành động</a>
-                            </li>
-                            <li>
-                                <a class="footer-link" href="#">Viễn tưởng</a>
-                            </li>
-                            <li>
-                                <a class="footer-link" href="#">Anime</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-6 col-md-2 footer__content">
-                        <div class="footer__content-title">Quy định</div>
-                        <ul>
-                            <li>
-                                <a class="footer-link" href="#">Quy định chung</a>
-                            </li>
-                            <li>
-                                <a class="footer-link" href="#">Quyền riêng tư</a>
-                            </li>
-                            <li>
-                                <a class="footer-link" href="#">Bản quyền</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-6 col-md-2 footer__content">
-                        <div class="footer__content-title">Contact us</div>
-                        <ul>
-                            <li>
-                                <a class="footer-link" href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-                            </li>
-                            <li>
-                                <a class="footer-link" href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
-                            </li>
-                            <li>
-                                <a class="footer-link" href=""><i class="fa-brands fa-github"></i> Github</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <span class="form__message"></span>
+          </div>
+          <div class="input-group form__item">
+            <div class="form-floating form__item">
+              <input type="text" class="form-control form__input" id="email" name="email" placeholder="email">
+              <label for="email" class="form__label">Email</label>
             </div>
+            <span class="form__message"></span>
+          </div>
+          <div class="input-group form__item">
+            <div class="form-floating form__item">
+              <input type="password" class="form-control form__input" id="password" name="password" placeholder="Mật khẩu">
+              <label for="password" class="form__label">Mật khẩu</label>
+            </div>
+            <span class="form__message"></span>
+          </div>
+          <div class="input-group form__item">
+            <div class="form-floating form__item">
+              <input type="password" class="form-control form__input" id="password-repeat" name="password-repeat" placeholder="Nhập lại mật khẩu">
+              <label for="passwordrp" class="form__label">Nhập lại mật khẩu</label>
+            </div>
+            <span class="form__message"></span>
+          </div>
+          <div class="row input-group form__item" id="sex">
+            <div class="mb-3 form__item-radio">
+              <label for="sex" class="form__check-label form__label">Giới tính</label>
+            </div>
+            <div class="col">
+              <input class="form-check-input form__check-input form__radio-selection" type="radio" name="sex"
+                id="male" value="male">
+              <label class="form-check-label form__check-label form__label-radio-check" for="male">
+                Nam
+              </label>
+            </div>
+            <div class="col">
+              <input class="form-check-input form__check-input form__radio-selection" type="radio" name="sex"
+                id="female" value="female">
+              <label class="form-check-label form__check-label form__label-radio-check" for="female">
+                Nữ
+              </label>
+            </div>
+            <div class="col">
+              <input class="form-check-input form__check-input form__radio-selection" type="radio" name="sex"
+                id="sex-other" value="other">
+              <label class="form-check-label form__check-label form__label-radio-check" for="sex-other">
+                Khác
+              </label>
+            </div>
+            <span class="form__message"></span>
+          </div>
+          <div class="mb-3 form__item">
+            <input type="checkbox" class="form-check-input form__check-input form__checkbox" id="poplicy-rule">
+            <label class="form-check-label form__check-label form__label" for="poplicy-rule">Đồng ý với các <a class="form__link"
+                href="">Điều khoản</a> và <a class="form__link" href="">Chính sách</a></label>
+          </div>
+          <button type="submit" class="input-group btn form__submit">Đăng ký</button>
+        </form>
+        <p class="form__footer mt-2"> Bạn đã có tài khoản? <a class="form__link" href="login.html">Đăng nhập</a></p>
+      </div>
 
-            <div class="copyright"><i class="fa-regular fa-copyright"></i> 2023 FZilla. Bản quyền thuộc về FZilla</div>
-        </footer>
+    </main>
 
-    </div>
+    <footer class="footer bg-black bg-gradient">
+      <div class="container-lg">
+        <div class="row">
+          <div class="ms-2 col-0 col-md-6 footer__content row">
+            <div class="col-4 col-md-12">
+              <img class="footer__brand" src="./assets/img/brand.png" alt="">
+            </div>
+            <div class="col-8 col-md-12">
+              <p class="footer__desc">
+                Website được xây dựng bởi ... <br>
+                Chúc bạn có những giây phút xem phim vui vẻ!
+              </p>
+            </div>
+          </div>
 
-    <div class="to-top-btn" title="Về đầu trang">
-    </div>
+          <div class="col-md-2 d-none d-md-block footer__content">
+            <div class="footer__content-title">Thể loại</div>
+            <ul>
+              <li>
+                <a class="footer-link" href="#">Hành động</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Viễn tưởng</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Anime</a>
+              </li>
+            </ul>
+          </div>
 
-    <div class="modal"></div>
+          <div class="col-6 col-md-2 footer__content">
+            <div class="footer__content-title">Quy định</div>
+            <ul>
+              <li>
+                <a class="footer-link" href="#">Quy định chung</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Quyền riêng tư</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#">Bản quyền</a>
+              </li>
+            </ul>
+          </div>
 
-    <div class="toast"></div>
+          <div class="col-6 col-md-2 footer__content">
+            <div class="footer__content-title">Contact us</div>
+            <ul>
+              <li>
+                <a class="footer-link" href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+              </li>
+              <li>
+                <a class="footer-link" href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+              </li>
+              <li>
+                <a class="footer-link" href=""><i class="fa-brands fa-github"></i> Github</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <!-- bootstrap 5 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
-        </script>
+      <div class="copyright"><i class="fa-regular fa-copyright"></i> 2023 FZilla. Bản quyền thuộc về FZilla</div>
+    </footer>
 
-    <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  </div>
 
-    <script src="./assets/js/userData.js"></script>
-    <script src="./assets/js/movieData.js"></script>
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/render.js"></script>
-    <script src="./assets/js/renderMovie.js"></script>
-    <script src="./assets/js/swiperCarousel.js"></script>
-    <script src="./assets/js/navbar.js"></script>
-    <script src="./assets/js/bookmark.js"></script>
-    <script src="./assets/js/user.js"></script>
-    <script src="./assets/js/search.js"></script>
+  <div class="to-top-btn" title="Về đầu trang">
+  </div>
 
-    <script>
+  <div class="modal"></div>
 
+  <div class="toast"></div>
 
+  <!-- bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
+
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="./assets/js/userData.js"></script>
+  <script src="./assets/js/movieData.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/render.js"></script>
+  <script src="./assets/js/renderMovie.js"></script>
+  <script src="./assets/js/swiperCarousel.js"></script>
+  <script src="./assets/js/navbar.js"></script>
+  <script src="./assets/js/bookmark.js"></script>
+  <script src="./assets/js/user.js"></script>
+  <script src="./assets/js/search.js"></script>
+  <script src="./assets/js/formValidator.js"></script>
+
+  <script>  
+    Validator({
+      form: '#form-register',
+      formMessage: '.form__message',
+      formGroup: '.input-group',
+      rules: [
+        Validator.require('#username', '* Vui lòng nhập tên đăng nhập'),
+        Validator.require('#email', '* Vui lòng nhập email'),
+        Validator.require('#password', '* Vui lòng nhập mật khẩu'),
+        Validator.require('#password-repeat', '* Vui lòng nhập lại mật khẩu'),
+        Validator.require('input[name="sex"]', '* Vui lòng chọn giới tính của bạn'),
+        Validator.requireMinLength('#username', 3, '* Tên đăng nhập phải chứa ít nhất 3 kí tự'),
+        Validator.isEmail('#email', '* Email không hợp lệ'),
+        Validator.requireMinLength('#password', 6, '* Mật khẩu phải chứa ít nhất 6 kí tự'),
+        Validator.requireMinLength('#password-repeat', 6, '* Mật khẩu phải chứa ít nhất 6 kí tự'),
+      ],
+      handleFormOnSubmit(values) {
+        // call API
+        console.log('Form values: ', values);
+      }
+    });
+  </script>
 </body>
 
 </html>
