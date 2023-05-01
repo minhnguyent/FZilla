@@ -1,17 +1,5 @@
 const searchForm = document.querySelector('.search-form');
 
-// test history
-const historyItemList = {
-    history: [
-        'Avatar Dòng chảy của nước',
-        'Hành động',
-        'Loki',
-        'Khế ước'
-    ]
-};
-localStorage.setItem('searchHistory', JSON.stringify(historyItemList));
-
-
 if (searchForm) {
     const searchInput = searchForm.querySelector('.search-form__input');
     const resetButton = searchForm.querySelector('.search-form__reset');
@@ -29,22 +17,20 @@ if (searchForm) {
         if (searchInput.value === '')
             return;
         
-        searchRedirection(); 
-        if (typeof localStorage['searchHistory'] === 'undefined') {
-            let historyItemList = {
-                history: [
+            if (typeof localStorage['searchHistory'] === 'undefined') {
+                let historyItemList = [
                     searchInput.value
-                ]
-            };
-            localStorage['history'] = historyItemList;
-        } else {
-            let historyItemList = JSON.parse(localStorage['searchHistory']);
-            if (historyItemList['history'].includes(searchInput.value) === false) {
-                historyItemList['history'].unshift(searchInput.value);
+                ];
+                localStorage['searchHistory'] = JSON.stringify(historyItemList);
+            } else {
+                let historyItemList = JSON.parse(localStorage['searchHistory']);
+                if (historyItemList.includes(searchInput.value) === false) {
+                    historyItemList.unshift(searchInput.value);
+                }
+                localStorage['searchHistory'] = JSON.stringify(historyItemList);
             }
-            localStorage['searchHistory'] = JSON.stringify(historyItemList);
-            renderSearchHistory(searchHistoryElement);
-        }
+
+            searchRedirection(); 
     });
 
     const showHistory = function() {
@@ -55,7 +41,7 @@ if (searchForm) {
         }
     }
 
-    const hideHistory = function() {
+    const hideHistory = function() {    
         searchHistoryElement.innerHTML = '';
         searchInput.classList.add('rounded-1');
         searchInput.classList.remove('search-form__input--expand');
@@ -67,6 +53,7 @@ if (searchForm) {
             showHistory();
         }
     });
+
     searchInput.addEventListener('input', function() {
         this.value ? hideHistory() : showHistory();
     })
@@ -115,7 +102,9 @@ if (searchForm) {
 
         root.innerHTML = '';
 
-        historyItemList['history'].forEach(function (value, key) {
+        historyItemList.forEach(function (value, key) {
+            if (key > 2) return ;
+
             let item = document.createElement('div');
             item.classList.add('search-history-item');
             item.setAttribute('tabindex', '0');
@@ -125,10 +114,11 @@ if (searchForm) {
                 <span class="search-history-item__remove" tabindex="0"><i class="fa-solid fa-xmark"></i></span>`
 
             // add remove event
-            item.querySelector('.search-history-item__remove').addEventListener('click', function (event) {
-                historyItemList['history'].splice(key, 1);
+            item.querySelector('.search-history-item__remove').addEventListener('click', function () {
+                // remove this 
+                historyItemList.splice(key, 1);
 
-                if (historyItemList['history'].length !== 0) {
+                if (historyItemList.length !== 0) {
                     localStorage['searchHistory'] = JSON.stringify(historyItemList);
                 } else {
                     localStorage.removeItem('searchHistory');

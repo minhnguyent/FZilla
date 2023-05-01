@@ -1,3 +1,12 @@
+const historyItemList = [
+    'Avatar Dòng chảy của nước',
+    'Hành động',
+    'Loki',
+    'Khế ước'
+];
+
+// localStorage.setItem('searchHistory', JSON.stringify(historyItemList));
+
 const listFavouriteMovies = [
     {
         category: 'trendingMoviesMonth',
@@ -22,21 +31,21 @@ const listFavouriteMovies = [
 ];
 
 const listHistoryMovies = [
-        {
-            category: 'trendingMoviesMonth',
-            filmId: 3
-        },
-        {
-            category: 'trendingMoviesMonth',
-            filmId: 1
-        },
-        {
-            category: 'popularMovies',
-            filmId: 2
-        },
+    {
+        category: 'trendingMoviesMonth',
+        filmId: 3
+    },
+    {
+        category: 'trendingMoviesMonth',
+        filmId: 1
+    },
+    {
+        category: 'popularMovies',
+        filmId: 2
+    },
 ];
 
-localStorage.setItem('favouriteMovies', JSON.stringify(listFavouriteMovies));
+// localStorage.setItem('favouriteMovies', JSON.stringify(listFavouriteMovies));
 
 const user = {
     username: 'fzilla', // username maxlength12
@@ -51,4 +60,4 @@ const user = {
 }
 
 // Mô phỏng đăng nhập
-localStorage.setItem('user', JSON.stringify(user));
+// localStorage.setItem('user', JSON.stringify(user));
