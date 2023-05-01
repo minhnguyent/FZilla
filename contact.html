@@ -51,8 +51,7 @@
           <div class="col-6 d-flex justify-content-center align-items-center">
             <form class="search-form search-form--empty d-flex justify-content-center" role="search">
               <input class="search-form__input ps-2 pe-5 rounded-1 form-control" type="text"
-                placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search"
-                aria-describedby="button-addon2" />
+                placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search" aria-describedby="button-addon2" />
 
               <div class="search-history">
                 <!-- Lich su tim kiem -->
@@ -97,9 +96,8 @@
               <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
             </div>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false"
-              aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content"
+              aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -111,8 +109,7 @@
               </ul>
 
               <div class="dropdown">
-                <a class="nav-link nav-link--bookmark" href="#"><i
-                    class="fa-regular fa-bookmark"></i></a>
+                <a class="nav-link nav-link--bookmark" href="#"><i class="fa-regular fa-bookmark"></i></a>
                 <div class="dropdown__list bg-dark bg-gradient bookmark">
                   <div class="bookmark-wrapper">
 
@@ -126,53 +123,69 @@
     </header>
 
     <main class="main bg-dark bg-gradient">
-      <div class="container-lg">
+      <div class="form-container bg-light">
 
-        <div class="contact">
-          <div class="first">
-            <h1>LIÊN HỆ</h1>
-            <h2>Thông tin</h2>
-            <br>
-            <p>&emsp;FZilla là website xem phim online và chia sẻ thông tin các bộ phim mới thông qua nhiều nguồn khác nhau. Nếu
-              muốn biết
-              thêm thông tin chi tiết, vui lòng liên hệ địa chỉ bên dưới:</p>
-            <br>
-            <p>&emsp;Địa chỉ: Phường Xuân Khánh, quận Ninh Kiều, Tp Cần Thơ</p>
-            <p>&emsp;Điện thoại: 0000000000</p>
-            <p>&emsp;Mạng xã hội: Facebook Instagram Fanpage</p>
-            <br>
-            <h2>Phản hồi</h2>
-            <br>
-            <p>&emsp;Nếu bạn có bất kỳ ý kiến đóng góp nào, vui lòng gửi liên hệ thư điện tử hoặc điền thông tin vào biểu mẫu
-              sau:
-            </p>
-            <br>
-          </div>
-          
-          <div class="second">
-            <h2>&ensp;Ý kiến đóng góp</h2>
-            <form action="contact.html" method="post">
-              <label for="name">&ensp; Họ và tên</label>
-              <input type="text" id="name" name="name" placeholder="Vui lòng nhập họ tên của bạn">
-              <br>
-              <label for="email">&ensp; Email</label>
-              <input type="email" id="email" name="email" placeholder="Vui lòng nhập địa chỉ email.">
-              <br>
-              <label id="sub" for="subject">&ensp; Vấn đề gặp phải</label>
-              <select name="lang" id="lang-select">
-                <option value="1">Tài khoản cá nhân</option>
-                <option value="2">Chế độ ưu đãi</option>
-                <option value="3">Vấn đề khác</option>
-              </select>
-              <br>
-              <label for="message">&ensp; Nội dung chi tiết</label>
-              <br>
-              <textarea id="message" name="message" placeholder="Nội dung ý kiến đóng góp"
-                style="height:100px;width:100%"></textarea>
-              <br>
-              <input type="submit" value="Gửi">
+        <div class="row">
+          <h1 class="form__heading mt-2 text-uppercase">LIÊN HỆ</h1>
+          <h2 class="form__sub-heading">Thông tin</h2>
+          <div class="form__desc">
+            FZilla là website xem phim online và chia sẻ thông tin các bộ phim mới thông qua nhiều nguồn khác nhau.
+            Nếu muốn biết thêm thông tin chi tiết, vui lòng liên hệ địa chỉ bên dưới:<br>
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-dot"></i> Địa chỉ: Phường Xuân Khánh, quận Ninh Kiều, Tp Cần Thơ
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i> Điện thoại: 0000000000
+              </li>
+              <li>
+                <i class="fa-solid fa-pen"></i> Nếu bạn có bất kỳ ý kiến đóng góp nào vui lòng
+                điền thông tin vào biểu mẫu sau:
+              </li>
+            </ul>
           </div>
         </div>
+
+        <div class="row">
+          <h2 class="form__sub-heading">Ý kiến đóng góp</h2>
+          <form class="form" action="contact.html" method="post">
+            <div class="input-group form__item">
+              <div class="form-floating form__item">
+                <input type="text" class="form-control form__input" id="fullname" name="fullname"
+                  placeholder="Họ và tên">
+                <label for="email" class="form__label">Họ và tên</label>
+              </div>
+              <span class="form__message"></span>
+            </div>
+            <div class="input-group form__item">
+              <div class="form-floating form__item">
+                <input type="text" class="form-control form__input" id="email" name="email" placeholder="Email liên hệ">
+                <label for="email" class="form__label">Email liên hệ</label>
+              </div>
+              <span class="form__message"></span>
+            </div>
+            <div class="input-group form__item">
+              <div class="form-floating form__item">
+                <select class="form-select form-control form__input" id="type">
+                  <option value="0">Bản quyền phim</option>
+                  <option value="1">Tài khoản cá nhân</option>
+                  <option value="2">Chế độ ưu đãi</option>
+                  <option value="3">Vấn đề khác</option>
+                </select>
+                <label for="type">Vấn đề gặp phải</label>
+              </div>
+            </div>
+            <div class="input-group form__item">
+              <div class="form-floating form__item">
+                <textarea class="form-control form__input" id="describe" name="describe"
+                  placeholder="Thông tin chi tiết" style="height: 150px;"></textarea>
+                <label for="describe" class="form__label">Thông tin chi tiết</label>
+              </div>
+              <span class="form__message"></span>
+            </div>
+            <button type="submit" class="input-group btn form__btn form__btn--submit">Gửi</button>
+        </div>
+      </div>
     </main>
 
     <footer class="footer bg-black bg-gradient">
