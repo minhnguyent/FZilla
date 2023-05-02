@@ -40,3 +40,40 @@
     padding: .5rem 0;
     text-align: center;
 }
+
+/* Responsive */
+
+/* xs bs-breakpoint */
+@media (min-width: 0px) {
+    .ps-sm-1 {
+        padding-left: 1rem !important;
+    }
+}
+
+/* sm bs-breakpoint */
+@media (min-width: 576px) {
+    
+}
+
+/* md bs-breakpoint */
+@media (min-width: 768px) {
+    .ps-sm-1 {
+        padding-left: 0rem !important;
+    }
+}
+
+/* lg bs-breakpoint */
+@media (min-width: 992px) {
+    
+
+}
+
+/* xl bs-breakpoint */
+@media (min-width: 1200px) {
+    
+}
+
+/* xxl bs-breakpoint */
+@media (min-width: 1400px) {
+
+}
