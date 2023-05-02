@@ -6,12 +6,42 @@ const mainSectionCarousel = new Swiper('.main-section__carousel', {
     },
     loop: true,
     slidesPerView: 'auto',
-    loopedSlides: 6,
-    spaceBetween: 20,
-    slidesPerGroup: 6,
 
     breakpoints: {
-        // TODO
+        // xs - width < 576px
+        0: {
+            loopedSlides: 3,
+            spaceBetween: 8,
+            slidesPerGroup: 3,
+        },
+        // sm - width >= 576px
+        576: {
+            loopedSlides: 3,
+            spaceBetween: 8,
+            slidesPerGroup: 3,
+        },
+        // md - width >= 768px
+        768: {
+            loopedSlides: 4,
+            spaceBetween: 12,
+            slidesPerGroup: 4,
+        },
+        // lg - width >= 992px
+        992: {
+            loopedSlides: 5,
+            spaceBetween: 16,
+            slidesPerGroup: 5,
+
+        },
+        // xl - width >= 1200px
+        1200: {
+            loopedSlides: 6,
+            spaceBetween: 20,
+            slidesPerGroup: 6,
+        },
+        // xxl - width >= 1400px
+        1400: {
+        },
     },
 
     speed: 1300,

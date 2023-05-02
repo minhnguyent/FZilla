@@ -41,13 +41,13 @@ const renderCarouselMovies = function(root, category) {
   }).join('');
 }
 
-const renderMovieList = (root, category, colClassList = ['col-3']) => {
+const renderMovieList = (root, category) => {
   if (!root || moviesByCategory.hasOwnProperty(category) === false) return;
 
   const movies = moviesByCategory[category];
   root.innerHTML = movies.map((movie, id) => {
     return `
-      <div class="${colClassList.join(' ')}">
+      <div class="col">
         <div class="film-item">
           <a href="/FZilla/film_info.html?film_category=${category}&film_id=${id}" class="film-item-inner">
             <div class="film-item__main">

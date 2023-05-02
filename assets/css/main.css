@@ -253,10 +253,14 @@
 }
 
 .main-section__carousel-btn {
+    --width: 1.875rem;
+    --height: 2.5rem;
     top: 40%;
     background-color: #EA871Eaa;
     padding: 8px 10px;
     border-radius: 2px;
+    width: var(--width);
+    height: var(--height);
 }
 
 .main-section__carousel-btn:hover {
@@ -264,7 +268,7 @@
 }
 
 .main-section__carousel-btn::after {
-    font-size: 1.8rem;
+    font-size: 1rem;
     color: var(--color-white);
 }
 
@@ -320,7 +324,7 @@
 
 .main-sidebar-section__heading h2 {
     margin-bottom: 0.5rem;
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--color-white);
 }
 
@@ -340,15 +344,16 @@
 }
 
 .main-sidebar-section__carousel-btn {
-    --width: 1.4rem;
-    --height: 1.2rem;
-    --buttonSpace: 2px;
+    --width: 2.5rem;
+    --height: 1.75rem;
+    --buttonSpace: 5px;
 
     color: var(--color-white);
     background-color: var(--color-black);
+    border: 1px solid var(--color-supreme-orange);
     width: var(--width);
     height: var(--height);
-    top: 34px;
+    top: 28px;
     transition: background-color 0.2s linear;
 }
 
@@ -357,7 +362,7 @@
 }
 
 .main-sidebar-section__carousel-btn::after {
-    font-size: 0.4rem;
+    font-size: 0.625rem;
 }
 
 .main-sidebar-section__carousel-btn-prev {
@@ -427,8 +432,9 @@
 }
 
 .trailer-item__title {
-    font-size: 0.85rem;
+    font-size: 1rem;
     line-height: 1.2;
+    margin-top: 4px;
     margin-bottom: 4px;
 }
 
@@ -465,6 +471,7 @@
 }
 
 .main-sidebar-section__tabs {
+    --spaceBetween: 8px;
     display: flex;
     position: relative;
 }
@@ -473,12 +480,18 @@
     flex: 1;
     text-align: center;
     color: var(--color-white);
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     line-height: 1;
-    padding: 8px 0;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
     border-bottom: 2px solid transparent;
     opacity: 0.6;
     transition: opacity 0.2s ease;
+}
+
+.main-sidebar-section__tab-item:not(:first-child) {
+    margin-left: var(--spaceBetween);
 }
 
 .main-sidebar-section__tab-item.active {
@@ -495,14 +508,14 @@
     position: absolute;
     top: calc(100% - 2px);
     left: 0;
-    width: 33.33333%;
+    width: calc((100% - 2 * var(--spaceBetween)) / 3);
     height: 2px;
     background-color: var(--color-supreme-orange);
     transition: left 0.3s ease;
 }
 
 .main-sidebar-section__tab-content {
-    margin-top: 10px;
+    margin-top: 16px;
 }
 
 .main-sidebar-section__tab-pane {
@@ -528,9 +541,11 @@
 }
 
 .main-sidebar-section__tab-pane-item-thumb {
-    --thumb-width: 15%;
+    --thumb-width: 10%;
+    --thumb-min-width: 48px;
     position: relative;
     width: var(--thumb-width);
+    min-width: var(--thumb-min-width);
     overflow: hidden;
     padding-top: calc(var(--thumb-width) / 0.7);
 }
@@ -548,7 +563,7 @@
     flex: 1;
     color: var(--color-white);
     padding-left: 8px;
-    padding-top: 4px;
+    padding-top: 6px;
     transition: background-color 0.08s linear;
 }
 
@@ -610,7 +625,7 @@
 }
 
 
-/* breadcrumb */
+/* breadcrumb 
 .breadcrumb {
 
 }
