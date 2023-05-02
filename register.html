@@ -133,14 +133,28 @@
           <div class="input-group form__item">
             <div class="form-floating form__item">
               <input type="text" class="form-control form__input" id="username" name="username" placeholder="Tên đăng nhập">
-              <label for="login" class="form__label">Tên đăng nhập</label>
+              <label for="username" class="form__label">Tên đăng nhập</label>
             </div>
             <span class="form__message"></span>
           </div>
           <div class="input-group form__item">
             <div class="form-floating form__item">
-              <input type="text" class="form-control form__input" id="email" name="email" placeholder="email">
+              <input type="text" class="form-control form__input" id="fullname" name="fullname" placeholder="Họ và tên">
+              <label for="fullname" class="form__label">Họ và tên</label>
+            </div>
+            <span class="form__message"></span>
+          </div>
+          <div class="input-group form__item">
+            <div class="form-floating form__item">
+              <input type="text" class="form-control form__input" id="email" name="email" placeholder="Email">
               <label for="email" class="form__label">Email</label>
+            </div>
+            <span class="form__message"></span>
+          </div>
+          <div class="input-group form__item">
+            <div class="form-floating form__item">
+              <input type="text" class="form-control form__input" id="phone" name="phone" placeholder="Số điện thoại">
+              <label for="phone" class="form__label">Số điện thoại</label>
             </div>
             <span class="form__message"></span>
           </div>
@@ -309,7 +323,11 @@
       ],
       handleFormOnSubmit(values) {
         // call API
-        console.log('Form values: ', values);
+        if(createUser(values)) {
+          setTimeout(() => {
+            window.location.href = './login.html';
+          }, 1500);
+        }
       }
     });
   </script>

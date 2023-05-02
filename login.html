@@ -268,7 +268,13 @@
       ],
       handleFormOnSubmit(values) {
         // call API
-        console.log('Form values: ', values);
+        if (verifyLogin(values)) {
+          setTimeout(() => {
+            window.location.href = './index.html';
+          }, 1500);
+        } else {
+          // sai ten tai khoan hoat mat khau
+        }
       }
     });
   </script>

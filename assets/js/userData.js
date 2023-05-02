@@ -61,3 +61,7 @@ const user = {
 
 // Mô phỏng đăng nhập
 // localStorage.setItem('user', JSON.stringify(user));
+
+
+if (typeof localStorage['allUserData'] === 'undefined')
+    localStorage.setItem('allUserData', JSON.stringify([]));

@@ -7,7 +7,7 @@ function getFavouriteMovies() {
     } else { // not
         if (typeof localStorage['favouriteMovies'] === 'undefined')
             localStorage.setItem('favouriteMovies', JSON.stringify([]));
-        
+
         return JSON.parse(localStorage['favouriteMovies']);
     }
 }
@@ -28,30 +28,30 @@ function setFavouriteMovies(movies) {
 // return -1 if not, else
 function isFavouriteMovie(movie, listMovies = getFavouriteMovies()) {
     let position = -1;
-    listMovies.forEach(function(value, index) {
+    listMovies.forEach(function (value, index) {
         if (movie['category'] === value['category'] && movie['filmId'] === value['filmId'])
             position = index;
     });
     return position;
-} 
+}
 
-function addFavouriteMovie(movie, listMovies = getFavouriteMovies()) { 
+function addFavouriteMovie(movie, listMovies = getFavouriteMovies()) {
     // movie = { category: ..., filmId: ... };
     if (isFavouriteMovie(movie) !== -1)
-        return ;
+        return;
     listMovies.push(movie);
     setFavouriteMovies(listMovies);
-} 
+}
 
 function removeFavouriteByIndex(index, listMovies = getFavouriteMovies()) {
-    if (index < 0 || index >= listMovies.length) return ;
+    if (index < 0 || index >= listMovies.length) return;
     listMovies.splice(index, 1);
     setFavouriteMovies(listMovies);
 }
 
 function removeFavouriteByMovie(movie, listMovies = getFavouriteMovies()) {
     let position = isFavouriteMovie(movie);
-    if (position === -1) return ;
+    if (position === -1) return;
     removeFavouriteByIndex(position, listMovies);
 }
 
@@ -69,7 +69,7 @@ if (bookmarkElement) {
                 `<div class="bookmark-wrapper--empty">
                     Không có phim nào ở đây!
                 </div>`;
-            
+
         } else {
             renderBookmark(bookmarkWrapper, favouriteMovies);
         }
@@ -99,7 +99,7 @@ if (bookmarkElement) {
                 removeFavouriteByIndex(key);
             });
 
-            item.addEventListener('click', function() {
+            item.addEventListener('click', function () {
                 window.location.href = `/FZilla/film_info.html?film_category=${value['category']}&film_id=${value['filmId']}`;
             });
 
@@ -126,7 +126,7 @@ if (bookmarkElement) {
 function handleBookmarkButton() {
     const { category, filmId } = getFilmInfoFromSearchParams();
     const mainFilmInfoBookmark = $('.main-film-info__bookmark');
-    mainFilmInfoBookmark.addEventListener('click', function() {
+    mainFilmInfoBookmark.addEventListener('click', function () {
         if (
             this.classList.contains('main-film-info__bookmark--added') ||
             this.classList.contains('main-film-info__bookmark--adding')
@@ -140,7 +140,7 @@ function handleBookmarkButton() {
             // add
             this.classList.add('main-film-info__bookmark--adding');
             addFavouriteMovie({ category, filmId });
-            this.addEventListener('mouseout', function() {
+            this.addEventListener('mouseout', function () {
                 if (this.classList.contains('main-film-info__bookmark--adding')) {
                     this.classList.remove('main-film-info__bookmark--adding');
                     this.classList.add('main-film-info__bookmark--added');
@@ -158,7 +158,7 @@ function setBookmarkButtonStatus() {
         mainFilmInfoBookmark.classList.remove('main-film-info__bookmark--added');
         mainFilmInfoBookmark.classList.remove('main-film-info__bookmark--adding');
     }
-    else {   
+    else {
         mainFilmInfoBookmark.classList.add('main-film-info__bookmark--added');
         mainFilmInfoBookmark.classList.add('main-film-info__bookmark--adding');
     }

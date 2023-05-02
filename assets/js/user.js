@@ -1,7 +1,7 @@
 /* ************************************* *
  * Tạm thời hoàn tất                     *
- * Chỉ cần bổ sung thông báo đăng xuất   *
- * Thêm tính năng đăng nhập              *
+ * Chỉ cần bổ sung thông báo             *
+ * Thêm tính năng đăng nhập (đã xong)    *
  * ************************************* */
 
 const viInformationTitle = {
@@ -13,6 +13,7 @@ const viInformationTitle = {
 };
 
 
+// Mô phỏng các chức năng đăng nhập, đăng xuất
 function getUserData() {
     return typeof localStorage['user'] === 'undefined' ? undefined : JSON.parse(localStorage['user']);
 }
@@ -21,24 +22,36 @@ function setUserData(user) {
     localStorage.setItem('user', JSON.stringify(user));
 }
 
-
-// Logout
-
+// Logout event
 document.querySelector('.user-logout').addEventListener('click', function () {
+    // update userData in allUserData
+    let allUserData = JSON.parse(localStorage['allUserData']);
+    let currentUser = getUserData();
+
+    for (let key in allUserData) {
+        if (allUserData[key]['username'] === currentUser['username'])
+            allUserData[key] = currentUser;
+    }
+
+    localStorage['allUserData'] = JSON.stringify(allUserData);
+
+    // remove user from local
     localStorage.removeItem('user');
-    renderUserHeader();
-
-
-    if (window.location.pathname === '/FZilla/user_profile.html')
-        window.location.href = '/FZilla/index.html';
 
     /************************************
      *  Hiển thị thông báo đăng xuất    *
      * **********************************/
+    console.log('Dang xuat thanh cong');
+    
+    setTimeout(() => {
+        if (window.location.pathname === '/FZilla/user_profile.html')
+            window.location.href = '/FZilla/index.html';
+        else window.location.reload();
+    }, 1500);
+
 });
 
 // Header
-
 function renderUserHeader() {
     const userData = getUserData();
 
@@ -65,9 +78,7 @@ function renderUserHeader() {
     }
 }
 
-
 // User profile 
-
 function renderUserProfile() {
     const userInformationElement = document.querySelector('.user-information');
     if (userInformationElement) {
@@ -136,10 +147,7 @@ function renderUserProfile() {
             }).join('');
         }
 
-        editProfileButton.addEventListener('click', function () {
-            alert('Chức năng đang cập nhật! Vui lòng quay lại sau!');
-        });
-
+        
         renderInformation(usernameElement, userData['username'], viInformationTitle['username']);
         renderInformation(fullnameElement, userData['fullname'], viInformationTitle['fullname']);
         renderInformation(emailElement, userData['email'], viInformationTitle['email']);
@@ -148,6 +156,72 @@ function renderUserProfile() {
         renderUserAvatar(avatarElement, userData['avatar']);
         renderProfileMovies(document.querySelector('.user-bookmark .row'), userData['favourite']);
         renderProfileMovies(document.querySelector('.user-watch-history .row'), userData['history']);
+        
+        editProfileButton.addEventListener('click', function () {
+            alert('Chức năng đang cập nhật! Vui lòng quay lại sau!');
+        });
+    }
+}
+
+function createUser(user) {
+    // set registrationDate
+    let rightNow = new Date();
+    let res = rightNow.toISOString().slice(0,10).replace(/-/g,"-");
+    user['registrationDate'] = res;
+
+    // set default avatar
+    switch (user['sex']) {
+        case 'male': 
+            user['avatar'] = '/FZilla/assets/img/avatar-male.png';
+            break;
+        case 'female':
+            user['avatar'] = '/FZilla/assets/img/avatar-female.png';
+            break;
+        default:
+            user['avatar'] = '/FZilla/assets/img/avatar-default.png';
+            break;
+    }
+
+    // set favourite and history
+    user['favourite'] = [];
+    user['history'] = [];
+
+    
+    // addUser
+    let allUserData = JSON.parse(localStorage['allUserData']);
+    allUserData.push(user);
+    localStorage['allUserData'] = JSON.stringify(allUserData);
+    /************************************
+     *  Hiển thị thông báo tạo tài      *
+     * khoản thành công hoặc thất bại   *
+     * **********************************/
+    console.log('tao tai khoan thanh cong');
+    return true;
+}
+
+function verifyLogin(values) {
+    let allUserData = JSON.parse(localStorage['allUserData']);
+
+    let loggedIn = false;
+
+    for (let user of allUserData) {
+        if (user['username'] === values['username'] && user['password'] === values['password']) {
+            setUserData(user);
+            loggedIn = true;
+            break;
+        }
+    }
+
+    /************************************
+     *  Hiển thị thông báo đăng nhập    *
+     * thành công hoặc thất bại         *
+     * **********************************/
+    if (loggedIn) {
+        console.log('Dang nhap thanh cong');
+        return true;
+    } else {   
+        console.log('Sai ten tai khoan hoac mat khau');
+        return false;
     }
 }
 
