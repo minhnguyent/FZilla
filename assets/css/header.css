@@ -4,9 +4,12 @@
 
 /* Header */
 
-.header {}
+.header {
+}
 
-.header__content {}
+.header__content {
+    padding: calc((var(--header-height) - 2 * var(--nav-link-height)) / 2);
+}
 
 .header__brand {
     display: inline-block;
@@ -20,8 +23,8 @@
     color: var(--color-white);
     font-size: 0.875rem;
     text-transform: uppercase;
-    line-height: 3.125rem;
-    height: 100%;
+    line-height: var(--nav-link-height);
+    height: var(--nav-link-height);
     text-align: center;
     transition: all .3s;
     cursor: pointer;
@@ -43,13 +46,15 @@
 }
 
 .nav-link--account {
-    padding: 0 .25rem;
+    padding: 0;
+}
+
+.nav-link--account + .nav-link--account {
+    margin-left: .5rem;
 }
 
 .nav-link--username {
     text-transform: none;
-    width: 10rem;
-    text-align: right;
 }
 
 .nav-link:hover:not(.active-link, .nav-link--username) {
@@ -236,7 +241,7 @@
     padding: 0;
     z-index: 100;
     right: 0;
-    top: 50px;
+    top: var(--nav-link-height);
     border: 1px solid var(--border-color);
 }
 
@@ -248,24 +253,23 @@
 /* Hide scrollbar for Chrome, Safari and Opera */
 .bookmark-wrapper::-webkit-scrollbar {
     display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .bookmark-wrapper {
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.bookmark-wrapper {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-  }
+}
 
 .bookmark-wrapper--empty {
-    width: 300px;
     color: var(--color-white);
     padding: .5rem 1rem;
+    width: 300px;
 }
 
 .bookmark-item {
     display: flex;
     align-items: center;
-    width: 320px;
     padding: .2rem;
 }
 
@@ -338,4 +342,65 @@
 
 .bookmark-clear-all:hover {
     color: var(--color-supreme-orange);
+}
+
+/* Responsive */
+
+/* xs bs-breakpoint */
+@media (min-width: 0px) {
+    .header {
+        --header-height: 66px;
+        --nav-link-height: 50px;
+    }
+
+    .header__user--logged-out .nav-link--user-mobile-expand {
+        display: none;
+    }
+
+    .nav-link--username {
+        width: auto;
+        text-align: center;
+    }
+
+    .bookmark-item {
+        width: 100%;
+    }
+}
+
+/* sm bs-breakpoint */
+@media (min-width: 576px) {
+    
+}
+
+/* md bs-breakpoint */
+@media (min-width: 768px) {
+    .header {
+        --header-height: 116px;
+        --nav-link-height: 50px;
+    }
+
+    .nav-link--username {
+        width: 10rem;
+        text-align: right;
+    }
+
+    .bookmark-item {
+        width: 320px;
+    }
+}
+
+/* lg bs-breakpoint */
+@media (min-width: 992px) {
+    
+
+}
+
+/* xl bs-breakpoint */
+@media (min-width: 1200px) {
+    
+}
+
+/* xxl bs-breakpoint */
+@media (min-width: 1400px) {
+
 }

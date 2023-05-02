@@ -33,10 +33,30 @@ const navbarItems = [
     }
 ];
 
+const navbarItemsMobile = [
+    {
+        item: 'Trang chủ',
+        link: 'index.html'
+    },
+    {
+        item: 'Hành động',
+        link: 'hanh-dong.html'
+    },
+    {
+        item: 'Viễn tưởng',
+        link: 'vien-tuong.html'
+    },
+    {
+        item: 'Anime',
+        link: 'anime.html'
+    },
+];
+
 const navbarElement = document.querySelector('.navbar-nav');
 
 function renderNavbar() {
     if (navbarElement) {
+        navbarElement.innerHTML = '';
         // render navbar
         for (let i = 0; i < 4; i++) {
             navbarElement.innerHTML +=
@@ -87,4 +107,63 @@ function renderNavbar() {
     }
 }
 
-renderNavbar();
+function renderNavbarMobile() {
+    if (navbarElement) {
+        navbarElement.innerHTML = '';
+
+        // render navbar
+        for (let i = 0; i < navbarItemsMobile.length; i++) {
+            navbarElement.innerHTML +=
+                `<li class="nav-item">
+                <a class="nav-link" href="./${navbarItemsMobile[i]['link']}">${navbarItemsMobile[i]['item']}</a>
+            </li>`;
+        }
+
+        navbarElement.innerHTML += `<div class="header__user header__user--logged-out me-1">
+            <a class="nav-link nav-link--account" href="login.html">Đăng nhập</a>
+            <a class="nav-link nav-link--account" href="register.html">Đăng kí</a>
+            <a class="nav-link nav-link--username" href="user_profile.html"></a>
+            <a class="nav-link user-logout nav-link nav-link--user-mobile-expand" href="#">
+                <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+            </a>
+        </div>`
+
+        // active page 
+
+        let path = window.location.pathname;
+        let found = false;
+
+        navbarElement.querySelectorAll('a').forEach(function(item, value) {
+            if (item.href.substring(item.href.lastIndexOf('/FZilla/')) === (`${path}`)) {
+                item.classList.add('active-link');
+                item.href = '#';
+                found = true;
+            }
+        });
+
+        if (!found) {
+            navbarElement.querySelectorAll('a').forEach(function(item, value) {
+                if (path === '/FZilla/' && item.textContent === 'Trang chủ') {
+                    item.classList.add('active-link');
+                    found = true;
+                }
+            });
+        }
+    }
+}
+
+
+if (window.innerWidth <= 768)
+    renderNavbarMobile();
+else renderNavbar();
+
+window.onresize = function(event) {
+    if (window.innerWidth <= 768)
+        renderNavbarMobile();
+    else renderNavbar();
+
+    /****************************************
+     * resize theo chiều dọc vẫn rerender
+     * resize trên desktop size mobile
+     ****************************************/
+}

@@ -41,7 +41,9 @@
   <div class="app">
     <header class="header bg-dark bg-gradient fixed-top">
       <div class="container-lg">
-        <div class="header__content d-none d-md-flex container-fluid px-1 py-2">
+        
+        <!-- Hidden in mobile -->
+        <div class="row m-0 header__content d-none d-md-flex container-fluid">
           <div class="col-3">
             <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
           </div>
@@ -61,14 +63,14 @@
                 <!-- Lich su tim kiem -->
               </div>
 
-              <button class="search-form__submit btn btn-sm" type="submit" id="ariabutton-addon2">
+              <button class="search-form__submit btn btn-sm" type="submit">
                 <i class="fa fa-search" aria-hidden="true"></i>
               </button>
             </form>
           </div>
 
           <div class="col-3">
-            <div class="header__user header__user--logged-out d-flex justify-content-end me-1">
+            <div class="header__user header__user--logged-out d-flex justify-content-end">
               <a class="nav-link nav-link--account" href="login.html">Đăng nhập</a>
               <a class="nav-link nav-link--account" href="register.html">Đăng kí</a>
 
@@ -92,7 +94,7 @@
         </div>
 
         <nav class="navbar navbar-expand-md p-0 m-0">
-          <div class="container-fluid p-md-0 p-2">
+          <div class="container-fluid p-0 p-md-0 py-2">
             <div class="d-md-none">
               <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
             </div>

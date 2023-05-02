@@ -23,32 +23,34 @@ function setUserData(user) {
 }
 
 // Logout event
-document.querySelector('.user-logout').addEventListener('click', function () {
-    // update userData in allUserData
-    let allUserData = JSON.parse(localStorage['allUserData']);
-    let currentUser = getUserData();
+document.querySelectorAll('.user-logout').forEach(function(element) {
+    element.addEventListener('click', function () {
+        // update userData in allUserData
+        let allUserData = JSON.parse(localStorage['allUserData']);
+        let currentUser = getUserData();
 
-    for (let key in allUserData) {
-        if (allUserData[key]['username'] === currentUser['username'])
-            allUserData[key] = currentUser;
-    }
+        for (let key in allUserData) {
+            if (allUserData[key]['username'] === currentUser['username'])
+                allUserData[key] = currentUser;
+        }
 
-    localStorage['allUserData'] = JSON.stringify(allUserData);
+        localStorage['allUserData'] = JSON.stringify(allUserData);
 
-    // remove user from local
-    localStorage.removeItem('user');
+        // remove user from local
+        localStorage.removeItem('user');
 
-    /************************************
-     *  Hiển thị thông báo đăng xuất    *
-     * **********************************/
-    console.log('Dang xuat thanh cong');
-    
-    setTimeout(() => {
-        if (window.location.pathname === '/FZilla/user_profile.html')
-            window.location.href = '/FZilla/index.html';
-        else window.location.reload();
-    }, 1500);
+        /************************************
+         *  Hiển thị thông báo đăng xuất    *
+         * **********************************/
+        console.log('Dang xuat thanh cong');
+        
+        setTimeout(() => {
+            if (window.location.pathname === '/FZilla/user_profile.html')
+                window.location.href = '/FZilla/index.html';
+            else window.location.reload();
+        }, 1500);
 
+    });
 });
 
 // Header
@@ -58,22 +60,21 @@ function renderUserHeader() {
     if (typeof userData !== 'undefined') {
 
         // Change state
-        document.querySelector('.header__user').classList.remove('header__user--logged-out');
-        document.querySelector('.header__user').classList.add('header__user--logged-in');
-
+        document.querySelectorAll('.header__user').forEach(function(item) {
+            item.classList.remove('header__user--logged-out');
+            item.classList.add('header__user--logged-in');
+        });
         // Show user
-        let usernameElement = document.querySelector('.nav-link--username');
-        
-        // usernameElement.innerHTML =
-        //     `${userData['username']} <span class="px-2"><i
-        // class="fa fa-user" aria-hidden="true"></i></span>`;
-
-        usernameElement.innerHTML =
-            `${userData['username']} <span class="px-2"><img class="header__user-img" src="${userData.avatar}"></img></span>`;
+        document.querySelectorAll('.nav-link--username').forEach(function(item) {
+            item.innerHTML = `${userData['username']} <span class="px-2"><img class="header__user-img" src="${userData.avatar}"></img></span>`;
+        });;
+            
     } else {
          // Change state
-         document.querySelector('.header__user').classList.add('header__user--logged-out');
-         document.querySelector('.header__user').classList.remove('header__user--logged-in');
+         document.querySelectorAll('.header__user').forEach(function(item) {
+            item.classList.add('header__user--logged-out');
+            item.classList.remove('header__user--logged-in');
+        });
  
     }
 }
