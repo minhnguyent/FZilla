@@ -10,15 +10,15 @@ const mainSectionCarousel = new Swiper('.main-section__carousel', {
     breakpoints: {
         // xs - width < 576px
         0: {
-            loopedSlides: 3,
+            loopedSlides: 2,
             spaceBetween: 8,
-            slidesPerGroup: 3,
+            slidesPerGroup: 2,
         },
         // sm - width >= 576px
         576: {
-            loopedSlides: 3,
+            loopedSlides: 4,
             spaceBetween: 8,
-            slidesPerGroup: 3,
+            slidesPerGroup: 4,
         },
         // md - width >= 768px
         768: {
@@ -64,7 +64,18 @@ const mainSectionCarouselInfoPage = new Swiper('.main-section__carousel--same-to
     slidesPerGroup: 1,
 
     breakpoints: {
-        // TODO
+        // xs - width < 576px
+        0: {
+            spaceBetween: 8,
+        },
+        // sm - width >= 576px
+        576: {
+            spaceBetween: 8,
+        },
+        // md - width >= 768px
+        768: {
+            spaceBetween: 12,
+        },
     },
 
     speed: 650,
