@@ -35,6 +35,22 @@
     color: var(--color-white);
 }
 
+.footer__contact-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    align-self: center;
+    border-radius: 2px;
+    background-color: var(--color-supreme-orange);
+}
+
+.footer__contact-btn:hover {
+    background-color: #e99237;
+    color: var(--color-white);
+}
+
+
 .copyright {
     color: var(--color-white);
     padding: .5rem 0;

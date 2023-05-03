@@ -46,11 +46,11 @@
 }
 
 .nav-link--account {
-    padding: 0;
+    padding: 0 .25rem;
 }
 
 .nav-link--account + .nav-link--account {
-    margin-left: .5rem;
+    /* margin-left: .5rem; */
 }
 
 .nav-link--username {
@@ -73,6 +73,7 @@
 .nav-link--bookmark {
     min-width: 4rem;
 }
+
 
 /* Header user */
 
@@ -102,12 +103,13 @@
 .search-form__input {
     border: 0;
     padding: 0;
-    font-size: 1rem;
-    width: 70%;
+    font-size: var(--search-input-size);
+    padding-left: 8px;
+    padding-right: 40px;
 }
 
 .search-form__submit {
-    font-size: 1rem;
+    font-size: var(--search-input-size);
     color: var(--color-white);
     border: 0;
 }
@@ -121,7 +123,6 @@
     border: 0;
     background-color: var(--color-white);
     top: 12%;
-    right: calc(15% + 21px);
     height: 1.9125rem;
     border-radius: 0 0.25rem 0.25rem 0;
     opacity: .7;
@@ -363,8 +364,18 @@
     }
 
     .bookmark-item {
-        width: 100%;
+        width: calc(100vw - 24px);
     }
+
+    .search-form__input {
+        --search-input-size: 1.1rem;
+        width: 85%;
+    }
+
+    .search-form__reset {
+        right: calc(10% + 16px);
+    }
+
 }
 
 /* sm bs-breakpoint */
@@ -386,6 +397,15 @@
 
     .bookmark-item {
         width: 320px;
+    }
+
+    .search-form__input {
+        --search-input-size: 1rem;
+        width: 70%;
+    }
+
+    .search-form__reset {
+        right: calc(15% + 21px);
     }
 }
 

@@ -42,20 +42,18 @@
   <div class="app">
     <header class="header bg-dark bg-gradient fixed-top">
       <div class="container-lg">
-        
+
         <!-- Hidden in mobile -->
-        <div class="row m-0 header__content d-none d-md-flex container-fluid">
+        <div class="row header__content d-none d-md-flex">
           <div class="col-3">
             <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
           </div>
 
           <div class="col-6 d-flex justify-content-center align-items-center">
             <form class="search-form d-flex justify-content-center" role="search">
-              <input class="search-form__input ps-2 pe-5 rounded-1 form-control" type="text"
-                placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search"
-                aria-describedby="button-addon2"
-                value=""
-              />
+              <input class="search-form__input rounded-1 form-control" type="text"
+                placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search" aria-describedby="button-addon2"
+                value="" />
               <button class="search-form__reset" type="reset">
                 <i class="fa-solid fa-xmark"></i>
               </button>
@@ -96,11 +94,17 @@
 
         <nav class="navbar navbar-expand-md p-0 m-0">
           <div class="container-fluid p-0 p-md-0 py-2">
-            <div class="d-md-none">
+            <div class="d-md-none col-8">
               <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
             </div>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <!-- Button trigger modal -->
+            <button type="button" class="btn modal-btn--search col-2 d-md-none" data-bs-toggle="modal"
+              data-bs-target="#searchModalMobile">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+
+            <button class="navbar-toggler col-2" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false"
               aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -114,8 +118,7 @@
               </ul>
 
               <div class="dropdown">
-                <a class="nav-link nav-link--bookmark" href="#"><i
-                    class="fa-regular fa-bookmark"></i></a>
+                <a class="nav-link nav-link--bookmark" href="#"><i class="fa-regular fa-bookmark"></i></a>
                 <div class="dropdown__list bg-dark bg-gradient bookmark">
                   <div class="bookmark-wrapper">
 
@@ -140,9 +143,12 @@
               </div>
               <div class="main-section__body mt-4">
                 <ul class="row search-result__category">
-                  <li class="search-result__category-item col-3 btn"><a href="#"><i class="fa-solid fa-film"></i> Viễn tưởng</a></li>
-                  <li class="search-result__category-item col-3 btn"><a href="#"><i class="fa-solid fa-film"></i> Hành động</a></li>
-                  <li class="search-result__category-item col-3 btn"><a href="#"><i class="fa-solid fa-film"></i> Tình cảm</a></li>
+                  <li class="search-result__category-item col-3 btn"><a href="#"><i class="fa-solid fa-film"></i> Viễn
+                      tưởng</a></li>
+                  <li class="search-result__category-item col-3 btn"><a href="#"><i class="fa-solid fa-film"></i> Hành
+                      động</a></li>
+                  <li class="search-result__category-item col-3 btn"><a href="#"><i class="fa-solid fa-film"></i> Tình
+                      cảm</a></li>
                 </ul>
               </div>
             </div>
@@ -152,9 +158,8 @@
               <div class="main-section__heading">
                 <h2 class="text-uppercase">Phim có liên quan</h2>
                 <div class="main-section__heading-show-all my-btn">
-                  <a href="/all_film.html">Xem tất cả</a> 
-                  <span class="main-section__heading-show-all-icon"><i
-                      class="fa-solid fa-caret-right"></i></span>
+                  <a href="/all_film.html">Xem tất cả</a>
+                  <span class="main-section__heading-show-all-icon"><i class="fa-solid fa-caret-right"></i></span>
                 </div>
               </div>
               <div class="main-section__body mt-3">
@@ -171,15 +176,15 @@
     <footer class="footer bg-black bg-gradient">
       <div class="container-lg">
         <div class="row">
-          <div class="ms-2 col-md-6 footer__content row">
-            <div class="col-3 col-md-12">
+          <div class="ps-2 col-md-6 footer__content row">
+            <div class="pt-3 pt-md-0 col-3 col-md-12">
               <a href="./index.html"><img class="footer__brand" src="./assets/img/brand.png" alt="" /></a>
             </div>
             <div class="col-9 col-md-12">
               <p class="footer__desc">
                 Website được xây dựng bởi <b>FZilla</b> <br>
                 Chúc bạn có những giây phút xem phim vui vẻ!<br>
-                Liên lạc với chúng tôi <a class="btn rounded-0 p-1 form__btn--submit" href="./contact.html">Tại đây</a>
+                Liên lạc với chúng tôi <a class="btn footer__contact-btn" href="./contact.html">Tại đây</a>
               </p>
             </div>
           </div>
@@ -240,7 +245,26 @@
   <div class="to-top-btn" title="Về đầu trang">
   </div>
 
-  <div class="modal"></div>
+  <!-- Modal -->
+  <div class="modal fade" id="searchModalMobile" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body modal-body--mobile d-flex align-items-center">
+          <form class="search-form d-flex justify-content-center" role="search">
+            <input class="search-form__input rounded-1 form-control" type="text"
+              placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search" aria-describedby="button-addon2" value="" />
+            <button class="search-form__reset" type="reset">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button class="search-form__submit btn btn-sm" type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="toast"></div>
 

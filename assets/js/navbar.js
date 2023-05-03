@@ -153,14 +153,13 @@ function renderNavbarMobile() {
 }
 
 
-if (window.innerWidth <= 768)
+if (window.innerWidth < 768)
     renderNavbarMobile();
 else renderNavbar();
 
 window.onresize = function(event) {
-    if (window.innerWidth <= 768)
-        renderNavbarMobile();
-    else renderNavbar();
+    if (window.innerWidth >= 768)
+        renderNavbar();
 
     /****************************************
      * resize theo chiều dọc vẫn rerender

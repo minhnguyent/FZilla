@@ -1,0 +1,13 @@
+.modal {
+    top: 66px;
+}
+
+.modal-body--mobile {
+    background-color: var(--color-gray);
+    border-radius: 2px;
+}
+
+.modal-btn--search {
+    color: var(--color-supreme-orange);
+    /* border-radius: 8px; */
+}
