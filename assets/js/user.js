@@ -58,7 +58,7 @@ function renderUserHeader() {
     const userData = getUserData();
 
     if (typeof userData !== 'undefined') {
-
+        setDropdownType(document.querySelector('.dropdown__btn--account').parentElement);
         // Change state
         document.querySelectorAll('.header__user').forEach(function(item) {
             item.classList.remove('header__user--logged-out');

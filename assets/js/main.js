@@ -61,3 +61,22 @@ window.addEventListener('storage', function() {
   if (typeof updateBookmark === 'function') updateBookmark();
   if (typeof setBookmarkButtonStatus === 'function') setBookmarkButtonStatus();
 }); 
+
+/*******************************************************************
+ * Xử lý dropdown trên mobile and pc
+ *******************************************************************/
+function setDropdownType(dropdownElement) {
+  if ('ontouchstart' in window) {
+      // Mobile and tablet - touch = click
+      const dropdownListElement = dropdownElement.querySelector('.dropdown__list');
+      dropdownElement.addEventListener('click',  function() {
+          dropdownListElement.classList.toggle('dropdown__list--show');
+      });
+  } else {
+      // PC = hover
+      const dropdownListElement = dropdownElement.querySelector('.dropdown__list');
+      dropdownElement.addEventListener('mouseout',  function() {
+          dropdownListElement.classList.add('can-hover');
+      });
+  }
+};

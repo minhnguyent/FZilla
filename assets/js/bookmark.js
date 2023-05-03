@@ -57,6 +57,8 @@ function removeFavouriteByMovie(movie, listMovies = getFavouriteMovies()) {
 
 
 if (bookmarkElement) {
+    setDropdownType(document.querySelector('.dropdown__btn--bookmark').parentElement);
+    
     const bookmarkWrapper = bookmarkElement.querySelector('.bookmark-wrapper');
 
     updateBookmark();
@@ -163,3 +165,4 @@ function setBookmarkButtonStatus() {
         mainFilmInfoBookmark.classList.add('main-film-info__bookmark--adding');
     }
 }
+

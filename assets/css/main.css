@@ -1135,10 +1135,8 @@
     font-size: 1.15rem;
     color: var(--color-gray);
     border-radius: 0;
-}
-
-.search-result__category-item:first-child {
-    margin-left: 1rem;
+    text-align: left;
+    padding: 1rem 3rem;
 }
 
 .search-result__category-item:hover {

@@ -75,10 +75,10 @@ function renderNavbar() {
         }
 
         navbarElement.innerHTML += `<li class="nav-item dropdown">
-            <a class="nav-link dropdown__btn" href="#" role="button" aria-expanded="false">
+            <a class="nav-link dropdown__btn dropdown__btn--category" href="#" role="button" aria-expanded="false">
                 Thể loại khác <i class="fa fa-caret-down" aria-hidden="true"></i>
             </a>
-            <ul class="dropdown__list bg-dark bg-gradient">
+            <ul class="dropdown__list dropdown__list--category bg-dark bg-gradient">
                 ${otherCategories}
             </ul>
         </li>`;
@@ -104,6 +104,8 @@ function renderNavbar() {
                 }
             });
         }
+
+        setDropdownType(document.querySelector('.dropdown__btn--category').parentElement);
     }
 }
 
@@ -152,17 +154,20 @@ function renderNavbarMobile() {
     }
 }
 
-
-if (window.innerWidth < 768)
+if (window.innerWidth < 768) {
+    isMobile = true;
     renderNavbarMobile();
-else renderNavbar();
+} else {
+    isMobile = false;
+    renderNavbar();
+}
 
 window.onresize = function(event) {
-    if (window.innerWidth >= 768)
+    if (window.innerWidth >= 768 && isMobile) {
+        isMobile = false;
         renderNavbar();
-
-    /****************************************
-     * resize theo chiều dọc vẫn rerender
-     * resize trên desktop size mobile
-     ****************************************/
+    } else if (window.innerWidth < 768 && !isMobile) {
+        isMobile = true;
+        renderNavbarMobile();
+    }
 }
