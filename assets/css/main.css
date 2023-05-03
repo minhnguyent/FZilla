@@ -1027,8 +1027,6 @@
 
 .player__control-btns {
     margin-top: 0.5rem;
-    display: flex;
-    justify-content: flex-end;
 }
 
 .player__control-btns-btn {
@@ -1036,7 +1034,8 @@
     line-height: 1;
     border-radius: 2px;
     padding: 0 8px;
-    height: 1.5rem;
+    margin-bottom: 0.5rem;
+    height: 1.8125rem;
     background-color: rgba(0, 0, 0, 0.1);
     border: 1px solid var(--color-supreme-orange);
     color: rgba(255, 255, 255, 0.8);
@@ -1047,7 +1046,7 @@
 }
 
 .player__control-btns-btn + .player__control-btns-btn {
-    margin-left: 2px;
+    margin-left: 5px;
 }
 
 .player__control-btns-btn-icon {
@@ -1061,14 +1060,12 @@
 
 .player__film-info {
     background-color: rgba(0, 0, 0, 0.2);
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     padding: 0.625rem 0.875rem;
 }
 
 .player__film-info-heading {
     color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    align-items: flex-start;
 }
 
 .player__film-info-heading-item {
@@ -1084,18 +1081,20 @@
     font-weight: 500;
     font-size: 1.25rem;
     color: var(--color-supreme-orange);
+    line-height: 1.25;
+/*    margin-bottom: 0.25rem;*/
 }
 
 .player__film-info-subtitle {
-    font-size: 1rem;
+    font-size: 0.9375rem;
 }
 
 .player__film-info-rating {
-
 }
 
 .player__film-info-rating-label {
     font-size: 1rem;
+    line-height: 1.25;
 }
 
 .player__film-info-rating-label-num {
@@ -1103,7 +1102,7 @@
 }
 
 .player__film-info-rating-stars {
-    text-align: right;
+
 }
 
 .player__film-info-rating-stars-item {
@@ -1121,7 +1120,7 @@
 }
 
 .player__film-info-expand-desc {
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
     font-size: 0.875rem;
     cursor: pointer;
 }

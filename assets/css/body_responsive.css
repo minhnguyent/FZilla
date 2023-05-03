@@ -102,6 +102,14 @@
     .trailer-item__title {
         font-size: 0.8125rem;
     }
+    
+    .player__control-btns-btn {
+        height: 1.5rem;
+    }
+
+    .player__control-btns-btn + .player__control-btns-btn {
+        margin-left: 2px;
+    }
 }
 
 /* xl bs-breakpoint */
