@@ -53,6 +53,17 @@ document.querySelectorAll('.user-logout').forEach(function(element) {
     });
 });
 
+function isValidPassword(values) {
+    let userData = getUserData();
+
+    if (userData['password'] === values['password_old']) {
+        userData['password'] = values['password'];
+        return true;
+    } else {
+        return false;
+    }
+}
+
 // Header
 function renderUserHeader() {
     const userData = getUserData();

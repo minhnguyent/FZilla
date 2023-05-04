@@ -133,32 +133,34 @@
     <main class="bg bg-dark bg-gradient main">
       <div class="form-container bg-light">
         <h1 class="form__heading mt-2 text-uppercase">
-          ĐỔI MẬT KHẨU
+          Đổi mật khẩu
         </h1>
-        <form>
-          <div class="input-group mb-3 login-register_form_item">
-            <div class="form-floating login-register_form_item">
-              <input type="password" class="form-control login-register__form-input" id="password_curent"
+        <form class="form form-change_pwrd" id="form-change_pwrd">
+          <div class="input-group form__item">
+            <div class="form-floating form__item">
+              <input type="password" class="form-control form__input" id="password_old" name="password_old"
                 placeholder="Mật khẩu">
-              <label for="password_curent" class="login-register__form-label">Mật khẩu</label>
+              <label for="password" class="form__label">Mật khẩu</label>
             </div>
+            <span class="form__message"></span>
           </div>
-          <div class="input-group mb-3 login-register_form_item">
-            <div class="form-floating login-register_form_item">
-              <input type="password" class="form-control login-register__form-input" id="password_new"
-                placeholder="Mật khẩu">
-              <label for="password" class="login-register__form-label">Mật khẩu mới</label>
+          <div class="input-group form__item">
+            <div class="form-floating form__item">
+              <input type="password" class="form-control form__input" id="password" name="password"
+                placeholder="Mật khẩu mới">
+              <label for="password" class="form__label">Mật khẩu mới</label>
             </div>
+            <span class="form__message"></span>
           </div>
-          <div class="input-group mb-3 login-register_form_item">
-            <div class="form-floating login-register_form_item">
-              <input type="password" class="form-control login-register__form-input" id="password_new_rp"
+          <div class="input-group form__item">
+            <div class="form-floating form__item">
+              <input type="password" class="form-control form__input" id="password-repeat" name="password-repeat"
                 placeholder="Nhập lại mật khẩu mới">
-              <label for="password_new_rp" class="login-register__form-label">Nhập lại mật khẩu
-                mới</label>
+              <label for="passwordrp" class="form__label">Nhập lại mật khẩu mới</label>
             </div>
+            <span class="form__message"></span>
           </div>
-          <button type="submit" class="btn btn-primary login-register__form-submit">Đổi mật khẩu</button>
+          <button type="submit" class="input-group btn form__btn form__btn--submit">Đổi mật khẩu</button>
         </form>
       </div>
 
@@ -278,6 +280,31 @@
   <script src="./assets/js/search.js"></script>
   <script src="./assets/js/toast.js"></script>
 
+  <script>
+    Validator({
+      form: '#form-change_pwrd',
+      formMessage: '.form__message',
+      formGroup: '.input-group',
+      rules: [
+        Validator.require('#password', '* Vui lòng nhập mật khẩu'),
+        Validator.require('#password-repeat', '* Vui lòng nhập lại mật khẩu'),
+        Validator.require('#password_old', '* Vui lòng nhập mật khẩu'),
+        Validator.requireMinLength('#password', 6, '* Mật khẩu phải chứa ít nhất 6 kí tự'),
+        Validator.requireMinLength('#password_old', 6, '* Mật khẩu phải chứa ít nhất 6 kí tự'),
+        Validator.requireMinLength('#password-repeat', 6, '* Mật khẩu phải chứa ít nhất 6 kí tự'),
+      ],
+      handleFormOnSubmit(values) {
+        // call API
+        console.log('Form values: ', values);
+
+        if (isValidPassword(values)) {
+          console.log('Doi mat khau thanh cong');
+        } else {
+          console.log('Mat khau cu khong dung');
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
