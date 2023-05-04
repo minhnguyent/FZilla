@@ -166,5 +166,44 @@
     font-weight: lighter;
     justify-self:center;
     font-style: italic;
-    width: var(--input-width);
+}
+
+
+
+/* Responsive */
+
+/* xs bs-breakpoint */
+@media (min-width: 0px) {
+    .form_infor {
+        width: 100%;
+    }
+}
+
+/* sm bs-breakpoint */
+@media (min-width: 576px) {
+    .form_infor {
+        width: var(--input-width);
+    }
+}
+
+/* md bs-breakpoint */
+@media (min-width: 768px) {
+    .form_infor {
+        width: var(--input-width);
+    }
+}
+
+/* lg bs-breakpoint */
+@media (min-width: 992px) {
+    
+}
+
+/* xl bs-breakpoint */
+@media (min-width: 1200px) {
+
+}
+
+/* xxl bs-breakpoint */
+@media (min-width: 1400px) {
+
 }

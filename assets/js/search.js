@@ -35,17 +35,19 @@ if (allSearchForm) {
         });
     
         const showHistory = function() {
-            if (searchInput.value === '') {
+            if (searchInput.value === '' && searchHistoryElement) {
                 renderSearchHistory(searchHistoryElement);
                 searchInput.classList.remove('rounded-1');
                 searchInput.classList.add('search-form__input--expand');
             }
         }
     
-        const hideHistory = function() {    
-            searchHistoryElement.innerHTML = '';
-            searchInput.classList.add('rounded-1');
-            searchInput.classList.remove('search-form__input--expand');
+        const hideHistory = function() {
+            if (searchHistoryElement) {    
+                searchHistoryElement.innerHTML = '';
+                searchInput.classList.add('rounded-1');
+                searchInput.classList.remove('search-form__input--expand');
+            }
         }
     
         // Show search history

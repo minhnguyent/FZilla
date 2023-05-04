@@ -259,7 +259,27 @@
     <div class="to-top-btn" title="Về đầu trang">
     </div>
 
-    <div class="modal"></div>
+    <!-- Modal -->
+    <div class="modal fade" id="searchModalMobile" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body modal-body--mobile d-flex align-items-center">
+                    <form class="search-form d-flex justify-content-center" role="search">
+                        <input class="search-form__input rounded-1 form-control" type="text"
+                            placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search"
+                            aria-describedby="button-addon2" value="" />
+                        <button class="search-form__reset" type="reset">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <button class="search-form__submit btn btn-sm" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="toast" id="toast"></div>
 
