@@ -135,6 +135,13 @@ function handleBookmarkButton() {
             this.classList.remove('main-film-info__bookmark--added');
             this.classList.remove('main-film-info__bookmark--adding');
             removeFavouriteByMovie({ category, filmId });
+            toast({
+                title: '',
+                message: 'Xóa phim thành công',
+                type: 'info',
+                duration: 3500
+            });
+
         }
         else {
             // add
@@ -146,6 +153,12 @@ function handleBookmarkButton() {
                     this.classList.add('main-film-info__bookmark--added');
                 }
             }, { once: true });
+            toast({
+                title: '',
+                message: 'Thêm phim thành công',
+                type: 'success',
+                duration: 3500
+            });
         }
     });
 }

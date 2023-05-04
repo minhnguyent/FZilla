@@ -10,6 +10,9 @@ const renderFilmWatching = function(root, category, filmId) {
   breadCrumbList.querySelector('.breadcrumb__item:last-child .breadcrumb__item-link').innerHTML = movie.titleVn;
 
   root.innerHTML = `
+    <div class="player__title text-center d-md-none">
+      <h2 class="player_title-heading">Bạn đang xem phim <span>${movie.titleVn}</span></h2>
+    </div>
     <div class="player__video-wrapper">
       <video src="${movie.trailer}" class="player__video" controls></video>
     </div>

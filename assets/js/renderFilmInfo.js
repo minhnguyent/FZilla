@@ -18,7 +18,7 @@ const renderFilmInfo = function(root) {
           <div class="main-film-info__thumb-img-wrapper">
             <img src="${movie.thumb}" class="main-film-info__img" alt="${movie.titleVn}">
           </div>
-          <div class="main-film-info__bookmark ${isFavouriteMovie({ category, filmId }) !== -1 && 'main-film-info__bookmark--added'}">
+          <div class="main-film-info__bookmark ${isFavouriteMovie({ category, filmId }) !== -1 ? 'main-film-info__bookmark--added' : ''}">
             <span class="main-film-info__bookmark-icon">
               <i class="fa-solid fa-bookmark"></i>
             </span>

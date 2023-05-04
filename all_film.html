@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewsport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.svg">
@@ -33,102 +33,99 @@
   <link rel="stylesheet" href="./assets/css/modal.css">
   <link rel="stylesheet" href="./assets/css/form.css">
   <link rel="stylesheet" href="./assets/css/toast.css">
+  <link rel="stylesheet" href="./assets/css/body_responsive.css">
 
   <title class="titlePage" id="titlePage">FZilla - Xem phim trực tuyến</title>
 </head>
 
 <body>
   <div class="app">
-    <header class="header bg-dark bg-gradient fixed-top">
+<header class="header bg-dark bg-gradient fixed-top">
       <div class="container-lg">
-          <div class="header__content d-none d-md-flex container-fluid px-1 py-2">
-              <div class="col-3">
-                  <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
-              </div>
-
-              <div class="col-6 d-flex justify-content-center align-items-center">
-                  <form class="search-form search-form--empty d-flex justify-content-center" role="search">
-                      <input class="search-form__input ps-2 pe-5 rounded-1 form-control" type="text"
-                          placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search"
-                          aria-describedby="button-addon2" />
-
-                      <div class="search-history">
-                          <!-- Lich su tim kiem -->
-                      </div>
-
-                      <button class="search-form__submit btn btn-sm" type="submit" id="ariabutton-addon2">
-                          <i class="fa fa-search" aria-hidden="true"></i>
-                      </button>
-                      <button class="search-form__reset" type="reset">
-                          <i class="fa-solid fa-xmark"></i>
-                      </button>
-                  </form>
-              </div>
-
-              <div class="col-3">
-                  <div class="header__user header__user--logged-out d-flex justify-content-end me-1">
-                      <a class="nav-link nav-link--account" href="login.html">Đăng nhập</a>
-                      <a class="nav-link nav-link--account" href="register.html">Đăng kí</a>
-
-                      <div class="dropdown">
-                          <a class=" nav-link dropdown__btn nav-link--username"></a>
-                          <ul class="dropdown__list dropdown__list--account bg-dark bg-gradient">
-                              <li class="dropdown__list-item">
-                                  <a class="nav-link" href="user_profile.html">
-                                      <i class="fa-regular fa-user"></i> Hồ sơ cá nhân
-                                  </a>
-                              </li>
-                              <li class="dropdown__list-item">
-                                  <a class="nav-link user-logout" href="#">
-                                      <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
-                                  </a>
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
+        <div class="header__content d-none d-md-flex container-fluid px-1 py-2">
+          <div class="col-3">
+            <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
           </div>
 
-          <nav class="navbar navbar-expand-md p-0 m-0">
-              <div class="container-fluid p-md-0 p-2">
-                  <div class="d-md-none">
-                      <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
-                  </div>
+          <div class="col-6 d-flex justify-content-center align-items-center">
+            <form class="search-form search-form--empty d-flex justify-content-center" role="search">
+              <input class="search-form__input ps-2 pe-5 rounded-1 form-control" type="text"
+                placeholder="Tìm kiếm thể loại, phim,..." aria-label="Search" aria-describedby="button-addon2" />
 
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false"
-                      aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>
-
-                  <div class="navbar-collapse collapse" id="navbar-content">
-                      <div class="container-fluid d-sm-block d-md-none mb-2">
-                      </div>
-
-                      <ul class="navbar-nav me-auto">
-                      </ul>
-
-                      <div class="dropdown">
-                          <a class="nav-link nav-link--bookmark" href="#"><i
-                                  class="fa-regular fa-bookmark"></i></a>
-                          <div class="dropdown__list bg-dark bg-gradient bookmark">
-                              <div class="bookmark-wrapper">
-
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+              <div class="search-history">
+                <!-- Lich su tim kiem -->
               </div>
-          </nav>
+
+              <button class="search-form__submit btn btn-sm" type="submit" id="ariabutton-addon2">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+              <button class="search-form__reset" type="reset">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </form>
+          </div>
+
+          <div class="col-3">
+            <div class="header__user header__user--logged-out d-flex justify-content-end me-1">
+              <a class="nav-link nav-link--account" href="login.html">Đăng nhập</a>
+              <a class="nav-link nav-link--account" href="register.html">Đăng kí</a>
+
+              <div class="dropdown">
+                <a class=" nav-link dropdown__btn nav-link--username"></a>
+                <ul class="dropdown__list dropdown__list--account bg-dark bg-gradient">
+                  <li class="dropdown__list-item">
+                    <a class="nav-link" href="user_profile.html">
+                      <i class="fa-regular fa-user"></i> Hồ sơ cá nhân
+                    </a>
+                  </li>
+                  <li class="dropdown__list-item">
+                    <a class="nav-link user-logout" href="#">
+                      <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-md p-0 m-0">
+          <div class="container-fluid p-md-0 p-2">
+            <div class="d-md-none">
+              <a href="./index.html"><img class="header__brand" src="./assets/img/brand.png" alt="" /></a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content"
+              aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbar-content">
+              <div class="container-fluid d-sm-block d-md-none mb-2">
+              </div>
+
+              <ul class="navbar-nav me-auto">
+              </ul>
+
+              <div class="dropdown">
+                <a class="nav-link nav-link--bookmark" href="#"><i class="fa-regular fa-bookmark"></i></a>
+                <div class="dropdown__list bg-dark bg-gradient bookmark">
+                  <div class="bookmark-wrapper">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
-  </header>
+    </header>
 
     <main class="main bg-dark bg-gradient">
-
-      <div class="container-lg">
+      <div class="container-md">
         <div class="row">
           <div class="col-12">
-            <div class="main-breadcrumb-container">
+            <div class="main-breadcrumb-container d-none d-md-flex mt-1 mb-2">
               <div class="breadcrumb main-breadcrumb mb-0">
                 <ul class="breadcrumb__list">
                   <li class="breadcrumb__item">
@@ -147,14 +144,14 @@
 
             <div class="film-list-container">
               <div class="main-section main-section--all-movies">
-                <div class="main-section__heading">
-                  <h2 class="text-uppercase">Phim mới hot</h2>
+                <div class="main-section__heading flex-column flex-lg-row">
+                  <h2 class="text-uppercase align-self-start mb-2 mb-lg-0">Phim mới hot</h2>
                   <div class="main-section__heading-show-all my-btn">
                     Xem tất cả
                     <span class="main-section__heading-show-all-icon"><i class="fa-solid fa-caret-right"></i></span>
                   </div>
                   <div class="main-section__filter">
-                    <select class="main-section__filter-item" name="topic">
+                    <!-- <select class="main-section__filter-item" name="topic">
                       <option value="category">Thể loại</option>
                       <option value="trinh-tham">Trinh thám</option>
                       <option value="hanh-dong">Hành động</option>
@@ -170,7 +167,7 @@
                       <option value="the-thao">Thể thao</option>
                       <option value="kinh-di">Kinh dị</option>
                       <option value="tv-shows">TV Shows</option>
-                    </select>
+                    </select> -->
                     <select class="main-section__filter-item" name="type">
                       <option value="category">Hình thức</option>
                       <option value="feature-film">Phim lẻ</option>
@@ -212,12 +209,14 @@
                       <option value="by-views"> Lượt xem</option>
                       <option value="by-update-time">Thời gian cập nhật</option>
                     </select>
-                    <div class="main-section__filter-item main-section__filter-item-btn my-btn my-btn-flex">Tìm Kiếm
+                    <div class="main-section__filter-item main-section__filter-item-btn my-btn my-btn-flex">
+                      <span class="d-none d-lg-inline-block">Tìm Kiếm</span>
+                      <span class="d-lg-none"><i class="fa-solid fa-magnifying-glass"></i></span>
                     </div>
                   </div>
                 </div>
                 <div class="main-section__body mt-3">
-                  <div class="row gy-3">
+                  <div class="row gy-3 row-cols-2 row-cols-sm-3 row-cols-sm-4 row-cols-lg-5 row-cols-xl-6">
                   </div>
                 </div>
               </div>
@@ -234,18 +233,6 @@
                   </li>
                   <li class="pagination__item">
                     <a href="#" class="pagination__item-link">2</a>
-                  </li>
-                  <li class="pagination__item">
-                    <a href="#" class="pagination__item-link">3</a>
-                  </li>
-                  <li class="pagination__item">
-                    <a href="#" class="pagination__item-link">4</a>
-                  </li>
-                  <li class="pagination__item">
-                    <a href="#" class="pagination__item-link">5</a>
-                  </li>
-                  <li class="pagination__item">
-                    <a href="#" class="pagination__item-link">6</a>
                   </li>
                   <li class="pagination__item pagination__item--disabled">
                     <a href="#" class="pagination__item-link">...</a>
@@ -336,7 +323,7 @@
 
   </div>
 
-  <div class="toast">
+  <div class="toast" id="toast">
 
   </div>
 
@@ -355,6 +342,7 @@
   <script src="./assets/js/userData.js"></script>
   <script src="./assets/js/movieData.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/toast.js"></script>
   <script src="./assets/js/render.js"></script>
   <script src="./assets/js/renderMovie.js"></script>
   <script src="./assets/js/swiperCarousel.js"></script>
