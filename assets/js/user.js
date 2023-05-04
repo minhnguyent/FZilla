@@ -42,7 +42,7 @@ document.querySelectorAll('.user-logout').forEach(function(element) {
         /************************************
          *  Hiển thị thông báo đăng xuất    *
          * **********************************/
-        console.log('Dang xuat thanh cong');
+        toast({title:'Thành công',message:'Đăng xuất thành công',type:'success', duration:3000});
         
         setTimeout(() => {
             if (window.location.pathname === '/FZilla/user_profile.html')
@@ -159,7 +159,7 @@ function renderUserProfile() {
         renderProfileMovies(document.querySelector('.user-watch-history .row'), userData['history']);
         
         editProfileButton.addEventListener('click', function () {
-            alert('Chức năng đang cập nhật! Vui lòng quay lại sau!');
+            toast({title:'Thông tin',message:'Chức năng đang được cập nhật!',type:'info', duration:3000});
         });
     }
 }
@@ -194,9 +194,9 @@ function createUser(user) {
     localStorage['allUserData'] = JSON.stringify(allUserData);
     /************************************
      *  Hiển thị thông báo tạo tài      *
-     * khoản thành công hoặc thất bại   *
+     * khoản thành công                 *
      * **********************************/
-    console.log('tao tai khoan thanh cong');
+    toast({title:'Thành công',message:'Tạo tài khoản thành công!',type:'success', duration:3000});
     return true;
 }
 
@@ -218,10 +218,10 @@ function verifyLogin(values) {
      * thành công hoặc thất bại         *
      * **********************************/
     if (loggedIn) {
-        console.log('Dang nhap thanh cong');
+        toast({title:'Thành công',message:'Đăng nhập thành công',type:'success', duration:3000});
         return true;
     } else {   
-        console.log('Sai ten tai khoan hoac mat khau');
+        toast({title:'Thất bại',message:'Sai tên đăng nhập hoặc mật khẩu',type:'error', duration:3000});
         return false;
     }
 }

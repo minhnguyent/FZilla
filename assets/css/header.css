@@ -245,7 +245,6 @@
     display: none;
     padding: 0;
     z-index: 100;
-    right: 0;
     top: var(--nav-link-height);
     border: 1px solid var(--border-color);
 }
@@ -385,17 +384,27 @@
         text-align: center;
     }
 
+    .bookmark {
+        right: 0;
+        left: 0;
+    }
+
     .bookmark-wrapper--empty {
-        width: calc(100vw - 24px);
+        /* width: calc(100vw - 24px); */
     }
 
     .bookmark-item {
-        width: calc(100vw - 24px);
+        /* width: calc(100vw - 24px); */
     }
 
     .search-form__input {
         --search-input-size: 1.1rem;
         width: 85%;
+    }
+
+    .bookmark-item.has-scrollbar,
+    .bookmark-wrapper--empty.has-scrollbar {
+        width: calc(100vw - 36px);
     }
 
     .search-form__reset {
@@ -420,6 +429,11 @@
     .nav-link--username {
         width: 10rem;
         text-align: right;
+    }
+
+    .bookmark {
+        right: 0;
+        left: auto;
     }
 
     .bookmark-wrapper--empty {
