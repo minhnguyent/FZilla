@@ -138,7 +138,7 @@ function handleBookmarkButton() {
             this.classList.remove('main-film-info__bookmark--adding');
             removeFavouriteByMovie({ category, filmId });
             toast({
-                title: '',
+                title: 'Thông báo',
                 message: 'Xóa phim thành công',
                 type: 'info',
                 duration: 3500
@@ -156,7 +156,7 @@ function handleBookmarkButton() {
                 }
             }, { once: true });
             toast({
-                title: '',
+                title: 'Thành công',
                 message: 'Thêm phim thành công',
                 type: 'success',
                 duration: 3500

@@ -35,7 +35,7 @@ function toast({
             <i class="${icon}"></i>
         </div>
         <div class="toast__body">
-            ${title && `<h3 class="toast__title">${title}</h3>`}
+            ${title ? `<h3 class="toast__title">${title}</h3>`: ''}
             <p class="toast__msg">${message}</p>
         </div>
         <div class="toast__close">

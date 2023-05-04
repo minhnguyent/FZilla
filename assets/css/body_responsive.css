@@ -47,20 +47,6 @@
     .main-film-info__about {
         margin-top: 0;
     }
-
-    .toast {
-        width: 300px;
-        top: 116px;
-        right: 20px;
-    }
-
-    .toast-message {
-/*        height: 116px;*/
-    }
-
-    .toast-message + .toast-message {
-        margin-top: 10px;
-    }
 }
 
 /* lg bs-breakpoint */
