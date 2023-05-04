@@ -75,7 +75,7 @@ function setDropdownType(dropdownElement) {
   } else {
       // PC = hover
       const dropdownListElement = dropdownElement.querySelector('.dropdown__list');
-      dropdownElement.addEventListener('mouseout',  function() {
+      dropdownElement.addEventListener('mouseenter',  function() {
           dropdownListElement.classList.add('can-hover');
       });
   }
