@@ -129,7 +129,7 @@
                 <h1 class="form__heading mt-2 text-uppercase">
                     Khôi phục tài khoản
                 </h1>
-                <form class="form form-recovery_1" id="form-recovery_1">
+                <form class="form form-recovery" id="form-recovery_1">
                     <p class="form_infor form__item">Nhập email của bạn để lấy lại mật khẩu</p>
                     <div class="input-group form__item">
                         <div class="form-floating form__item">
@@ -139,10 +139,10 @@
                         </div>
                         <span class="form__message"></span>
                     </div>
-                    <p class="form_infor form__item">chúng tôi sẽ gửi mã xác minh đến email bạn vừa nhập vui lòng kiểm tra email của bạn</p>
                     <button type="submit" class="input-group btn form__btn form__btn--submit">Xác nhận</button>
                 </form>
-                <form class="form form-recovery_2" id="form-recovery_2">
+                <form class="form form-recovery" id="form-recovery_2" hidden>
+                    <p class="form_infor form__item">Vui lòng kiểm tra email để lấy mã xác nhận</p>
                     <div class="input-group form__item">
                         <div class="form-floating form__item">
                             <input type="text" class="form-control form__input" id="code_identify" name="code_identify"
@@ -151,10 +151,10 @@
                         </div>
                         <span class="form__message"></span>
                     </div>
-                    <button class="rp_code_identify input-group btn form__btn form__btn--change">Gửi lại mã xác nhận</button>
+                    <button type="reset" class="rp_code_identify input-group btn form__btn form__btn--change">Gửi lại mã xác nhận (<span id="countdown"> 60</span>s)</button>
                     <button type="submit" class="input-group btn form__btn form__btn--submit">Xác nhận</button>
                 </form>
-                <form class="form form-recovery_3" id="form-recovery_3">
+                <form class="form form-recovery" id="form-recovery_3" hidden>
                     <div class="input-group form__item">
                         <div class="form-floating form__item">
                             <input type="password" class="form-control form__input" id="password" name="password"
@@ -272,10 +272,11 @@
     <script src="./assets/js/user.js"></script>
     <script src="./assets/js/search.js"></script>
     <script src="./assets/js/formValidator.js"></script>
+    <script src="./assets/js/recovery.js"></script>
 
     <script>
         Validator({
-            form: '#form-register_1',
+            form: '#form-recovery_1',
             formMessage: '.form__message',
             formGroup: '.input-group',
             rules: [
@@ -285,10 +286,15 @@
             handleFormOnSubmit(values) {
                 // call API
                 console.log('Form values: ', values);
+
+                // Thông báo đã gửi email và chuyển sang bước kế tiếp
+                console.log('Email đã được gửi vào hòm thư, vui lòng kiểm tra!');
+                
+                nextStep1();
             }
         });
         Validator({
-            form: '#form-register_2',
+            form: '#form-recovery_2',
             formMessage: '.form__message',
             formGroup: '.input-group',
             rules: [
@@ -297,10 +303,20 @@
             handleFormOnSubmit(values) {
                 // call API
                 console.log('Form values: ', values);
+
+                 // Thông báo xac nhan
+                if (values['code_identify'] !== '123456')
+                    console.log('Mã xác nhận không đúng, vui lòng kiểm tra lại!');
+                else {
+                    console.log('Nhập mật khẩu mới');
+                    
+                    nextStep2();
+                }
+                
             }
         });
         Validator({
-            form: '#form-register_3',
+            form: '#form-recovery_3',
             formMessage: '.form__message',
             formGroup: '.input-group',
             rules: [
@@ -312,6 +328,13 @@
             handleFormOnSubmit(values) {
                 // call API
                 console.log('Form values: ', values);
+
+                // Thong bao doi mat khau thanh cong
+                console.log('Doi mat khau thanh cong');
+
+                setTimeout(() => {
+                    window.location.href = './index.html';
+                }, 1500);
             }
         });
 

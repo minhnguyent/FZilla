@@ -161,10 +161,10 @@
 #change-password {
     
 }
-p.form_infor{
+
+.form_infor{
     font-weight: lighter;
     justify-self:center;
     font-style: italic;
-    width: 400px;
-    
+    width: var(--input-width);
 }

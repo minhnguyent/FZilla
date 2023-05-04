@@ -267,6 +267,12 @@
       handleFormOnSubmit(values) {
         // call API
         console.log('Form values: ', values);
+
+        if (isValidPassword(values)) {
+          console.log('Doi mat khau thanh cong');
+        } else {
+          console.log('Mat khau cu khong dung');
+        }
       }
     });
   </script>

@@ -21,6 +21,16 @@ function setUserData(user) {
     localStorage.setItem('user', JSON.stringify(user));
 }
 
+function isValidPassword(values) {
+    let userData = getUserData();
+
+    if (userData['password'] === values['password_old']) {
+        userData['password'] = values['password'];
+        return true;
+    } else {
+        return false;
+    }
+}
 
 // Logout
 
@@ -29,7 +39,7 @@ document.querySelector('.user-logout').addEventListener('click', function () {
     renderUserHeader();
 
 
-    if (window.location.pathname === '/FZilla/user_profile.html')
+    if (window.location.pathname !== '/FZilla/index.html')
         window.location.href = '/FZilla/index.html';
 
     /************************************
