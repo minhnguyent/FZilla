@@ -9,9 +9,10 @@ function nextStep1() {
         rpCodeIdentify.addEventListener('click', function(event) {
             event.preventDefault();
             if (time.textContent !== '0') {
-                console.log('Vui lòng chờ ' + time.textContent + 's');
+                toast({ title: 'Thông tin', message: 'Vui lòng chờ ' + time.textContent + 's để gửi lại mã xác nhận!' , type: 'info', duration: 3000 });
+                console.log();
             } else {
-                console.log('Mã xác nhận đã được gửi lại');
+                toast({ title: 'Thông tin', message: 'Email xác nhận đã được gửi lại!', type: 'info', duration: 3000 });
             }
         });
 

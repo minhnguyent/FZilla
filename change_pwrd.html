@@ -278,6 +278,7 @@
   <script src="./assets/js/bookmark.js"></script>
   <script src="./assets/js/user.js"></script>
   <script src="./assets/js/search.js"></script>
+  <script src="./assets/js/formValidator.js"></script>
   <script src="./assets/js/toast.js"></script>
 
   <script>
@@ -298,9 +299,12 @@
         console.log('Form values: ', values);
 
         if (isValidPassword(values)) {
-          console.log('Doi mat khau thanh cong');
+          toast({title:'Thành công',message:'Đổi mật khẩu thành công!',type:'success', duration:3000});
+          setTimeout(() => {
+            window.location.href = './index.html';
+          }, 1500);
         } else {
-          console.log('Mat khau cu khong dung');
+          toast({title:'Thất bại',message:'Mật khẩu hiện tại không chính xác!',type:'error', duration:3000});
         }
       }
     });
