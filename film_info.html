@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="./assets/css/modal.css">
   <link rel="stylesheet" href="./assets/css/form.css">
   <link rel="stylesheet" href="./assets/css/toast.css">
+  <link rel="stylesheet" href="./assets/css/body_responsive.css">
 
   <title class="titlePage" id="titlePage">FZilla - Xem phim trực tuyến</title>
 </head>
@@ -132,10 +133,10 @@
     </header>
 
     <main class="main bg-dark bg-gradient">
-      <div class="container-lg">
+      <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="main-breadcrumb-container">
+            <div class="main-breadcrumb-container d-none d-md-flex mt-1 mb-2">
               <div class="breadcrumb main-breadcrumb mb-0">
                 <ul class="breadcrumb__list">
                   <li class="breadcrumb__item">
@@ -157,10 +158,10 @@
           </div>
         </div>
       </div>
-      <div class="container-lg">
-        <div class="row">
-          <div class="col-8">
-            <div class="main-box-wrapper">
+      <div class="container-md">
+        <div class="row flex-column flex-lg-row">
+          <div class="col-lg-8">
+            <div class="main-box-wrapper mt-1 mt-md-0">
             </div>
 
             <div class="film-list-container">
@@ -196,15 +197,15 @@
                   </div>
                 </div>
                 <div class="main-section__body mt-3">
-                  <div class="row gy-3">
+                  <div class="row gy-3 row-cols-2 row-cols-sm-3 row-cols-sm-4">
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-lg-4">
             <div class="main-sidebar">
-              <div class="main-sidebar-section">
+              <div class="main-sidebar-section mt-4 mt-lg-0">
                 <div class="main-sidebar-section__heading">
                   <h2 class="text-uppercase">Phim sắp chiếu</h2>
                 </div>
@@ -235,9 +236,9 @@
 
                 <div class="main-sidebar-section__body mt-2">
                   <div class="main-sidebar-section__tabs">
-                    <div class="main-sidebar-section__tab-item active">Ngày</div>
-                    <div class="main-sidebar-section__tab-item">Tuần</div>
-                    <div class="main-sidebar-section__tab-item">Tháng</div>
+                    <div class="main-sidebar-section__tab-item active">Trong ngày</div>
+                    <div class="main-sidebar-section__tab-item">Trong tuần</div>
+                    <div class="main-sidebar-section__tab-item">Trong tháng</div>
 
                     <div class="main-sidebar-section__tab-line"></div>
                   </div>
@@ -371,6 +372,7 @@
   <script src="./assets/js/userData.js"></script>
   <script src="./assets/js/movieData.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/toast.js"></script>
   <script src="./assets/js/render.js"></script>
   <script src="./assets/js/renderFilmInfo.js"></script>
   <script src="./assets/js/renderMovie.js"></script>
@@ -389,7 +391,6 @@
 
     renderCarouselMovies($('.main-section--same-topic .main-section__carousel-wrapper'), 'popularMovies');
     renderMovieList($('.main-section--recommendation .main-section__body .row'), 'hotMovies');
-
   </script>
 </body>
 

@@ -10,11 +10,14 @@ const renderFilmWatching = function(root, category, filmId) {
   breadCrumbList.querySelector('.breadcrumb__item:last-child .breadcrumb__item-link').innerHTML = movie.titleVn;
 
   root.innerHTML = `
+    <div class="player__title text-center d-md-none">
+      <h2 class="player_title-heading">Bạn đang xem phim <span>${movie.titleVn}</span></h2>
+    </div>
     <div class="player__video-wrapper">
       <video src="${movie.trailer}" class="player__video" controls></video>
     </div>
 
-    <div class="player__control-btns">
+    <div class="player__control-btns d-flex flex-wrap justify-content-center justify-content-md-end">
       <button class="player__control-btns-btn my-btn my-btn-flex">
         <span class="player__control-btns-btn-icon player__control-btns-btn-icon--left"><i class="fa-solid fa-caret-left"></i></span>
         Tập trước
@@ -37,18 +40,18 @@ const renderFilmWatching = function(root, category, filmId) {
     </div>
 
     <div class="player__film-info">
-      <div class="player__film-info-heading">
+      <div class="player__film-info-heading d-flex flex-column flex-md-row">
         <div class="player__film-info-heading-item">
           <div class="player__film-info-title">${movie.titleVn}</div>
           <div class="player__film-info-subtitle">${movie.titleEn} (${movie.year})</div>
         </div>
         <div class="player__film-info-heading-item">
-          <div class="player__film-info-rating">
+          <div class="player__film-info-rating mt-2 mt-md-0">
             <div class="player__film-info-rating-label">
               Đánh giá phim
               <span class="player__film-info-rating-label-num">(43 lượt)</span>
             </div>
-            <div class="player__film-info-rating-stars">
+            <div class="player__film-info-rating-stars text-md-end">
               <span class="player__film-info-rating-stars-item active"><i class="fa-solid fa-star"></i></span>
               <span class="player__film-info-rating-stars-item active"><i class="fa-solid fa-star"></i></span>
               <span class="player__film-info-rating-stars-item active"><i class="fa-solid fa-star"></i></span>

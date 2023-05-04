@@ -13,12 +13,12 @@ const renderFilmInfo = function(root) {
 
   root.innerHTML = `
     <div class="main-film-info">
-      <div class="main-film-info__with-thumb">
-        <div class="main-film-info__thumb">
+      <div class="main-film-info__with-thumb flex-column flex-md-row">
+        <div class="main-film-info__thumb align-self-center align-self-md-baseline">
           <div class="main-film-info__thumb-img-wrapper">
             <img src="${movie.thumb}" class="main-film-info__img" alt="${movie.titleVn}">
           </div>
-          <div class="main-film-info__bookmark ${isFavouriteMovie({ category, filmId }) !== -1 && 'main-film-info__bookmark--added'}">
+          <div class="main-film-info__bookmark ${isFavouriteMovie({ category, filmId }) !== -1 ? 'main-film-info__bookmark--added' : ''}">
             <span class="main-film-info__bookmark-icon">
               <i class="fa-solid fa-bookmark"></i>
             </span>
@@ -42,7 +42,7 @@ const renderFilmInfo = function(root) {
           </a>
         </div>
         <div class="main-film-info__about">
-          <div class="main-film-info__about-title">${movie.titleVn}</div>
+          <div class="main-film-info__about-title text-center text-md-start">${movie.titleVn}</div>
           <ul class="main-film-info__about-list">
             <li class="main-film-info__about-list-item">
               <span>Quốc gia:</span>
