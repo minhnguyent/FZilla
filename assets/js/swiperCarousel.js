@@ -41,6 +41,9 @@ const mainSectionCarousel = new Swiper('.main-section__carousel', {
         },
         // xxl - width >= 1400px
         1400: {
+            loopedSlides: 6,
+            spaceBetween: 20,
+            slidesPerGroup: 6,
         },
     },
 
