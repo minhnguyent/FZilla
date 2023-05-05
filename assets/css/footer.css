@@ -28,6 +28,7 @@
     color: var(--color-white);
     opacity: .6;
     transition: all .3s;
+    cursor: pointer;
 }
 
 .footer-link:hover {

@@ -214,6 +214,8 @@
             <input type="checkbox" class="form-check-input form__check-input form__checkbox" id="policy-rule">
             <label class="form-check-label form__check-label form__label" for="policy-rule">Đồng ý với các <a
                 class="form__link" href="">Điều khoản</a> và <a class="form__link" href="">Chính sách</a></label>
+            <span class="form__message"></span>
+
           </div>
           <button type="submit" class="input-group btn form__btn form__btn--submit">Đăng ký</button>
         </form>
@@ -233,7 +235,8 @@
               <p class="footer__desc">
                 Website được xây dựng bởi <b>FZilla</b> <br>
                 Chúc bạn có những giây phút xem phim vui vẻ!<br>
-                Liên lạc với chúng tôi <a class="btn footer__contact-btn" href="./contact.html">Tại đây</a>
+                Liên lạc với chúng tôi <a class="btn footer__contact-btn" href="./contact.html">Tại
+                  đây</a>
               </p>
             </div>
           </div>
@@ -242,13 +245,13 @@
             <div class="footer__content-title">Thể loại</div>
             <ul>
               <li>
-                <a class="footer-link" href="#">Hành động</a>
+                <a class="footer-link">Hành động</a>
               </li>
               <li>
-                <a class="footer-link" href="#">Viễn tưởng</a>
+                <a class="footer-link">Viễn tưởng</a>
               </li>
               <li>
-                <a class="footer-link" href="#">Anime</a>
+                <a class="footer-link">Anime</a>
               </li>
             </ul>
           </div>
@@ -257,13 +260,13 @@
             <div class="footer__content-title">Quy định</div>
             <ul>
               <li>
-                <a class="footer-link" href="#">Quy định chung</a>
+                <a class="footer-link">Quy định chung</a>
               </li>
               <li>
-                <a class="footer-link" href="#">Quyền riêng tư</a>
+                <a class="footer-link">Quyền riêng tư</a>
               </li>
               <li>
-                <a class="footer-link" href="#">Bản quyền</a>
+                <a class="footer-link">Bản quyền</a>
               </li>
             </ul>
           </div>
@@ -272,13 +275,13 @@
             <div class="footer__content-title">Contact us</div>
             <ul>
               <li>
-                <a class="footer-link" href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                <a class="footer-link"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
               </li>
               <li>
-                <a class="footer-link" href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a class="footer-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
               </li>
               <li>
-                <a class="footer-link" href=""><i class="fa-brands fa-github"></i> Github</a>
+                <a class="footer-link"><i class="fa-brands fa-github"></i> Github</a>
               </li>
             </ul>
           </div>
@@ -357,6 +360,8 @@
       handleFormOnSubmit(values) {
         // call API
         if (createUser(values)) {
+          toast({title:'Thành công',message:'Tạo tài khoản thành công!',type:'success', duration:3000});
+
           setTimeout(() => {
             window.location.href = './login.html';
           }, 1500);

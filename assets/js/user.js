@@ -1,9 +1,3 @@
-/* ************************************* *
- * Tạm thời hoàn tất                     *
- * Chỉ cần bổ sung thông báo             *
- * Thêm tính năng đăng nhập (đã xong)    *
- * ************************************* */
-
 const viInformationTitle = {
     username: 'Tên đăng nhập',
     fullname: 'Họ và tên',
@@ -203,11 +197,7 @@ function createUser(user) {
     let allUserData = JSON.parse(localStorage['allUserData']);
     allUserData.push(user);
     localStorage['allUserData'] = JSON.stringify(allUserData);
-    /************************************
-     *  Hiển thị thông báo tạo tài      *
-     * khoản thành công                 *
-     * **********************************/
-    toast({title:'Thành công',message:'Tạo tài khoản thành công!',type:'success', duration:3000});
+
     return true;
 }
 

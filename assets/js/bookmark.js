@@ -71,7 +71,8 @@ if (bookmarkElement) {
                 `<div class="bookmark-wrapper--empty">
                     Không có phim nào ở đây!
                 </div>`;
-
+            if (bookmarkWrapper.nextElementSibling)
+            bookmarkWrapper.nextElementSibling.remove();
         } else {
             renderBookmark(bookmarkWrapper, favouriteMovies);
         }
