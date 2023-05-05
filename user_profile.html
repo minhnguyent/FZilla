@@ -325,8 +325,9 @@
   <script src="./assets/js/search.js"></script>
   <script src="./assets/js/toast.js"></script>
   <script>
-    renderMovieList($('.main-section--category-1 .main-section__body .row'), 'hotMovies');
-    renderMovieList($('.main-section--category-2 .main-section__body .row'), 'hotMovies');
+    const userData = getUserData();
+    renderProfileMovies($('.main-section--category-1 .main-section__body .row'), userData['favourite']);
+    renderProfileMovies($('.main-section--category-2 .main-section__body .row'), userData['history']);
 
   </script>
 </body>

@@ -83,6 +83,50 @@ const renderMovieList = (root, category) => {
   }).join('');
 }
 
+const renderProfileMovies = (root, userFavouriteList) => {
+  if (!root || !userFavouriteList) return;
+
+  root.innerHTML = userFavouriteList.map((movieInfo) => {
+    const category = movieInfo.category;
+    const id = movieInfo.filmId;
+    const movie = moviesByCategory[category][id];
+    return `
+      <div class="col">
+        <div class="film-item">
+          <a href="/FZilla/film_info.html?film_category=${category}&film_id=${id}" class="film-item-inner">
+            <div class="film-item__main">
+              <div class="film-item__thumb">
+                <img src="${movie.thumb}" alt="${movie.titleEn}" class="film-item__thumb-img">
+              </div>
+
+              <div class="film-item__label">
+                <div class="film-item__label-item">HD</div>
+                <div class="film-item__label-item">Thuyết minh</div>
+              </div>
+
+              <div class="film-item__rating ${movie.rating ? '' : 'film-item__rating--not-available'}">
+                <span class="film-item__rating-icon"><i class="fa-regular fa-star"></i></span>
+                <span class="film-item__rating-num">${movie.rating}</span>
+                <span class="film-item__rating-NA">N/A</span>
+              </div>
+
+              <div class="film-item__play-btn" title="Xem phim">
+                <span class="film-item__play-btn-icon"><i class="fa-solid fa-play"></i></span>
+              </div>
+            </div>
+            <div class="film-item__desc">
+              <div class="film-item__title" title="${movie.titleVn}">${movie.titleVn}</div>
+              <div class="film-item__subtitle">
+              <span class="film-item__subtitle-item" title="${movie.titleEn} (${movie.year})">${movie.titleEn} (${movie.year})</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
 const renderTrailers = (root, category) => {
   if (!root || moviesByCategory.hasOwnProperty(category) == false) return;
 

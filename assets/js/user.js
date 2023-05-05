@@ -160,8 +160,9 @@ function renderUserProfile() {
         renderInformation(phoneElement, userData['phone'], viInformationTitle['phone']);
         renderInformation(registrationDateElement, userData['registrationDate'], viInformationTitle['registrationDate']);
         renderUserAvatar(avatarElement, userData['avatar']);
-        renderProfileMovies(document.querySelector('.user-bookmark .row'), userData['favourite']);
-        renderProfileMovies(document.querySelector('.user-watch-history .row'), userData['history']);
+        
+        // renderProfileMovies(document.querySelector('.user-bookmark .row'), userData['favourite']);
+        // renderProfileMovies(document.querySelector('.user-watch-history .row'), userData['history']);
         
         editProfileButton.addEventListener('click', function () {
             toast({title:'Thông tin',message:'Chức năng đang được cập nhật!',type:'info', duration:3000});
