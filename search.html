@@ -136,7 +136,9 @@
 
       <div class="container-md">
         <div class="row search-result mt-2">
-          <h2 class="search-result__title">Kết quả tìm kiếm cho "Avatar Dòng chảy của nước"</h2>
+          <h2 class="search-result__title">Kết quả tìm kiếm cho
+            <span id="search-keyword"></span>
+          </h2>
           <div class="category-list-container">
             <div class="main-section">
               <div class="main-section__heading">
@@ -300,7 +302,12 @@
 
     renderMovieList($('.main-section--category-1 .main-section__body .row'), 'hotMovies');
 
+    const searchString = window.location.search;
+    const searchParams = new URLSearchParams(searchString);
+    const searchQuery = searchParams.get('search_query');
 
+    console.log(searchQuery);
+    $('#search-keyword').innerHTML = `"${searchQuery}"`;
   </script>
 </body>
 
