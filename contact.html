@@ -198,6 +198,7 @@
       </div>
     </main>
 
+
     <footer class="footer bg-black bg-gradient">
       <div class="container-lg">
         <div class="row">
@@ -317,32 +318,26 @@
 
   <script>
     Validator({
-      form: '#form-contact',
+      form: '#form-login',
       formMessage: '.form__message',
       formGroup: '.input-group',
       rules: [
-        Validator.require('#fullname', '* Vui lòng nhập họ tên của bạn', true),
-        Validator.require('#email', '* Vui lòng nhập email'),
-        Validator.require('#describe', '* Thông tin không thể để trống', true),
-        Validator.requireMinLength('#fullname', 5, '* Họ và tên phải chứa ít nhất 5 kí tự', true),
-        Validator.isEmail('#email', '* Email không hợp lệ'),
-        Validator.requireMinWord('#describe', 10, '* Thông tin phải chứa ít nhất 10 từ'),
+        Validator.require('#username', '* Vui lòng nhập tên đăng nhập', true),
+        Validator.require('#password', '* Vui lòng nhập mật khẩu'),
+        Validator.requireMinLength('#username', 3, '* Tên đăng nhập phải chứa ít nhất 3 kí tự', true),
+        Validator.requireMinLength('#password', 6, '* Mật khẩu phải chứa ít nhất 6 kí tự'),
       ],
       handleFormOnSubmit(values) {
-        // console.log(values);
-        toast({
-          title: 'Thành công',
-          message: 'Phản hồi của bạn đã được ghi nhận',
-          type: 'success',
-          duration: 3000
-        });
-
-        setTimeout(() => {
-          window.location.href = '/FZilla';
-        }, 1500);
+        // call API
+        if (verifyLogin(values)) {
+          setTimeout(() => {
+            window.location.href = './index.html';
+          }, 1500);
+        } else {
+          // sai ten tai khoan hoat mat khau
+        }
       }
     });
-
   </script>
 </body>
 
