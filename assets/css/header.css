@@ -158,7 +158,7 @@
     line-height: 2rem;
     max-width: 100%;
     padding: 0 2rem 0 .5rem;
-    border-top: 0.001px dotted var(--color-gray);
+    border-top: 1px dotted var(--color-gray);
     overflow: hidden;
     cursor: pointer;
     transition: all .3s;
