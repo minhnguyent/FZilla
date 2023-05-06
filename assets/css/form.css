@@ -158,6 +158,14 @@
     text-decoration: underline;
 }
 
+p.term-privacy,
+p.term-privacy .form__link {
+    text-align: center;
+    line-height: 1.25;
+    max-width: var(--input-width);
+    font-size: 0.875rem;
+}
+
 #change-password {
     
 }
