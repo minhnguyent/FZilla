@@ -129,7 +129,12 @@ if (bookmarkElement) {
 function handleBookmarkButton() {
     const { category, filmId } = getFilmInfoFromSearchParams();
     const mainFilmInfoBookmark = $('.main-film-info__bookmark');
+    const smBSBreakpoint = 576;
     mainFilmInfoBookmark.addEventListener('click', function () {
+        this.classList.add('shaking');
+        this.addEventListener('animationend', () => {
+            this.classList.remove('shaking');
+        }, { once: true });
         if (
             this.classList.contains('main-film-info__bookmark--added') ||
             this.classList.contains('main-film-info__bookmark--adding')
@@ -138,12 +143,14 @@ function handleBookmarkButton() {
             this.classList.remove('main-film-info__bookmark--added');
             this.classList.remove('main-film-info__bookmark--adding');
             removeFavouriteByMovie({ category, filmId });
-            toast({
-                title: 'Thông báo',
-                message: 'Xóa phim thành công',
-                type: 'info',
-                duration: 3500
-            });
+            if (window.innerWidth >= smBSBreakpoint) {
+                toast({
+                    title: 'Thông báo',
+                    message: 'Xóa phim thành công',
+                    type: 'info',
+                    duration: 3500
+                }); 
+            }
 
         }
         else {
@@ -156,12 +163,14 @@ function handleBookmarkButton() {
                     this.classList.add('main-film-info__bookmark--added');
                 }
             }, { once: true });
-            toast({
-                title: 'Thành công',
-                message: 'Thêm phim thành công',
-                type: 'success',
-                duration: 3500
-            });
+            if (window.innerWidth >= smBSBreakpoint) {
+                toast({
+                    title: 'Thành công',
+                    message: 'Thêm phim thành công',
+                    type: 'success',
+                    duration: 3500
+                });   
+            }
         }
     });
 }
