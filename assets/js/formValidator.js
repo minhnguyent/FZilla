@@ -158,12 +158,27 @@ Validator.isEmail = (selector, errorMessage) => {
     };
 }
 
-Validator.requireMinLength = (selector, minLength = 6, errorMessage) => {
+Validator.requireMinLength = (selector, minLength = 6, errorMessage, isTrim = false) => {
     return {
         selector,
-        test(password) {
-            return (password.length >= minLength ? undefined :
+        test(input) {
+            if (isTrim && typeof input === 'string') input = input.trim();
+            return (input.length >= minLength ? undefined :
                 errorMessage || `Vui lòng nhập ít nhất ${minLength} kí tự`);
+        }
+    };
+}
+
+Validator.requireMinWord = (selector, minWord = 6, errorMessage) => {
+    return {
+        selector,
+        test(input) {
+            const words = input.split(/(\s+)/).filter((word) => {
+                return word.trim().length > 0;
+            });
+            console.log(words);
+            return (words.length >= minWord ? undefined :
+                errorMessage || `Vui lòng nhập ít nhất ${minWord} từ`);
         }
     };
 }

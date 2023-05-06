@@ -294,9 +294,9 @@
       formMessage: '.form__message',
       formGroup: '.input-group',
       rules: [
-        Validator.require('#username', '* Vui lòng nhập tên đăng nhập'),
+        Validator.require('#username', '* Vui lòng nhập tên đăng nhập', true),
         Validator.require('#password', '* Vui lòng nhập mật khẩu'),
-        Validator.requireMinLength('#username', 3, '* Tên đăng nhập phải chứa ít nhất 3 kí tự'),
+        Validator.requireMinLength('#username', 3, '* Tên đăng nhập phải chứa ít nhất 3 kí tự', true),
         Validator.requireMinLength('#password', 6, '* Mật khẩu phải chứa ít nhất 6 kí tự'),
       ],
       handleFormOnSubmit(values) {

@@ -140,16 +140,16 @@
         <form class="form form-register" id="form-register">
           <div class="input-group form__item">
             <div class="form-floating form__item">
-              <input type="text" class="form-control form__input" id="username" name="username"
-                placeholder="Tên đăng nhập">
-              <label for="username" class="form__label">Tên đăng nhập</label>
+              <input type="text" class="form-control form__input" id="fullname" name="fullname" placeholder="Họ và tên">
+              <label for="fullname" class="form__label">Họ và tên</label>
             </div>
             <span class="form__message"></span>
           </div>
           <div class="input-group form__item">
             <div class="form-floating form__item">
-              <input type="text" class="form-control form__input" id="fullname" name="fullname" placeholder="Họ và tên">
-              <label for="fullname" class="form__label">Họ và tên</label>
+              <input type="text" class="form-control form__input" id="username" name="username"
+                placeholder="Tên đăng nhập">
+              <label for="username" class="form__label">Tên đăng nhập</label>
             </div>
             <span class="form__message"></span>
           </div>
@@ -347,12 +347,14 @@
       formMessage: '.form__message',
       formGroup: '.input-group',
       rules: [
-        Validator.require('#username', '* Vui lòng nhập tên đăng nhập'),
+        Validator.require('#fullname', '* Vui lòng nhập họ tên của bạn', true),
+        Validator.require('#username', '* Vui lòng nhập tên đăng nhập', true),
         Validator.require('#email', '* Vui lòng nhập email'),
         Validator.require('#password', '* Vui lòng nhập mật khẩu'),
         Validator.require('#password-repeat', '* Vui lòng nhập lại mật khẩu'),
         Validator.require('input[name="sex"]', '* Vui lòng chọn giới tính của bạn'),
-        Validator.requireMinLength('#username', 3, '* Tên đăng nhập phải chứa ít nhất 3 kí tự'),
+        Validator.requireMinLength('#fullname', 5, '* Họ và tên phải chứa ít nhất 5 kí tự', true),
+        Validator.requireMinLength('#username', 3, '* Tên đăng nhập phải chứa ít nhất 3 kí tự', true),
         Validator.isEmail('#email', '* Email không hợp lệ'),
         Validator.requireMinLength('#password', 6, '* Mật khẩu phải chứa ít nhất 6 kí tự'),
         Validator.requireMinLength('#password-repeat', 6, '* Mật khẩu phải chứa ít nhất 6 kí tự'),

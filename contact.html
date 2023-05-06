@@ -158,7 +158,7 @@
 
         <div class="row">
           <h2 class="form__sub-heading">Ý kiến đóng góp</h2>
-          <form class="form" action="contact.html" method="post">
+          <form class="form form-contact" id="form-contact" action="" method="post">
             <div class="input-group form__item">
               <div class="form-floating form__item">
                 <input type="text" class="form-control form__input" id="fullname" name="fullname"
@@ -312,13 +312,36 @@
   <script src="./assets/js/bookmark.js"></script>
   <script src="./assets/js/user.js"></script>
   <script src="./assets/js/search.js"></script>
+  <script src="./assets/js/formValidator.js"></script>
   <script src="./assets/js/toast.js"></script>
 
   <script>
-    /**************************
-     * Chưa validate          *
-     * ************************
-    */
+    Validator({
+      form: '#form-contact',
+      formMessage: '.form__message',
+      formGroup: '.input-group',
+      rules: [
+        Validator.require('#fullname', '* Vui lòng nhập họ tên của bạn', true),
+        Validator.require('#email', '* Vui lòng nhập email'),
+        Validator.require('#describe', '* Thông tin không thể để trống', true),
+        Validator.requireMinLength('#fullname', 5, '* Họ và tên phải chứa ít nhất 5 kí tự', true),
+        Validator.isEmail('#email', '* Email không hợp lệ'),
+        Validator.requireMinWord('#describe', 10, '* Thông tin phải chứa ít nhất 10 từ'),
+      ],
+      handleFormOnSubmit(values) {
+        // console.log(values);
+        toast({
+          title: 'Thành công',
+          message: 'Phản hồi của bạn đã được ghi nhận',
+          type: 'success',
+          duration: 3000
+        });
+
+        setTimeout(() => {
+          window.location.href = '/FZilla';
+        }, 1500);
+      }
+    });
 
   </script>
 </body>
