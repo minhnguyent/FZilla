@@ -39,8 +39,8 @@ document.querySelectorAll('.user-logout').forEach(function(element) {
         toast({title:'Thành công',message:'Đăng xuất thành công',type:'success', duration:3000});
         
         setTimeout(() => {
-            if (window.location.pathname === '/FZilla/user_profile.html')
-                window.location.href = '/FZilla/index.html';
+            if (window.location.pathname === '/user_profile.html')
+                window.location.href = './index.html';
             else window.location.reload();
         }, 1500);
 
@@ -119,7 +119,7 @@ function renderUserProfile() {
                 return `
                 <div class="${colClassList.join(' ')}">
                 <div class="film-item">
-                <a href="/FZilla/film_info.html?film_category=${category}&film_id=${id}" class="film-item-inner">
+                <a href="./film_info.html?film_category=${category}&film_id=${id}" class="film-item-inner">
                 <div class="film-item__main">
                 <div class="film-item__thumb">
                 <img src="${movie.thumb}" alt="${movie.titleEn}" class="film-item__thumb-img">
@@ -179,13 +179,13 @@ function createUser(user) {
     // set default avatar
     switch (user['sex']) {
         case 'male': 
-            user['avatar'] = '/FZilla/assets/img/avatar-male.png';
+            user['avatar'] = './assets/img/avatar-male.png';
             break;
         case 'female':
-            user['avatar'] = '/FZilla/assets/img/avatar-female.png';
+            user['avatar'] = './assets/img/avatar-female.png';
             break;
         default:
-            user['avatar'] = '/FZilla/assets/img/avatar-default.png';
+            user['avatar'] = './assets/img/avatar-default.png';
             break;
     }
 

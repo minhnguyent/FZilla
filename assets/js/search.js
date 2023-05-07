@@ -10,7 +10,7 @@ if (allSearchForm) {
         const searchRedirection = function() {
             if (searchInput.value === '') return;
             const searchQuery = searchInput.value;
-            window.location.href = `/FZilla/search.html?search_query=${searchQuery}`;
+            window.location.href = `./search.html?search_query=${searchQuery}`;
         }
     
         submitButton.addEventListener('click', function(event) {

@@ -122,9 +122,9 @@ function renderNavbarMobile() {
         }
 
         navbarElement.innerHTML += `<div class="header__user header__user--logged-out me-1">
-            <a class="nav-link nav-link--account" href="login.html">Đăng nhập</a>
-            <a class="nav-link nav-link--account" href="register.html">Đăng kí</a>
-            <a class="nav-link nav-link--username" href="user_profile.html"></a>
+            <a class="nav-link nav-link--account" href="./login.html">Đăng nhập</a>
+            <a class="nav-link nav-link--account" href="./register.html">Đăng kí</a>
+            <a class="nav-link nav-link--username" href="./user_profile.html"></a>
             <a class="nav-link user-logout nav-link nav-link--user-mobile-expand" href="#">
                 <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
             </a>

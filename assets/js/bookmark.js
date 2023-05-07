@@ -103,7 +103,7 @@ if (bookmarkElement) {
             });
 
             item.addEventListener('click', function () {
-                window.location.href = `/FZilla/film_info.html?film_category=${value['category']}&film_id=${value['filmId']}`;
+                window.location.href = `./film_info.html?film_category=${value['category']}&film_id=${value['filmId']}`;
             });
 
             root.append(item);

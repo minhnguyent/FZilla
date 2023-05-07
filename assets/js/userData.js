@@ -54,7 +54,7 @@ const user = {
     phone: '0912323223',
     registrationDate: '29-12-2022',
     password: 12345678,
-    avatar: '/FZilla/assets/img/nav-brand.png',
+    avatar: './assets/img/nav-brand.png',
     favourite: listFavouriteMovies,
     history: listHistoryMovies
 }

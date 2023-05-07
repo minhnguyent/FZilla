@@ -32,11 +32,11 @@ const renderFilmInfo = function(root) {
               <i class="fa-solid fa-x"></i>
             </span>
           </div>
-          <a href="/FZilla/film_watching.html?film_category=${category}&film_id=${filmId}" class="main-film-info__btn main-film-info__watch-trailer-btn my-btn my-btn-flex">
+          <a href="./film_watching.html?film_category=${category}&film_id=${filmId}" class="main-film-info__btn main-film-info__watch-trailer-btn my-btn my-btn-flex">
             <span class="main-film-info__btn-icon"><i class="fa-brands fa-youtube"></i></span>
             Xem trailer
           </a>
-          <a href="/FZilla/film_watching.html?film_category=${category}&film_id=${filmId}" class="main-film-info__btn main-film-info__watch-film-btn my-btn my-btn-flex">
+          <a href="./film_watching.html?film_category=${category}&film_id=${filmId}" class="main-film-info__btn main-film-info__watch-film-btn my-btn my-btn-flex">
             <span class="main-film-info__btn-icon"><i class="fa-regular fa-circle-play"></i></span>
             Xem phim
           </a>

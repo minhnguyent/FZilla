@@ -7,7 +7,7 @@ const renderCarouselMovies = function(root, category) {
     return `
       <div class="swiper-slide main-section__carousel-slide">
         <div class="film-item">
-          <a href="/FZilla/film_info.html?film_category=${category}&film_id=${id}" class="film-item-inner">
+          <a href="./film_info.html?film_category=${category}&film_id=${id}" class="film-item-inner">
             <div class="film-item__main">
               <div class="film-item__thumb">
                 <img src="${movie.thumb}" alt="${movie.titleEn}" class="film-item__thumb-img">
@@ -49,7 +49,7 @@ const renderMovieList = (root, category) => {
     return `
       <div class="col">
         <div class="film-item">
-          <a href="/FZilla/film_info.html?film_category=${category}&film_id=${id}" class="film-item-inner">
+          <a href="./film_info.html?film_category=${category}&film_id=${id}" class="film-item-inner">
             <div class="film-item__main">
               <div class="film-item__thumb">
                 <img src="${movie.thumb}" alt="${movie.titleEn}" class="film-item__thumb-img">
@@ -93,7 +93,7 @@ const renderProfileMovies = (root, userFavouriteList) => {
     return `
       <div class="col">
         <div class="film-item">
-          <a href="/FZilla/film_info.html?film_category=${category}&film_id=${id}" class="film-item-inner">
+          <a href="./film_info.html?film_category=${category}&film_id=${id}" class="film-item-inner">
             <div class="film-item__main">
               <div class="film-item__thumb">
                 <img src="${movie.thumb}" alt="${movie.titleEn}" class="film-item__thumb-img">
@@ -170,7 +170,7 @@ const renderTrendingMovies = (root, category) => {
   root.innerHTML = movies.map((movie, id) => {
     return `
       <div class="main-sidebar-section__tab-pane-item">
-        <a href="/FZilla/film_info.html?film_category=${category}&film_id=${id}" class="main-sidebar-section__tab-pane-item-inner">
+        <a href="./film_info.html?film_category=${category}&film_id=${id}" class="main-sidebar-section__tab-pane-item-inner">
           <div class="main-sidebar-section__tab-pane-item-thumb">
             <img src="${movie.thumb}" class="main-sidebar-section__tab-pane-item-img" alt="${movie.titleVn}">
           </div>
