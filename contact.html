@@ -10,21 +10,17 @@
   <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon.svg">
 
   <!-- font-awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+  <link rel="stylesheet" href="./assets/fontawesome-free-6.4.0-web/css/all.min.css">
 
   <!-- bootstrap-5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/bootstrap-5.3.0-alpha3/dist/css/bootstrap.min.css">
 
   <!-- normalize and reset -->
   <link rel="stylesheet" href="./assets/css/normalize.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
 
-
   <!-- swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <link rel="stylesheet" href="./assets/swiper-9.2.4/swiper-bundle.min.css">
 
   <!-- style -->
   <link rel="stylesheet" href="./assets/css/base.css">
@@ -194,10 +190,10 @@
               <span class="form__message"></span>
             </div>
             <button type="submit" class="input-group btn form__btn form__btn--submit">Gửi</button>
+          </form>
         </div>
       </div>
     </main>
-
 
     <footer class="footer bg-black bg-gradient">
       <div class="container-lg">
@@ -296,12 +292,10 @@
   <div class="toast" id="toast"></div>
 
   <!-- bootstrap 5 -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
-    </script>
+  <script src="./assets/bootstrap-5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- swiper -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./assets/swiper-9.2.4/swiper-bundle.min.js"></script>
 
   <script src="./assets/js/userData.js"></script>
   <script src="./assets/js/movieData.js"></script>
@@ -318,26 +312,32 @@
 
   <script>
     Validator({
-      form: '#form-login',
+      form: '#form-contact',
       formMessage: '.form__message',
       formGroup: '.input-group',
       rules: [
-        Validator.require('#username', '* Vui lòng nhập tên đăng nhập', true),
-        Validator.require('#password', '* Vui lòng nhập mật khẩu'),
-        Validator.requireMinLength('#username', 3, '* Tên đăng nhập phải chứa ít nhất 3 kí tự', true),
-        Validator.requireMinLength('#password', 6, '* Mật khẩu phải chứa ít nhất 6 kí tự'),
+        Validator.require('#fullname', '* Vui lòng nhập họ tên của bạn', true),
+        Validator.require('#email', '* Vui lòng nhập email'),
+        Validator.require('#describe', '* Thông tin không thể để trống', true),
+        Validator.requireMinLength('#fullname', 5, '* Họ và tên phải chứa ít nhất 5 kí tự', true),
+        Validator.isEmail('#email', '* Email không hợp lệ'),
+        Validator.requireMinWord('#describe', 10, '* Thông tin phải chứa ít nhất 10 từ'),
       ],
       handleFormOnSubmit(values) {
-        // call API
-        if (verifyLogin(values)) {
-          setTimeout(() => {
-            window.location.href = './index.html';
-          }, 1500);
-        } else {
-          // sai ten tai khoan hoat mat khau
-        }
+        // console.log(values);
+        toast({
+          title: 'Thành công',
+          message: 'Phản hồi của bạn đã được ghi nhận',
+          type: 'success',
+          duration: 3000
+        });
+
+        setTimeout(() => {
+          window.location.href = '/FZilla';
+        }, 1500);
       }
     });
+
   </script>
 </body>
 
