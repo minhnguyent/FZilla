@@ -31,7 +31,7 @@
 	<link rel="stylesheet" href="./assets/css/form.css">
 	<link rel="stylesheet" href="./assets/css/toast.css">
 
-	<title class="titlePage" id="titlePage">FZilla - Xem phim trực tuyến</title>
+	<title class="titlePage" id="titlePage">FZilla - Khôi phục tài khoản</title>
 </head>
 
 <body>
@@ -314,13 +314,13 @@
 
 				// Thông báo đã gửi email và chuyển sang bước kế tiếp
 
-				toast({ title: 'Thông tin', message: 'Email đã được gửi vào hòm thư, vui lòng kiểm tra!', type: 'info', duration: 10000 });
+				toast({ title: 'Thông tin', message: 'Email đã được gửi vào hòm thư, vui lòng kiểm tra!', type: 'info', duration: 3000 });
 
 				console.log('');
 
 				setTimeout(() => {
 					nextStep1();
-				}, 10000);
+				}, 1000);
 			}
 		});
 		Validator({
@@ -341,11 +341,11 @@
 				}
 				else {
 					console.log('Nhập mật khẩu mới');
-					toast({ title: 'Xác nhận thành công', message: 'Nhập mật khẩu mới!', type: 'success', duration: 10000 });
+					toast({ title: 'Xác nhận thành công', message: 'Nhập mật khẩu mới!', type: 'success', duration: 3000 });
 
 					setTimeout(() => {
 						nextStep2();
-					}, 10000);
+					}, 1000);
 						
 				}
 
@@ -366,12 +366,12 @@
 				console.log('Form values: ', values);
 
 				// Thong bao doi mat khau thanh cong
-				toast({ title: 'Thành công', message: 'Đổi mật khẩu thành công!', type: 'success', duration: 10000 });
+				toast({ title: 'Thành công', message: 'Đổi mật khẩu thành công!', type: 'success', duration: 3000 });
 
 
 				setTimeout(() => {
-					window.location.href = './index.html';
-				}, 10000);
+					window.location.href = './login.html';
+				}, 1000);
 			}
 		});
 
