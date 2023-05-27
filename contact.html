@@ -194,6 +194,7 @@
               <span class="form__message"></span>
             </div>
             <button type="submit" class="input-group btn form__btn form__btn--submit">Gửi</button>
+          </form>
         </div>
       </div>
     </main>
@@ -318,14 +319,16 @@
 
   <script>
     Validator({
-      form: '#form-login',
+      form: '#form-contact',
       formMessage: '.form__message',
       formGroup: '.input-group',
       rules: [
-        Validator.require('#username', '* Vui lòng nhập tên đăng nhập', true),
-        Validator.require('#password', '* Vui lòng nhập mật khẩu'),
-        Validator.requireMinLength('#username', 3, '* Tên đăng nhập phải chứa ít nhất 3 kí tự', true),
-        Validator.requireMinLength('#password', 6, '* Mật khẩu phải chứa ít nhất 6 kí tự'),
+        Validator.require('#fullname', '* Vui lòng nhập họ tên của bạn', true),
+        Validator.require('#email', '* Vui lòng nhập email'),
+        Validator.require('#describe', '* Thông tin không thể để trống', true),
+        Validator.requireMinLength('#fullname', 5, '* Họ và tên phải chứa ít nhất 5 kí tự', true),
+        Validator.isEmail('#email', '* Email không hợp lệ'),
+        Validator.requireMinWord('#describe', 10, '* Thông tin phải chứa ít nhất 10 từ'),
       ],
       handleFormOnSubmit(values) {
         // console.log(values);
